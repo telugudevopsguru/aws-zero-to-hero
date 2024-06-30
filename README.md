@@ -210,3 +210,140 @@
 - Lab Session - Remove inter-region VPC peering within the same AWS account
 - Lab Session - Configure inter-region VPC peering with a different AWS account
 - Lab Session - Remove inter-region VPC peering with a different AWS account
+## Day 19: AWS CloudWatch and AWS CloudTrail
+- What is CloudWatch?
+- Key Features of CloudWatch
+- Lab Session - Creating a log group in AWS CloudWatch
+- Lab Session - Sending VPC Flow logs to a CloudWatch log group
+- Lab Session - Setting up a CloudWatch alarm for an EC2 Instance
+- What is AWS CloudTrail?
+- Log event types in CloudTrail
+- Lab Session - Setting up AWS CloudTrail to send logs to an S3 bucket
+- Lab Session - Deletion of CloudTrail
+
+## Day 20: AWS ECR (Elastic Container Registry)
+- What is AWS ECR?
+- Types of Repositories
+- Components of Amazon ECR
+- Features of Amazon ECR
+- Lab Session - Creating an ECR repository in AWS
+- Lab Session - Pushing a docker image to AWS ECR
+- Lab Session - Setting up Lifecycle Policy in ECR
+- Lab Session - Setting up Replication configuration in ECR
+
+## Day 21: AWS EKS (Elastic Kubernetes Service)
+- What is Amazon Elastic Kubernetes Service?
+- How does Amazon EKS work?
+- Lab Session - Installation of AWS CLI in Windows
+- Lab Session - Installation of kubectl in Linux
+- Lab Session - Installation of kubectl in Windows
+- Lab Session - Creating an AWS IAM User
+- Lab Session - Creating an EKS Cluster through the AWS Console
+- Lab Session - Connecting to the EKS cluster
+- Lab Session - Deploying a sample application in Kubernetes
+
+## Day 22: AWS KMS (Key Management Service)
+- What is AWS KMS?
+- Features and benefits of KMS
+- Different types of keys in KMS
+- Lab Session - Creating a KMS key
+- Lab Session - Encrypting an EBS volume using AWS KMS
+- Lab Session - Deletion of KMS
+- What is AWS SES?
+- Lab Session - Creating AWS SES
+- Lab Session - Deletion of AWS SES
+- What is AWS SNS?
+- Lab Session - Creating AWS SNS
+- Lab Session - Deletion of AWS SNS
+
+## Day 23: AWS RDS (Relational Database Service)
+- What is RDS?
+- Features of RDS
+- RDS Subnet Group
+- Parameter groups
+- Option groups
+- Amazon RDS storage types
+- Lab Session - Creating a MySQL database in AWS RDS
+- Lab Session - Connecting to the RDS MySQL from an AWS EC2 instance
+- Lab Session - Installation of MySQL Workbench
+- Lab Session - Connecting to the RDS MySQL from MySQL Workbench
+- Lab Session - Deletion of RDS MySQL version
+
+## Day 24: AWS Route53
+- What is AWS Route53?
+- Benefits of Route53
+- What is a hosted zone in Route53?
+- Types of hosted zones
+- Lab Session - Creating a public hosted zone in AWS Route53
+- What are records in a hosted zone?
+- Types of records
+- What is Routing Policy?
+- Types of Routing policies
+- Lab Session - Creating a record in a hosted zone
+- What are Route53 Health Checks?
+- Lab Session - Creating a private hosted zone in AWS Route53
+- Lab Session - Configuring query logging for a Hosted Zone
+- Lab Session - Deletion of a Hosted Zone
+
+## Day 25: AWS ACM (AWS Certificate Manager)
+- What is AWS ACM?
+- Lab Session - Creating AWS ACM
+- Lab Session - Integrating AWS ACM with an Application Load Balancer
+- Lab Session - Deletion of AWS ACM
+
+## Day 26: AWS WAF (Web Application Firewall)
+- What is AWS WAF?
+- How AWS WAF works
+- Creating a Web ACL
+- Applying the Web ACL to an ALB
+- Blocking a Specific IP Address
+
+## Day 27: AWS EFS (Elastic File System)
+- What is AWS EFS?
+- Use cases of AWS EFS
+- Types of AWS EFS Storage Classes
+- Lab Session - Creation of AWS EFS
+- Lab Session - Mounting AWS EFS in an EC2 instance
+- Lab Session - Deletion of AWS EFS
+
+## Day 28: AWS Systems Manager
+- What is AWS Systems Manager?
+- Supported operating systems and machine types
+- What is SSM Agent?
+- Working with SSM Agent
+- What is Parameter Store?
+- Creating the Parameter Store
+- What is Run Command?
+- Setting up Run Command
+- What is Patch Manager?
+- Working with Patch Manager
+- What is Secret Manager?
+- Working with Secret Manager
+
+## Day 29: AWS Calculator
+- Introduction to AWS Calculator
+- Overview of AWS Pricing
+- Basic Navigation and Interface
+- Cost Estimation for EC2 Instances, EBS, RDS
+- Practical Exercises with Different Instance Types
+
+## Day 30: AWS Billing and Cost Management
+- What is AWS Billing and Cost Management?
+- Features of AWS Billing and Cost Management
+- Getting set up with Billing
+- Setting up a budget
+
+## Day 31: AWS Directory Service
+- What is AWS Directory Service?
+- AWS Directory Service options
+- Getting started with AWS Managed Microsoft AD
+- AWS Managed Microsoft AD prerequisites
+- Create your AWS Managed Microsoft AD
+- Deploy an Amazon EC2 instance to manage your AWS Managed Microsoft AD Active Directory
+- Verify that the base test lab is operational
+
+## Day 32: Resume Preparation
+- Resume preparation
+- Conducting Mock Interview
+- Interview Questions and Answers
+
