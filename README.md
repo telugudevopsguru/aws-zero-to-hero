@@ -17,26 +17,7 @@
 - Availability Zones
 - Lab Session - Creation of an AWS account
 
-## Day 2:
-- AWS Free Tier
-- AWS Management Console Overview
-- AWS Pricing Models
-- AWS Support Plans
-- AWS Trusted Advisor Overview
-- Lab Session - Navigating AWS Management Console
-
-## Day 3:
-- AWS Services Overview
-- Compute Services
-- Storage Services
-- Database Services
-- Networking Services
-- Security & Identity Services
-- Management Tools
-- Analytics Services
-- Application Integration Services
-
-## Day 4: Amazon Elastic Compute Cloud (EC2) Part 1
+## Day 2: Amazon Elastic Compute Cloud (EC2) Part 1
 - What is Amazon EC2?
 - Features of Amazon EC2
 - Amazon EC2 Instance Types
@@ -47,7 +28,7 @@
 - Lab Session - Creation of a Windows EC2 instance
 - Lab Session - Create an AMI from an Amazon EC2 Instance
 
-## Day 5: Amazon Elastic Compute Cloud (EC2) Part 2
+## Day 3: Amazon Elastic Compute Cloud (EC2) Part 2
 - What is an Elastic IP?
 - Lab Session - Creating an Elastic IP and Attaching it to an EC2 Instance
 - What is a Security Group?
@@ -57,7 +38,7 @@
 - Lab Session - Requesting Service Quotas in AWS
 - Lab Session - Metadata and user data in EC2
 
-## Day 6: AWS EBS (Elastic Block Storage)
+## Day 4: AWS EBS (Elastic Block Storage)
 - What is AWS EBS?
 - Features of AWS EBS
 - Types of EBS Volumes
@@ -69,7 +50,7 @@
 - Lab Session - Change the EBS volume type
 - Lab Session - Encrypt an existing attached EBS volume
 
-## Day 7: AWS EBS Snapshot
+## Day 5: AWS EBS Snapshot
 - What is a Snapshot in AWS?
 - Lab Session - Creation of a snapshot from an EC2 instance
 - Lab Session - Creation of a snapshot from an EBS volume
@@ -78,7 +59,7 @@
 - Options in a Snapshot
 - Lab Session - Deletion of Snapshots, Volumes, and AMIs
 
-## Day 8: AWS IAM (Identity Access Management)
+## Day 6: AWS IAM (Identity Access Management)
 - What is AWS IAM?
 - Features of AWS IAM
 - Lab Session - AWS IAM Users
@@ -94,7 +75,7 @@
 - Lab Session - Multi-Factor Authentication (MFA) for AWS IAM
 - IAM Best Practices
 
-## Day 9: AWS ASG (Auto Scaling Group)
+## Day 7: AWS ASG (Auto Scaling Group)
 - What is an Auto Scaling Group?
 - Benefits of an Auto Scaling Group
 - What is a Launch Configuration?
@@ -110,7 +91,7 @@
 - Lab Session - Enabling CloudWatch monitoring in an ASG
 - Lab Session - Deletion of an ASG
 
-## Day 10: AWS ELB (Elastic Load Balancing)
+## Day 8: AWS ELB (Elastic Load Balancing)
 - What is AWS Elastic Load Balancing?
 - Benefits of AWS Elastic Load Balancing
 - What is an AWS Classic Load Balancer?
@@ -125,7 +106,7 @@
 - Lab Session - Creation of an Application Load Balancer
 - Lab Session - Deletion of an ALB
 
-## Day 11: AWS ELB (Elastic Load Balancing) Part 2
+## Day 9: AWS ELB (Elastic Load Balancing) Part 2
 - What is an AWS Network Load Balancer?
 - Benefits of an AWS Network Load Balancer
 - Lab Session - Creation of an AWS Network Load Balancer
@@ -134,7 +115,7 @@
 - Lab Session - Attaching an ALB to a new Auto Scaling group
 - Lab Session - Attaching an ALB to an existing Auto Scaling group
 
-## Day 12: AWS S3 (Simple Storage Service)
+## Day 10: AWS S3 (Simple Storage Service)
 - What is AWS Simple Storage Service (S3)?
 - Buckets and Objects in Amazon S3
 - Types of storage classes in AWS S3
@@ -145,7 +126,7 @@
 - Bucket Policy in Amazon S3
 - Working with the Bucket Policy for S3 bucket
 
-## Day 13: AWS S3 (Simple Storage Service) Part 2
+## Day 11: AWS S3 (Simple Storage Service) Part 2
 - Access Control List (ACL) in Amazon S3
 - Lab Session - Apply ACL for S3 bucket
 - S3 Bucket Lifecycle
@@ -155,7 +136,7 @@
 - Server-side encryption for Amazon S3 buckets
 - Lab Session - Delete an S3 bucket
 
-## Day 14: AWS VPC (Virtual Private Cloud)
+## Day 12: AWS VPC (Virtual Private Cloud)
 - What is AWS VPC (Virtual Private Cloud)?
 - Key features of AWS VPC
 - CIDR (Classless Inter-Domain Routing)
@@ -170,7 +151,7 @@
 - Internet Gateway (IGW) in AWS VPC
 - Lab Session - Overview of the Default VPC in AWS
 
-## Day 15: AWS VPC (Virtual Private Cloud) Part 2
+## Day 13: AWS VPC (Virtual Private Cloud) Part 2
 - Lab Session - Create a customized VPC in AWS
 - NAT Gateway and NAT Instance in AWS VPC
 - Differences between NAT Gateway and NAT Instance
@@ -178,7 +159,7 @@
 - Lab Session - Create a NAT Gateway in AWS VPC
 - Lab Session - Delete a NAT Gateway in AWS VPC
 
-## Day 16: AWS VPC (Virtual Private Cloud) Part 3
+## Day 14: AWS VPC (Virtual Private Cloud) Part 3
 - Network Access Control List (NACL) in AWS VPC
 - Lab Session - Create a Network Access Control List (NACL) in AWS VPC
 - Security Group in AWS VPC
@@ -187,7 +168,7 @@
 - VPC Flow Logs and how to create them
 - Lab Session - Enable VPC Flow Logs
 
-## Day 17: AWS VPC (Virtual Private Cloud) Part 4
+## Day 15: AWS VPC (Virtual Private Cloud) Part 4
 - Options for configuring an AWS VPC
 - DHCP Option Set in AWS VPC
 - DNS Hostnames and DNS Resolution in AWS VPC
@@ -198,7 +179,7 @@
 - Lab Session - Create an ENI in AWS
 - Lab Session - Delete an AWS VPC
 
-## Day 18: AWS VPC Peering
+## Day 16: AWS VPC Peering
 - What is VPC Peering?
 - Key aspects of VPC Peering
 - Types of VPC Peering
@@ -210,7 +191,7 @@
 - Lab Session - Remove inter-region VPC peering within the same AWS account
 - Lab Session - Configure inter-region VPC peering with a different AWS account
 - Lab Session - Remove inter-region VPC peering with a different AWS account
-## Day 19: AWS CloudWatch and AWS CloudTrail
+## Day 17: AWS CloudWatch and CloudTrail
 - What is CloudWatch?
 - Key Features of CloudWatch
 - Lab Session - Creating a log group in AWS CloudWatch
@@ -221,7 +202,7 @@
 - Lab Session - Setting up AWS CloudTrail to send logs to an S3 bucket
 - Lab Session - Deletion of CloudTrail
 
-## Day 20: AWS ECR (Elastic Container Registry)
+## Day 18: AWS ECR (Elastic Container Registry)
 - What is AWS ECR?
 - Types of Repositories
 - Components of Amazon ECR
@@ -231,7 +212,7 @@
 - Lab Session - Setting up Lifecycle Policy in ECR
 - Lab Session - Setting up Replication configuration in ECR
 
-## Day 21: AWS EKS (Elastic Kubernetes Service)
+## Day 19: AWS EKS (Elastic Kubernetes Service)
 - What is Amazon Elastic Kubernetes Service?
 - How does Amazon EKS work?
 - Lab Session - Installation of AWS CLI in Windows
@@ -242,7 +223,7 @@
 - Lab Session - Connecting to the EKS cluster
 - Lab Session - Deploying a sample application in Kubernetes
 
-## Day 22: AWS KMS (Key Management Service)
+## Day 20: AWS KMS (Key Management Service)
 - What is AWS KMS?
 - Features and benefits of KMS
 - Different types of keys in KMS
@@ -256,7 +237,7 @@
 - Lab Session - Creating AWS SNS
 - Lab Session - Deletion of AWS SNS
 
-## Day 23: AWS RDS (Relational Database Service)
+## Day 21: AWS RDS (Relational Database Service)
 - What is RDS?
 - Features of RDS
 - RDS Subnet Group
@@ -269,7 +250,7 @@
 - Lab Session - Connecting to the RDS MySQL from MySQL Workbench
 - Lab Session - Deletion of RDS MySQL version
 
-## Day 24: AWS Route53
+## Day 22: AWS Route53
 - What is AWS Route53?
 - Benefits of Route53
 - What is a hosted zone in Route53?
@@ -285,20 +266,20 @@
 - Lab Session - Configuring query logging for a Hosted Zone
 - Lab Session - Deletion of a Hosted Zone
 
-## Day 25: AWS ACM (AWS Certificate Manager)
+## Day 23: AWS ACM (AWS Certificate Manager)
 - What is AWS ACM?
 - Lab Session - Creating AWS ACM
 - Lab Session - Integrating AWS ACM with an Application Load Balancer
 - Lab Session - Deletion of AWS ACM
 
-## Day 26: AWS WAF (Web Application Firewall)
+## Day 24: AWS WAF (Web Application Firewall)
 - What is AWS WAF?
 - How AWS WAF works
 - Creating a Web ACL
 - Applying the Web ACL to an ALB
 - Blocking a Specific IP Address
 
-## Day 27: AWS EFS (Elastic File System)
+## Day 25: AWS EFS (Elastic File System)
 - What is AWS EFS?
 - Use cases of AWS EFS
 - Types of AWS EFS Storage Classes
@@ -306,7 +287,7 @@
 - Lab Session - Mounting AWS EFS in an EC2 instance
 - Lab Session - Deletion of AWS EFS
 
-## Day 28: AWS Systems Manager
+## Day 26: AWS Systems Manager
 - What is AWS Systems Manager?
 - Supported operating systems and machine types
 - What is SSM Agent?
@@ -320,20 +301,20 @@
 - What is Secret Manager?
 - Working with Secret Manager
 
-## Day 29: AWS Calculator
+## Day 27: AWS Calculator
 - Introduction to AWS Calculator
 - Overview of AWS Pricing
 - Basic Navigation and Interface
 - Cost Estimation for EC2 Instances, EBS, RDS
 - Practical Exercises with Different Instance Types
 
-## Day 30: AWS Billing and Cost Management
+## Day 28: AWS Billing and Cost Management
 - What is AWS Billing and Cost Management?
 - Features of AWS Billing and Cost Management
 - Getting set up with Billing
 - Setting up a budget
 
-## Day 31: AWS Directory Service
+## Day 29: AWS Directory Service
 - What is AWS Directory Service?
 - AWS Directory Service options
 - Getting started with AWS Managed Microsoft AD
@@ -342,8 +323,6 @@
 - Deploy an Amazon EC2 instance to manage your AWS Managed Microsoft AD Active Directory
 - Verify that the base test lab is operational
 
-## Day 32: Resume Preparation
-- Resume preparation
+## Day 30: Resume Preparation
 - Conducting Mock Interview
 - Interview Questions and Answers
-
