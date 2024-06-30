@@ -4,7 +4,7 @@
 1. Windows/ Mac laptop
 2. Basic Linux Commands
 
-## Day 1:
+## Day 1: AWS Overview
 Understanding the fundamentals of cloud computing, focusing on AWS's global infrastructure and account creation.
 - What is Cloud Computing?
 - Benefits of Cloud Computing
