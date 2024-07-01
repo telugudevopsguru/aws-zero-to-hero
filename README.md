@@ -372,7 +372,7 @@ Introduction to AWS Directory Service for managing user directories, including s
 - Deploy an Amazon EC2 instance to manage your AWS Managed Microsoft AD Active Directory
 - Verify that the base test lab is operational
 
-## Day 30: Resume Preparation
+## Day 30: Final Session
 Preparing for AWS-related job interviews, including mock interviews and review of key concepts.
 - Resume Preparation
 - Conducting Mock Interview
