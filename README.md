@@ -26,6 +26,9 @@ SSM Agent enables the following capabilities:
 - **State Manager:** Ensures your instances are configured per your desired state, enforcing configurations and applying updates automatically.
 - **Inventory and Patch Management:** Collects metadata about your instances, installed applications, and patches, facilitating inventory management and patch deployments.
 
+**Install SSM Agent on EC2 Instance:**
+   - SSH into your EC2 instance.
+   - Install the SSM Agent using the appropriate commands for your operating system.
 ### What is Parameter Store?
 
 **Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management. It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
@@ -73,6 +76,13 @@ Patch Manager allows you to:
 - Define patch baselines to specify which patches should be applied and when.
 - View compliance reports to track patching status and remediate non-compliant instances.
 
+**Configuring Patch Manager:**
+   - Navigate to AWS Systems Manager -> Patch Manager.
+   - Click on "Patch Manager" in the left-hand menu.
+   - Create a patch baseline specifying which patches should be applied.
+   - Define the schedule for patching operations.
+   - Apply the patch baseline to your instances.
+
 ### What is Secrets Manager?
 
 **Secrets Manager** is an AWS service that helps you securely store, manage, and access sensitive information such as API keys, database passwords, and other credentials. It enables you to rotate, manage access, and audit usage of secrets throughout their lifecycle.
@@ -84,3 +94,11 @@ Secrets Manager allows you to:
 - **Rotate Secrets:** Automatically rotate secrets periodically or manually to enhance security.
 - **Access Controls:** Define fine-grained access policies to control who can access and manage secrets.
 - **Integration:** Integrate with AWS services and third-party applications securely using secrets.
+
+**Creating and Managing Secrets:**
+   - Navigate to AWS Secrets Manager.
+   - Click on "Store a new secret."
+   - Enter the secret details (e.g., key-value pairs, secrets).
+   - Configure rotation settings if needed.
+   - Click "Next" and review the settings.
+   - Click "Store" to create the secret.
