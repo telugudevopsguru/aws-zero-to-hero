@@ -105,4 +105,107 @@ aws eks update-kubeconfig --name dev-cluster --region us-east-1 --profile dev
 ```
 
 #### Congratulations: You have successfully created the AWS EKS Cluster.
-```
+-----
+
+
+### Lab Session - Deploying a Sample Application in Kubernetes
+
+1. **Create Kubernetes Deployment Manifest:**
+
+   Create a Kubernetes YAML file (`deployment.yaml`) that defines your application deployment. Here’s a basic example for a sample Nginx web server:
+
+   ```yaml
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: nginx-deployment
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: nginx
+     template:
+       metadata:
+         labels:
+           app: nginx
+       spec:
+         containers:
+         - name: nginx
+           image: nginx:latest
+           ports:
+           - containerPort: 80
+   ```
+
+   Save this YAML file (`deployment.yaml`).
+
+2. **Apply the Deployment to Kubernetes:**
+
+   Use `kubectl` command-line tool to apply the deployment manifest:
+
+   ```bash
+   kubectl apply -f deployment.yaml
+   ```
+
+   This command will create a Deployment named `nginx-deployment` with 3 replicas running Nginx.
+
+3. **Verify Deployment:**
+
+   Check the status of your deployment:
+
+   ```bash
+   kubectl get deployments
+   ```
+
+   Ensure that the `nginx-deployment` shows up and all replicas are running.
+
+4. **Create Kubernetes Service Manifest:**
+
+   If your application needs to be accessible externally, create a Kubernetes Service YAML file (`service.yaml`). Here’s an example for exposing Nginx deployment:
+
+   ```yaml
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: nginx-service
+   spec:
+     selector:
+       app: nginx
+     ports:
+       - protocol: TCP
+         port: 80
+         targetPort: 80
+     type: LoadBalancer
+   ```
+
+   Save this YAML file (`service.yaml`).
+
+5. **Apply the Service to Kubernetes:**
+
+   Apply the service manifest to create a Service that exposes the Nginx deployment:
+
+   ```bash
+   kubectl apply -f service.yaml
+   ```
+
+   This command will create a Service named `nginx-service` of type `LoadBalancer` that exposes port 80.
+
+6. **Verify Service:**
+
+   Check the status of your service:
+
+   ```bash
+   kubectl get services
+   ```
+
+   Ensure that `nginx-service` shows up with an external IP (if using `LoadBalancer` type).
+
+7. **Access Your Application:**
+
+   If you have an external IP (from `LoadBalancer` type service), open a web browser and enter the IP address to access the Nginx web server.
+
+### Notes:
+
+- **kubectl Configuration:** Ensure your `kubectl` is configured to point to the correct Kubernetes cluster (`kubectl config get-contexts` and `kubectl config use-context` if needed).
+- **Image and Ports:** Modify the `image` field in `deployment.yaml` to match your application’s Docker image, and adjust `containerPort` in both `deployment.yaml` and `service.yaml` as necessary.
+- **Security:** Consider using Kubernetes namespaces, network policies, and RBAC (Role-Based Access Control) for securing your deployments.
+
