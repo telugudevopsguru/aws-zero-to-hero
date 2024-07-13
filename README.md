@@ -173,8 +173,18 @@ An IAM role is an AWS identity with permissions to access AWS services and resou
 ----
 ### Root Account vs IAM User
 
-- **Root Account:** The AWS account created when you first sign up with AWS. It has unrestricted access to all AWS resources and services.
-- **IAM User:** Users created within an AWS account with defined permissions and access control. IAM users should be used instead of the root account for day-to-day activities to follow the principle of least privilege.
+| Feature                | Root Account                                    | IAM User                                      |
+|------------------------|-------------------------------------------------|-----------------------------------------------|
+| **Creation**           | Created automatically upon AWS account signup.  | Created within AWS account by an administrator. |
+| **Permissions**        | Full administrative access by default.          | Permissions defined by policies attached to the user. |
+| **Access Keys**        | Root account has access keys for API access.    | IAM users can have access keys for API access. Access keys can be rotated regularly. |
+| **Access Control**     | No restrictions; has access to all resources.   | Permissions can be granularly defined using IAM policies. |
+| **Security**           | Should not be used for everyday tasks due to security risks. | Enhanced security with defined permissions and monitoring. |
+| **Audit and Logging**  | Limited logging and auditing capabilities.      | Actions are logged and audited through AWS CloudTrail. |
+| **Multi-factor Authentication (MFA)** | MFA is available but not enforced by default. | MFA can be enabled for increased security. |
+| **Best Practices**     | Securely store credentials. Use for account management tasks only. | Follow least privilege principle. Rotate access keys regularly. Use for day-to-day operations. |
+
+----
 
 ### Lab Session - AWS IAM Password Policy
 
