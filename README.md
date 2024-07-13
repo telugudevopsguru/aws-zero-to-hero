@@ -187,14 +187,42 @@ An IAM role is an AWS identity with permissions to access AWS services and resou
 ----
 
 ### Lab Session - AWS IAM Password Policy
+The AWS IAM Password Policy allows you to set rules and requirements for the passwords used by IAM users in your AWS account. Here's an outline of the typical parameters you can configure in an AWS IAM Password Policy:
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the IAM Dashboard at [AWS Management Console](https://console.aws.amazon.com/iam/).
+| Parameter                          | Description                                                                                      |
+|------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Minimum Password Length**         | Specifies the minimum number of characters that must be present in an IAM user password.          |
+| **Require Lowercase Characters**    | Ensures that passwords contain at least one lowercase letter.                                      |
+| **Require Uppercase Characters**    | Ensures that passwords contain at least one uppercase letter.                                      |
+| **Require Numbers**                 | Ensures that passwords contain at least one numeric digit (0-9).                                   |
+| **Require Symbols**                 | Ensures that passwords contain at least one non-alphanumeric character (e.g., !, @, #, $, %).      |
+| **Allow Users to Change Password**  | Determines whether IAM users are allowed to change their own passwords.                            |
+| **Expire Passwords**                | Specifies the number of days after which IAM user passwords expire and must be reset.              |
+| **Password Expiration Warning**     | Specifies the number of days before password expiration that IAM users receive a warning.          |
+| **Prevent Reuse of Last N Passwords** | Restricts IAM users from reusing the specified number of previous passwords.                      |
 
-2. **Configure Password Policy:**
-   - Click on "Account settings" in the left sidebar.
-   - Click on "Change password policy" to define requirements such as minimum length, complexity, and expiration.
+### Configuring IAM Password Policy in AWS Console
 
+To configure the IAM Password Policy in AWS:
+
+1. **Sign in to the AWS Management Console**: Go to [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
+
+2. **Navigate to IAM**: Under "Services", select "IAM" to open the IAM dashboard.
+
+3. **Set Password Policy**:
+   - In the left navigation pane of the IAM dashboard, click on "Account settings".
+   - Click on "Change password policy".
+   - Configure the desired parameters for your password policy, such as minimum length, character requirements, password expiration settings, and password reuse prevention.
+   - Click on "Apply password policy" to save your changes.
+
+### Best Practices
+
+- **Complexity**: Ensure passwords are sufficiently complex to resist brute-force attacks.
+- **Rotation**: Regularly rotate passwords to reduce the risk of compromise.
+- **MFA**: Encourage or enforce the use of Multi-Factor Authentication (MFA) for added security.
+- **Monitoring**: Monitor AWS CloudTrail logs for password-related events to detect and respond to unauthorized access attempts.
+
+----
 ### Lab Session - Multi-Factor Authentication (MFA) for AWS IAM
 
 1. **Sign in to AWS Management Console:**
