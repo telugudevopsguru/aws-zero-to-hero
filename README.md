@@ -50,7 +50,7 @@ AWS Elastic IP (EIP) is a static, public IP address that can be allocated to you
    - Click on the "Actions" dropdown and select "Associate address."
    - Choose the instance or network interface you want to associate the EIP with, and confirm the association.
 
---
+----
 ### AWS Security Groups
 
 A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic.
@@ -115,7 +115,8 @@ A security group acts as a virtual firewall for your EC2 instances to control in
   - Any changes to security group rules are immediately applied to all associated instances without needing to restart them.
 
 By effectively managing security groups, you can enhance the security of your AWS environment by controlling access to and from your EC2 instances.
---
+
+----
 ### Spot Instances, On-Demand Instances, Savings Plans, Reserved Instances, Dedicated Hosts, Scheduled Instances, Capacity Reservations
 
 These are different pricing and provisioning models in AWS:
