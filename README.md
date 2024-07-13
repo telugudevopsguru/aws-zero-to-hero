@@ -9,7 +9,7 @@ An Auto Scaling Group (ASG) is a feature of AWS that automatically adjusts the n
 3. **Fault Tolerance:** Ensures applications can handle instance failures.
 4. **Elasticity:** Scales capacity up or down to maintain steady performance.
 5. **Easy Management:** Simplifies deployment and management of EC2 instances.
-
+----
 ### What is a Launch Configuration?
 
 A Launch Configuration defines the configuration settings for new EC2 instances launched by an Auto Scaling Group. It specifies the instance type, AMI, security groups, and other settings used when an instance is created.
@@ -25,7 +25,7 @@ A Launch Configuration defines the configuration settings for new EC2 instances 
 
 1. **Limited Flexibility:** Once created, a Launch Configuration cannot be modified; you need to create a new one.
 2. **Manual Updates:** Requires manual updates for changes like instance type or AMI.
-
+----
 ### Lab Session - Creation of an AWS Launch Configuration
 
 1. **Sign in to AWS Management Console:**
@@ -38,7 +38,7 @@ A Launch Configuration defines the configuration settings for new EC2 instances 
      - Select an instance type.
      - Configure details like IAM role, security groups, and storage.
      - Review and create the launch configuration.
-
+----
 ### What is an AWS Launch Template?
 
 An AWS Launch Template is a newer version of Launch Configuration that provides more features and flexibility. It allows you to define configurations for launching EC2 instances, including instance type, AMI, security groups, and more.
@@ -66,7 +66,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
 
 - **Launch Template:** Supports versioning, advanced configuration settings, and updates without recreating.
 - **Launch Configuration:** Older method, simpler, does not support versioning, requires recreation for updates.
-
+----
 ### Lab Session - Creation of an ASG through an AWS Launch Configuration
 
 1. **Sign in to AWS Management Console:**
@@ -78,7 +78,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
      - Select a launch configuration.
      - Configure scaling policies, network settings, and tags.
      - Review and create the Auto Scaling group.
-
+----
 ### Lab Session - Creation of an ASG through an AWS Launch Template
 
 1. **Sign in to AWS Management Console:**
@@ -90,7 +90,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
      - Select a launch template.
      - Configure scaling policies, network settings, and tags.
      - Review and create the Auto Scaling group.
-
+----
 ### Lab Session - Enabling CloudWatch Monitoring in an ASG
 
 1. **Sign in to AWS Management Console:**
@@ -101,7 +101,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
    - Select the Auto Scaling group.
    - Click on "Activity" tab, then "Instance management," then "Edit," then "Monitoring."
    - Enable CloudWatch detailed monitoring.
-
+----
 ### Lab Session - Deletion of an ASG
 
 1. **Sign in to AWS Management Console:**
