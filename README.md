@@ -217,18 +217,30 @@ Once attached, you typically need to mount the EBS volume to make it accessible 
 7. **Automate Mounting (Optional):**
    - Edit `/etc/fstab` to automatically mount the volume on system boot. Add a line like `/dev/xvdf   /mnt/data   ext4   defaults,nofail   0   2`.
 
+----
+
 ### Lab Session - Increase the Size of an Existing EBS Volume on a Linux EC2 Instance
+Increasing the size of an existing EBS (Elastic Block Store) volume on a Linux EC2 instance in AWS involves several steps, including resizing the volume and extending the file system. Here's a detailed guide on how to accomplish this:
 
-1. **Resize EBS Volume:**
-   - In the EC2 Dashboard, navigate to "Volumes."
-   - Select the EBS volume you want to resize and click "Actions > Modify Volume."
-   - Increase the size of the volume and click "Modify."
+### Steps to Increase the Size of an Existing EBS Volume on a Linux EC2 Instance
 
-2. **Resize File System:**
-   - SSH into your Linux EC2 instance.
-   - Use `lsblk` to verify the new size of the volume.
-   - Resize the file system on the volume (`sudo resize2fs /dev/xvdf`) to reflect the increased volume size.
+### Example:
 
+Suppose you have a Linux EC2 instance with an existing EBS volume (`vol-0abcdef1234567890`) of 50 GiB (`/dev/xvdf`) that you want to increase to 100 GiB:
+
+1. **Modify Volume:**
+   - Increase the size of `vol-0abcdef1234567890` to 100 GiB in the AWS Management Console.
+
+2. **SSH into Your Linux Instance:**
+   - Connect to your Linux instance via SSH.
+
+3. **Resize the File System:**
+   - Assuming it's an ext4 file system, use `sudo resize2fs /dev/xvdf`.
+
+4. **Verify:**
+   - Check with `df -h` to confirm the file system now shows the increased space.
+
+-----
 ### Lab Session - Attach an EBS Volume to a Windows EC2 Instance
 
 1. **Sign in to AWS Management Console:**
