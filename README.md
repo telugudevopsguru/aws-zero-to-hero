@@ -266,6 +266,7 @@ Suppose you have a Linux EC2 instance with an existing EBS volume (`vol-0abcdef1
    - RDP into your Windows EC2 instance.
    - Open Disk Management (`diskmgmt.msc`), right-click on the volume, and select "Extend Volume."
    - Follow the wizard to extend the volume using the unallocated space.
+-----
 
 ### Lab Session - Change the EBS Volume Type
 
@@ -275,7 +276,8 @@ Suppose you have a Linux EC2 instance with an existing EBS volume (`vol-0abcdef1
 2. **Modify EBS Volume Type:**
    - In the left sidebar, under "Elastic Block Store," click on "Volumes."
    - Select the EBS volume you want to modify and click "Actions > Modify Volume."
-   - Choose the new volume type (e.g., from gp2 to io1) and click "Modify."
+   - Choose the new volume type (e.g., from gp2 to gp3) and click "Modify."
+----
 
 ### Lab Session - Encrypt an Existing Attached EBS Volume
 
