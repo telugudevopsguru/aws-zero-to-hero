@@ -181,33 +181,24 @@ Each of these options provides different pricing models and flexibility, allowin
 ----
 ### Lab Session - Opening a Support Ticket with AWS
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the AWS Support Center at [AWS Support Center](https://console.aws.amazon.com/support/).
+### Example Description for an EBS Issue: Unable to Mount in Linux Server
 
-2. **Open Support Ticket:**
-   - Click on "Create case" to open a new support ticket.
-   - Choose the appropriate service category and describe your issue or request.
+Here is an example of a detailed description you might provide for an issue where you are unable to mount an EBS volume on a Linux server:
 
-3. **Provide Details:**
-   - Fill in the required fields, including contact information, severity level, and a detailed description of your issue.
+---
 
-4. **Submit Ticket:**
-   - Review the information and submit the ticket. Note down the case ID for reference.
+**Service**: Elastic Block Store (EBS)  
+**Category**: Volume Availability  
+**Severity**: System impaired  
 
-### Lab Session - Requesting Service Quotas in AWS
+**Description**:
+I am experiencing an issue with mounting an EBS volume on my Linux server. The details are as follows:
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the AWS Service Quotas Dashboard at [AWS Service Quotas](https://console.aws.amazon.com/servicequotas/).
+- **Volume ID**: vol-0abc12345def67890
+- **Instance ID**: i-0abc12345def67890
+- **Issue**: Unable to mount the EBS volume to the EC2 instance.
 
-2. **View Service Quotas:**
-   - Browse through the available service quotas for different AWS services.
-
-3. **Request Increase:**
-   - Select a quota and click on "Request quota increase."
-   - Fill out the request form, including details such as the desired limit increase and the reason for the request.
-
-4. **Submit Request:**
-   - Submit the request for AWS to review. Monitor the request status in the Service Quotas dashboard.
+Please assist in diagnosing and resolving this issue, as it is preventing us from accessing important data on the EBS volume. Can we have a quick call to discuss this further?
 
 ----
 ### Lab Session - Metadata and User Data in EC2
