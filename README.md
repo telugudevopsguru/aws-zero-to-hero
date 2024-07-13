@@ -19,16 +19,12 @@
 7. **Global Name Uniqueness**: Names must be globally unique due to S3's universal namespace.
 8. **Logging**: Supports enabling logging to track access and usage.
 
-### What is AWS Simple Storage Service (S3)?
-
-- AWS Simple Storage Service (S3) is an object storage service that offers scalable storage for data in the cloud.
-- It is designed to store and retrieve any amount of data from anywhere on the web.
-- S3 provides high availability, durability, and security for your data.
-
-### Buckets and Objects in Amazon S3
-
-- **Buckets:** Containers for storing objects (files) in S3. Every object is contained within a bucket.
-- **Objects:** Data files stored in S3, which can range in size from a few bytes to several terabytes. Each object is identified by a unique key within its bucket.
+### Objects in Bucket:
+- **Definition**: Objects are individual items stored in an S3 bucket.
+- **Characteristics**: Each object has a unique key and can store data up to 5TB, along with optional metadata.
+- **Hierarchy**: Objects are organized using unique keys, often resembling file paths, to simulate folder structures.
+- **Access**: Accessed via URLs incorporating bucket names and object keys (e.g., `https://s3.amazonaws.com/bucket_name/object_key`).
+- **Operations**: Common operations include upload, download, copy, delete, and list, managed via AWS SDKs, CLI, or AWS Management Console.
 ----
 ### Types of Storage Classes in AWS S3
 
