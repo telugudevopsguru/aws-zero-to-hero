@@ -9,7 +9,7 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
 3. **TLS Termination:** Supports TLS termination for end-to-end encryption.
 4. **Target Group Support:** Routes traffic to target groups using IP addresses and ports.
 5. **Health Checks:** Performs health checks on targets to ensure only healthy targets receive traffic.
-
+----
 ### Lab Session - Creation of an AWS Network Load Balancer
 
 1. **Sign in to AWS Management Console:**
@@ -20,7 +20,7 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
    - Click on "Create Load Balancer" and choose "Network Load Balancer."
    - Configure load balancer settings, including listeners, availability zones, security settings, and target groups.
    - Complete the creation and note the DNS name provided for your Network Load Balancer.
-
+----
 ### Lab Session - Deletion of an NLB
 
 1. **Sign in to AWS Management Console:**
@@ -30,7 +30,7 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
    - Click on "Load Balancers" in the left sidebar under "EC2."
    - Select the Network Load Balancer you want to delete.
    - Click on "Actions > Delete" and confirm the deletion.
-
+----
 ### Difference between an ALB and an NLB
 
 **AWS Application Load Balancer (ALB):**
@@ -45,7 +45,7 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
 - Routes traffic based on IP addresses and ports.
 - Supports TLS termination for end-to-end encryption.
 - Provides static IP addresses per Availability Zone (AZ).
-
+----
 ### Lab Session - Attaching an ALB to a New Auto Scaling Group
 
 1. **Sign in to AWS Management Console:**
@@ -56,7 +56,7 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
    - Click on "Create Auto Scaling group" and follow the wizard to create a new Auto Scaling group.
    - Configure scaling policies, network settings, and tags.
    - Choose the existing Application Load Balancer (ALB) during the creation process to attach it to the Auto Scaling group.
-
+----
 ### Lab Session - Attaching an ALB to an Existing Auto Scaling Group
 
 1. **Sign in to AWS Management Console:**
