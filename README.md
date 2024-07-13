@@ -1,6 +1,7 @@
 ### What is Cloud Computing?
 
-Cloud computing refers to the delivery of computing services—such as servers, storage, databases, networking, software, and more—over the internet ("the cloud"). It enables users to access and utilize these resources on-demand, rather than maintaining physical hardware or infrastructure locally.
+- Cloud computing refers to the delivery of computing services—such as servers, storage, databases, networking, software, and more—over the internet ("the cloud").
+- It enables users to access and utilize these resources on-demand, rather than maintaining physical hardware or infrastructure locally.
 
 ### Benefits of Cloud Computing
 
@@ -19,8 +20,16 @@ Cloud computing refers to the delivery of computing services—such as servers, 
 ### Types of Cloud Services
 
 1. **Infrastructure as a Service (IaaS):** Virtualized computing resources (servers, storage, networking).
+  ![IAAS - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-1/images/Infrastructure%20as%20a%20Service%20-%20%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+
 2. **Platform as a Service (PaaS):** Platform for developers to build, deploy, and manage applications.
+
+![PAAS - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-1/images/Platform%20as%20a%20Service-%20%20Moole%20Muralidhara%20Reddy-%20Tech%20World%20with%20Murali.png)
+
+
 3. **Software as a Service (SaaS):** Software delivered over the internet, typically on a subscription basis.
+4. 
+![SAAS - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-1/images/Software%20as%20a%20Service-%20%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ### What is AWS?
 
