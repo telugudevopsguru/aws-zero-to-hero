@@ -1,6 +1,8 @@
 ### What is AWS Simple Storage Service (S3)?
 
-AWS Simple Storage Service (S3) is an object storage service that offers scalable storage for data in the cloud. It is designed to store and retrieve any amount of data from anywhere on the web. S3 provides high availability, durability, and security for your data.
+- AWS Simple Storage Service (S3) is an object storage service that offers scalable storage for data in the cloud.
+- It is designed to store and retrieve any amount of data from anywhere on the web.
+- S3 provides high availability, durability, and security for your data.
 
 ### Buckets and Objects in Amazon S3
 
@@ -15,6 +17,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
 4. **One Zone-IA:** Lower-cost option for infrequently accessed data that doesn't require multiple Availability Zone resilience.
 5. **Glacier and Glacier Deep Archive:** For archival data with retrieval times ranging from minutes to hours.
 
+----
 ### Lab Session - Create an S3 Bucket
 
 1. **Sign in to AWS Management Console:**
@@ -25,7 +28,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
    - Enter a unique bucket name and choose a region.
    - Configure optional settings like versioning, logging, and tags.
    - Review and create the bucket.
-
+----
 ### Lab Session - Upload Objects to S3 using the AWS Console
 
 1. **Sign in to AWS Management Console:**
@@ -36,7 +39,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
    - Click on "Upload" and select files from your local machine.
    - Configure upload options and permissions as needed.
    - Upload the files to the S3 bucket.
-
+----
 ### Lab Session - Upload Objects to S3 using the AWS CLI
 
 1. **Open Command Line Interface:**
@@ -51,7 +54,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
      ```bash
      aws s3 sync <local_directory> s3://<bucket_name>/<remote_directory>
      ```
-
+----
 ### S3 Versioning and Enabling it
 
 - **Versioning:** Keeps multiple variants of an object in the same bucket.
@@ -60,7 +63,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
    - Navigate to S3 Dashboard.
    - Select the bucket and click on "Properties."
    - Under "Advanced settings," enable versioning.
-
+----
 ### Bucket Policy in Amazon S3
 
 - **Bucket Policy:** JSON-based access policy applied at the bucket level to manage permissions.
@@ -68,7 +71,7 @@ AWS Simple Storage Service (S3) is an object storage service that offers scalabl
    - Define permissions for who can access (e.g., IAM users, roles, or specific IP ranges).
    - Define actions allowed (e.g., read, write, delete).
    - Apply conditions for access (e.g., based on IP address, user agent).
-
+----
 ### Lab Session - Working with the Bucket Policy for S3 Bucket
 
 1. **Sign in to AWS Management Console:**
