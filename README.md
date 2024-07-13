@@ -177,6 +177,8 @@ Amazon EC2 offers a variety of instance purchasing options to help you optimize 
 - **Capacity Reservations**: Guarantee capacity for business-critical applications.
 
 Each of these options provides different pricing models and flexibility, allowing you to optimize costs while meeting the specific needs of your workloads.
+
+----
 ### Lab Session - Opening a Support Ticket with AWS
 
 1. **Sign in to AWS Management Console:**
@@ -207,6 +209,7 @@ Each of these options provides different pricing models and flexibility, allowin
 4. **Submit Request:**
    - Submit the request for AWS to review. Monitor the request status in the Service Quotas dashboard.
 
+----
 ### Lab Session - Metadata and User Data in EC2
 
 - **Metadata:** EC2 instance metadata provides information about the instance itself, such as instance ID, instance type, public IP address, and more. Metadata is accessible from within the instance using a special endpoint (`http://169.254.169.254/latest/meta-data/`).
