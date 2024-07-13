@@ -1,3 +1,24 @@
+### What is AWS S3:
+1. **Definition**: Amazon S3 is a simple storage service offering durable, highly available, and scalable data storage infrastructure at low costs.
+2. **Object Storage**: It is a key-based object store.
+3. **File Upload**: Allows uploading files ranging from 0 bytes to 5TB each.
+4. **Scalability**: Offers unlimited storage capacity.
+5. **Bucket Storage**: Files are stored in containers called buckets.
+6. **Key Structure**: Keys (object identifiers) can mimic hierarchical structures.
+7. **Data Accessibility**: Enables storing and retrieving any amount of data from anywhere on the internet.
+8. **Global Unique Names**: Operates with a universal namespace; bucket names must be globally unique.
+9. **DNS Name**: Each bucket has a DNS name for access (e.g., `https://s3-eu-east-2.amazonaws.com/bucket_name`).
+
+### Bucket:
+1. **Object Container**: Buckets are containers for storing objects.
+2. **Hierarchy**: Does not provide object hierarchy natively but uses object key names (prefixes) to simulate folders.
+3. **Folder Simulation**: Users can create folders within buckets using object key names.
+4. **Nested Buckets**: Nested buckets are not supported.
+5. **URL Access**: Bucket names are part of the URL for accessing stored objects.
+6. **Region Specific**: Each S3 bucket is specific to a region.
+7. **Global Name Uniqueness**: Names must be globally unique due to S3's universal namespace.
+8. **Logging**: Supports enabling logging to track access and usage.
+
 ### What is AWS Simple Storage Service (S3)?
 
 - AWS Simple Storage Service (S3) is an object storage service that offers scalable storage for data in the cloud.
@@ -8,7 +29,7 @@
 
 - **Buckets:** Containers for storing objects (files) in S3. Every object is contained within a bucket.
 - **Objects:** Data files stored in S3, which can range in size from a few bytes to several terabytes. Each object is identified by a unique key within its bucket.
-
+----
 ### Types of Storage Classes in AWS S3
 
 1. **Standard:** Provides high durability, availability, and performance for frequently accessed data.
