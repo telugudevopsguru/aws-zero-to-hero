@@ -110,30 +110,112 @@ Certainly! Let's expand on each AWS EBS volume type with their description, perf
 ----
 ### Lab Session - Creation of an EBS Volume
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the EC2 Dashboard at [AWS Management Console](https://console.aws.amazon.com/ec2/).
+Creating an EBS (Elastic Block Store) volume in AWS involves a few straightforward steps. Here’s a concise guide on how to create an EBS volume:
 
-2. **Create EBS Volume:**
-   - In the left sidebar, under "Elastic Block Store," click on "Volumes."
-   - Click on "Create Volume" and configure the volume settings, including volume type, size, and Availability Zone.
+### Steps to Create an EBS Volume in AWS
+
+1. **Navigate to the EC2 Console:**
+   - Log in to your AWS Management Console.
+   - Go to the EC2 dashboard.
+
+2. **Access the Volumes Section:**
+   - In the left-hand navigation pane, click on **"Volumes"** under the **"Elastic Block Store"** section.
 
 3. **Create Volume:**
-   - Review the configuration and click "Create Volume" to create the EBS volume.
+   - Click on **"Create Volume"** button.
+
+4. **Configure Volume Settings:**
+   - **Volume Type:** Choose the appropriate type based on your workload (e.g., gp2, io1, st1, sc1).
+   - **Size (GiB):** Specify the size of the volume in gigabytes (GB).
+   - **Availability Zone:** Select the availability zone where your EC2 instance that will use this volume is located.
+
+5. **Configure Additional Settings (Optional):**
+   - **Snapshot:** You can create a new volume from an existing snapshot if needed.
+   - **Encryption:** Choose whether to encrypt the volume using AWS-managed keys or customer-managed keys.
+   - **Tags:** Add tags to label your volume for easier management.
+
+6. **Review and Create:**
+   - Review your configuration settings.
+   - Click **"Create Volume"** to create the EBS volume.
+
+### Example:
+
+Let's say you want to create a 50 GiB General Purpose SSD (gp2) volume in the us-east-1a availability zone without encryption:
+
+- **Volume Type:** General Purpose SSD (gp2)
+- **Size:** 50 GiB
+- **Availability Zone:** us-east-1a
+- **Encryption:** None (optional)
+
+After reviewing your settings, click **"Create Volume"**. The EBS volume will be created and will appear in the list of volumes in the EC2 console. You can then attach this volume to your EC2 instance as needed.
+
 
 ### Lab Session - Attach an EBS Volume to a Linux EC2 Instance
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the EC2 Dashboard at [AWS Management Console](https://console.aws.amazon.com/ec2/).
+Attaching an EBS (Elastic Block Store) volume to a Linux EC2 instance in AWS involves a few steps. Here’s a guide on how to attach an EBS volume to a Linux EC2 instance:
 
-2. **Attach EBS Volume:**
-   - In the left sidebar, under "Elastic Block Store," click on "Volumes."
-   - Select the EBS volume you want to attach and click "Actions > Attach Volume."
-   - Choose the EC2 instance to attach the volume to and specify the device name (e.g., /dev/xvdf).
+### Steps to Attach an EBS Volume to a Linux EC2 Instance
 
-3. **Mount Volume:**
-   - SSH into your Linux EC2 instance.
-   - Use commands like `lsblk` to list available block devices and `sudo mkfs -t ext4 /dev/xvdf` to format the volume (if necessary).
-   - Create a mount point (`sudo mkdir /mnt/data`) and mount the volume (`sudo mount /dev/xvdf /mnt/data`).
+1. **Navigate to the EC2 Console:**
+   - Log in to your AWS Management Console.
+   - Go to the EC2 dashboard.
+
+2. **Identify Your EC2 Instance:**
+   - Note the Instance ID of the Linux EC2 instance to which you want to attach the EBS volume.
+
+3. **Create an EBS Volume (if not already created):**
+   - Follow the steps mentioned earlier to create an EBS volume, specifying the size, type, and availability zone.
+
+4. **Attach the EBS Volume:**
+
+   - In the EC2 dashboard, click on **"Volumes"** under **"Elastic Block Store"** in the left-hand navigation pane.
+   - Select the EBS volume you want to attach by clicking its checkbox.
+
+5. **Attach Volume Action:**
+   - Click **"Actions"** and then **"Attach Volume"**.
+
+6. **Configure Attachment:**
+   - In the **"Instance"** field, start typing the instance ID or name of your Linux EC2 instance.
+   - Select the instance from the drop-down list.
+   - In the **"Device"** field, specify the device name on the instance (e.g., `/dev/xvdf`). This is the device path where the volume will be mounted in the instance.
+
+7. **Attach the Volume:**
+   - Click **"Attach"** to attach the EBS volume to your Linux EC2 instance.
+
+### Example:
+
+Let's say you have an existing Linux EC2 instance with Instance ID `i-0abcdef1234567890` and you want to attach a 100 GiB General Purpose SSD (gp3) volume (`vol-1234567890abcdef0`) to it as `/dev/sdf`:
+
+- **Instance ID:** `i-0abcdef1234567890`
+- **EBS Volume ID:** `vol-1234567890abcdef0`
+- **Device:** `/dev/sdf`
+
+After attaching the volume, you can log in to your Linux EC2 instance and proceed to mount the attached volume to make use of it.
+
+### Mounting the EBS Volume on Linux
+
+Once attached, you typically need to mount the EBS volume to make it accessible within your Linux instance. Here are basic steps for mounting on a typical Linux system:
+
+1. **SSH into Your Linux Instance:**
+   - Use SSH to connect to your Linux instance where the volume is attached.
+
+2. **Check Attached Volumes:**
+   - Use the `lsblk` command to list all block devices including your newly attached volume. Identify the device name (e.g., `/dev/xvdf`).
+
+3. **Create a Mount Point:**
+   - Create a directory where you will mount the volume. For example, `sudo mkdir /mnt/data`.
+
+4. **Format the Volume (if not formatted):**
+   - If the volume is new or needs to be formatted, use a command like `sudo mkfs -t ext4 /dev/xvdf` to format it as ext4 (replace `/dev/xvdf` with your device name).
+
+5. **Mount the Volume:**
+   - Mount the volume to the mount point you created: `sudo mount /dev/xvdf /mnt/data`.
+
+6. **Verify Mounting:**
+   - Use `df -h` to verify that the volume is mounted correctly and check its available space.
+
+7. **Automate Mounting (Optional):**
+   - Edit `/etc/fstab` to automatically mount the volume on system boot. Add a line like `/dev/xvdf   /mnt/data   ext4   defaults,nofail   0   2`.
 
 ### Lab Session - Increase the Size of an Existing EBS Volume on a Linux EC2 Instance
 
