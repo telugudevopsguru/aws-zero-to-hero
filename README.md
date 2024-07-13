@@ -133,6 +133,36 @@ To configure a named profile named `dev` for the AWS CLI, you would typically us
 
 An IAM role is an AWS identity with permissions to access AWS services and resources. It is used to delegate access to users, applications, or services that don’t normally have access to AWS resources.
 
+### Steps to Create an IAM Role with Full S3 Access Policy
+
+1. **Sign in to the AWS Management Console:**
+   - Go to [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
+
+2. **Navigate to the IAM Console:**
+   - In the AWS Management Console, search for and select "IAM" under "Services", or directly go to the [IAM Dashboard](https://console.aws.amazon.com/iam/).
+
+3. **Create a New Role:**
+   - In the IAM dashboard, click on "Roles" in the left-hand navigation pane.
+   - Click on the "Create role" button to start creating a new IAM role.
+
+4. **Choose the Type of Trusted Entity:**
+   - Select "AWS service" as the type of trusted entity.
+   - Choose the service that will use this role. For S3 access, you can select "S3" from the list of services.
+
+5. **Attach Permissions Policies:**
+   - In the "Permissions" step, select "AmazonS3FullAccess" policy. This policy grants full access to all actions on all resources in S3.
+   - You can use the search box to find the policy quickly by typing "AmazonS3FullAccess".
+
+6. **Add Tags (Optional):**
+   - You can optionally add tags to categorize and manage your IAM resources. Tags are key-value pairs.
+
+7. **Review and Name the Role:**
+   - Review the details of the role configuration.
+   - Provide a name for your role, e.g., "S3FullAccessRole".
+
+8. **Create the Role:**
+   - Click on "Create role" to create the IAM role with full S3 access.
+
 ### Lab Session - How to Attach the IAM Role to an EC2 Instance?
 
 1. **Sign in to AWS Management Console:**
