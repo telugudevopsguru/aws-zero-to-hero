@@ -19,10 +19,6 @@
 5. **Management and Access:** You can manage snapshots through the AWS Management Console, AWS Command Line Interface (CLI), or AWS SDKs. Snapshots can be tagged, copied, shared, and deleted as per your requirements.
 
 
-### What is a Snapshot in AWS?
-
-A snapshot in AWS refers to a point-in-time backup of an EBS volume or an EC2 instance's root volume. It captures the entire state of the volume at the moment the snapshot is taken, including all data, configurations, and settings. Snapshots are stored in Amazon S3 and are incremental, meaning only the changed blocks since the last snapshot are stored. They are crucial for data backup, disaster recovery, and creating new volumes or AMIs.
-
 ### Lab Session - Creation of a Snapshot from an EC2 Instance
 
 1. **Sign in to AWS Management Console:**
