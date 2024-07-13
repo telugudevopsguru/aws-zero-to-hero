@@ -62,22 +62,73 @@ IAM policies are JSON documents that define permissions allowing or denying acti
 
 ### Lab Session - Configuring AWS CLI
 
-1. **Install AWS CLI:**
-   - Install AWS CLI on your local machine. Instructions vary based on your operating system; refer to AWS documentation for detailed steps.
+Configuring the AWS CLI involves setting up authentication credentials and default settings to interact with AWS services from the command line. Here’s a step-by-step guide to configuring the AWS CLI:
 
-2. **Configure AWS CLI:**
-   - Open a terminal or command prompt.
-   - Run `aws configure` and enter your AWS Access Key ID, Secret Access Key, default region, and output format (optional).
+### Prerequisites
+Before configuring the AWS CLI, ensure you have:
+- An AWS account.
+- AWS CLI installed on your local machine. If not installed, you can download it from [AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
+
+### Steps to Configure AWS CLI
+
+1. **Open a Terminal or Command Prompt:**
+   - Depending on your operating system, open Terminal (for macOS/Linux) or Command Prompt (for Windows).
+
+2. **Run `aws configure` Command:**
+   - Type the following command and press Enter:
+     ```
+     aws configure
+     ```
+
+3. **Enter AWS Access Key ID:**
+   - You will be prompted to enter your AWS Access Key ID. This is a key credential for accessing AWS services programmatically. It looks like `AKIAIOSFODNN7EXAMPLE`.
+
+4. **Enter AWS Secret Access Key:**
+   - Next, you will be prompted to enter your AWS Secret Access Key, which is paired with the Access Key ID to authenticate requests. It looks like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`.
+
+5. **Specify Default Region Name:**
+   - Enter the AWS region code that you want to use by default. For example, `us-east-1` or `eu-west-1`. This specifies the region where your AWS resources will be created and accessed unless overridden by specific commands.
+   
+6. **Specify Default Output Format (Optional):**
+   - Optionally, specify the default output format. The output can be formatted as `json`, `text`, `table`, etc. If you don't specify, it defaults to `json`.
+
+7. **Verification:**
+   - Once you’ve entered all the required information, AWS CLI will store these configurations in the `~/.aws/credentials` and `~/.aws/config` files on macOS/Linux or `%UserProfile%\.aws\credentials` and `%UserProfile%\.aws\config` files on Windows.
+
+8. **Test Configuration:**
+   - To verify that your configuration works, you can run a simple AWS CLI command, such as:
+     ```
+     aws s3 ls
+     ```
+   - This command lists all your S3 buckets. If configured correctly, it will list the buckets accessible with the provided credentials.
+
 
 ### Lab Session - Named Profiles for the AWS CLI
 
-1. **Edit AWS CLI Configuration:**
-   - Open or create the AWS CLI configuration file (`~/.aws/config` or `%UserProfile%\.aws\config` on Windows).
-   - Add a new profile under `[profile profile_name]` with `aws_access_key_id`, `aws_secret_access_key`, `region`, and `output` parameters.
+To configure a named profile named `dev` for the AWS CLI, you would typically use the `aws configure` command with the `--profile` option. Here's how you can do it:
 
-2. **Use Named Profile:**
-   - Specify the named profile with `--profile profile_name` parameter in AWS CLI commands (e.g., `aws s3 ls --profile profile_name`).
+1. Open your terminal or command prompt.
 
+2. Enter the following command:
+   ```
+   aws configure --profile dev
+   ```
+
+3. You will be prompted to enter the following information:
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - Default region name
+   - Default output format (optional)
+
+4. After entering the required information, press Enter.
+
+5. AWS CLI will store these configurations under the profile name `dev` in the AWS credentials and config files located in your user's home directory (`~/.aws/`).
+
+6. You can verify the configuration by using the `--profile` option with AWS CLI commands, for example:
+   ```
+   aws ec2 describe-instances --profile dev
+   ```
+----
 ### What is an IAM Role?
 
 An IAM role is an AWS identity with permissions to access AWS services and resources. It is used to delegate access to users, applications, or services that don’t normally have access to AWS resources.
