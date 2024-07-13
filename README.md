@@ -3,6 +3,15 @@
 - Amazon Elastic Block Store (EBS) is a high-performance block storage service designed for use with Amazon EC2 instances.
 - It provides persistent block-level storage volumes that can be attached to EC2 instances. EBS volumes are highly available and reliable storage volumes that can be used for databases, file systems, or any other application requiring durable storage.
 
+### Key Features of AWS EBS
+
+- **Elasticity**: Volumes can be dynamically scaled in size and performance to meet changing application demands.
+- **Durability**: Data is automatically replicated within an Availability Zone to protect against component failures.
+- **Snapshotting**: Point-in-time snapshots enable backup and recovery of EBS volumes.
+- **Encryption**: Volumes can be encrypted using AWS-managed or customer-managed keys for enhanced security.
+- **Availability**: Available in all AWS regions, allowing attachment to instances within the same region.
+
+
 ### Types of AWS EBS Volumes
 
 Certainly! Let's expand on each AWS EBS volume type with their description, performance characteristics, and specific use cases:
@@ -97,13 +106,6 @@ Certainly! Let's expand on each AWS EBS volume type with their description, perf
   - **Non-Critical Applications:** Development and testing environments where performance is not a primary concern.
   - **Budget-Conscious Environments:** Where minimizing costs is the primary consideration.
 
-### Key Features of AWS EBS
-
-- **Elasticity**: Volumes can be dynamically scaled in size and performance to meet changing application demands.
-- **Durability**: Data is automatically replicated within an Availability Zone to protect against component failures.
-- **Snapshotting**: Point-in-time snapshots enable backup and recovery of EBS volumes.
-- **Encryption**: Volumes can be encrypted using AWS-managed or customer-managed keys for enhanced security.
-- **Availability**: Available in all AWS regions, allowing attachment to instances within the same region.
 
 ----
 ### Lab Session - Creation of an EBS Volume
