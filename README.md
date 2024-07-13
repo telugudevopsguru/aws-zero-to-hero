@@ -8,7 +8,7 @@ AWS Elastic Load Balancing (ELB) automatically distributes incoming application 
 2. **Fault Tolerance:** Automatically routes traffic away from unhealthy targets to healthy ones.
 3. **Scalability:** Handles varying traffic loads by scaling resources up or down automatically.
 4. **Security:** Provides SSL/TLS termination to encrypt traffic and integration with AWS WAF for web application firewall protection.
-
+----
 ### What is an AWS Classic Load Balancer?
 
 AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS, primarily designed for applications that were built within the EC2-Classic network. It supports both EC2-Classic and EC2-VPC platforms.
@@ -19,7 +19,7 @@ AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS,
 2. **Sticky Sessions:** Supports session affinity, directing requests to the same instance.
 3. **Health Checks:** Monitors the health of registered instances and routes traffic only to healthy instances.
 4. **Cross-Zone Load Balancing:** Distributes traffic evenly across instances in multiple Availability Zones.
-
+----
 ### Lab Session - Creation of an AWS Classic Load Balancer
 
 1. **Sign in to AWS Management Console:**
@@ -30,7 +30,7 @@ AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS,
    - Click on "Create Load Balancer" and choose "Classic Load Balancer."
    - Configure load balancer settings, including listeners, availability zones, security settings, and health checks.
    - Complete the creation and note the DNS name provided for your Classic Load Balancer.
-
+----
 ### Lab Session - Deletion of a Classic Load Balancer
 
 1. **Sign in to AWS Management Console:**
@@ -40,7 +40,7 @@ AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS,
    - Click on "Load Balancers" in the left sidebar under "EC2."
    - Select the Classic Load Balancer you want to delete.
    - Click on "Actions > Delete" and confirm the deletion.
-
+----
 ### What is an AWS Target Group?
 
 An AWS Target Group is used with Application Load Balancers and Network Load Balancers to route requests to one or more registered targets, such as EC2 instances, IP addresses, or Lambda functions, based on routing rules.
@@ -61,7 +61,7 @@ A Listener is a process that checks for connection requests from clients and man
      - Configure health checks to monitor the health of targets.
      - Register targets (EC2 instances, IP addresses, or Lambda functions) with the target group.
      - Complete the creation of the target group.
-
+----
 ### What is an AWS Application Load Balancer?
 
 AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) and directs traffic based on URL routing rules, allowing multiple applications to be hosted on a single load balancer. It supports advanced routing, SSL termination, and content-based routing.
@@ -73,7 +73,7 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
 3. **Path-Based Routing:** Routes traffic based on URL paths.
 4. **WebSocket Support:** Supports WebSocket traffic.
 5. **Integrated with AWS WAF:** Provides protection against common web exploits and SQL injection.
-
+----
 ### Lab Session - Creation of an Application Load Balancer
 
 1. **Sign in to AWS Management Console:**
@@ -84,7 +84,7 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
    - Click on "Create Load Balancer" and choose "Application Load Balancer."
    - Configure load balancer settings, including listeners, availability zones, security settings, and routing rules.
    - Complete the creation and note the DNS name provided for your Application Load Balancer.
-
+----
 ### Lab Session - Deletion of an ALB
 
 1. **Sign in to AWS Management Console:**
