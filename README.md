@@ -59,7 +59,7 @@ IAM policies are JSON documents that define permissions allowing or denying acti
 1. **Managed Policies:** AWS-managed policies created and managed by AWS.
 2. **Inline Policies:** Policies that you create and manage directly within an IAM identity (user, group, role).
 3. **Custom Policies:** Policies tailored to specific needs and attached to IAM identities.
-
+----
 ### Lab Session - Configuring AWS CLI
 
 Configuring the AWS CLI involves setting up authentication credentials and default settings to interact with AWS services from the command line. Here’s a step-by-step guide to configuring the AWS CLI:
@@ -102,7 +102,7 @@ Before configuring the AWS CLI, ensure you have:
      ```
    - This command lists all your S3 buckets. If configured correctly, it will list the buckets accessible with the provided credentials.
 
-
+---
 ### Lab Session - Named Profiles for the AWS CLI
 
 To configure a named profile named `dev` for the AWS CLI, you would typically use the `aws configure` command with the `--profile` option. Here's how you can do it:
@@ -162,24 +162,15 @@ An IAM role is an AWS identity with permissions to access AWS services and resou
 
 8. **Create the Role:**
    - Click on "Create role" to create the IAM role with full S3 access.
-
+----
 ### Lab Session - How to Attach the IAM Role to an EC2 Instance?
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the IAM Dashboard at [AWS Management Console](https://console.aws.amazon.com/iam/).
-
-2. **Create IAM Role:**
-   - Click on "Roles" in the left sidebar and then "Create role."
-   - Select the type of trusted entity (AWS service, another AWS account, etc.).
-   - Choose the use case policy (e.g., EC2) to define permissions.
-   - Complete the role creation.
-
-3. **Attach IAM Role to EC2 Instance:**
    - Navigate to the EC2 Dashboard at [AWS Management Console](https://console.aws.amazon.com/ec2/).
    - Select the EC2 instance you want to attach the IAM role to.
    - Click on "Actions > Security > Modify IAM role" and select the IAM role you created.
    - Apply the changes to attach the IAM role to the EC2 instance.
 
+----
 ### Root Account vs IAM User
 
 - **Root Account:** The AWS account created when you first sign up with AWS. It has unrestricted access to all AWS resources and services.
