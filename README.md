@@ -233,11 +233,21 @@ To configure the IAM Password Policy in AWS:
    - Click on the "Security credentials" tab and locate "Assigned MFA device."
    - Follow the instructions to configure and activate MFA using a hardware device or virtual MFA app.
 
+----
 ### IAM Best Practices
 
-- **Use IAM Roles:** Instead of long-term access keys for applications.
-- **Implement Least Privilege:** Grant only necessary permissions to users, groups, and roles.
-- **Regularly Rotate Credentials:** Change passwords and access keys periodically.
-- **Enable MFA:** Add an extra layer of security for user accounts.
-- **Monitor and Audit:** Review IAM policies, roles, and permissions regularly.
-  
+1. **Implement Least Privilege**: Grant minimal permissions necessary for tasks, avoiding excessive access.
+
+2. **Enable MFA**: Require multi-factor authentication for all IAM users to enhance login security.
+
+3. **Secure Root Account**: Use it sparingly, secure with strong passwords and MFA.
+
+4. **Use IAM Roles for EC2**: Assign roles instead of access keys to EC2 instances for secure AWS resource access.
+
+5. **Monitor IAM Activity**: Enable CloudTrail for logging and CloudWatch for alarms on IAM events.
+
+6. **Rotate Credentials**: Regularly update access keys, passwords, and MFA devices to mitigate risks.
+
+7. **Use IAM Policy Conditions**: Apply conditions (e.g., IP, time) in policies to enforce stricter access controls.
+
+8. **Centralize Identity Management**: Use AWS Organizations and SSO for streamlined account management and security integration.
