@@ -1,25 +1,74 @@
 ### What is AWS EBS?
 
-Amazon Elastic Block Store (EBS) is a high-performance block storage service designed for use with Amazon EC2 instances. It provides persistent block-level storage volumes that can be attached to EC2 instances. EBS volumes are highly available and reliable storage volumes that can be used for databases, file systems, or any other application requiring durable storage.
+- Amazon Elastic Block Store (EBS) is a high-performance block storage service designed for use with Amazon EC2 instances.
+- It provides persistent block-level storage volumes that can be attached to EC2 instances. EBS volumes are highly available and reliable storage volumes that can be used for databases, file systems, or any other application requiring durable storage.
 
-### Features of AWS EBS
+### Types of AWS EBS Volumes
 
-1. **High Performance:** EBS volumes offer low-latency performance needed for a variety of workloads.
-2. **Durability:** Data on EBS volumes is replicated within the same Availability Zone to protect against component failure.
-3. **Snapshots:** EBS volumes can be backed up using point-in-time snapshots for data protection and disaster recovery.
-4. **Encryption:** EBS volumes support encryption at rest to help meet compliance requirements and secure data.
-5. **Scalability:** Easily increase the size or performance of EBS volumes to meet changing application requirements.
+Amazon Elastic Block Store (EBS) offers several types of volumes tailored to different performance and cost requirements. Here are the main types:
 
-### Types of EBS Volumes
+#### 1. General Purpose SSD (gp2)
 
-AWS offers several types of EBS volumes optimized for different use cases:
+- **Description**: Default EBS volume type, suitable for a wide variety of workloads.
+- **Performance**:
+  - Balanced price and performance.
+  - Supports burstable IOPS up to 16,000 and throughput up to 250 MiB/s.
+- **Use Cases**:
+  - Small to medium-sized databases.
+  - Development and test environments.
+  - Boot volumes.
 
-1. **General Purpose SSD (gp2):** Suitable for a broad range of workloads, providing balanced price and performance.
-2. **Provisioned IOPS SSD (io1):** Designed for I/O-intensive workloads requiring high performance with consistent and low-latency I/O.
-3. **Throughput Optimized HDD (st1):** Low-cost HDD volume designed for frequently accessed, throughput-intensive workloads.
-4. **Cold HDD (sc1):** Lowest cost HDD volume designed for less frequently accessed workloads.
-5. **Magnetic (standard):** Previous generation HDD volume for workloads where data is accessed infrequently.
+#### 2. Provisioned IOPS SSD (io1)
 
+- **Description**: Designed for I/O-intensive workloads that require consistent and high performance.
+- **Performance**:
+  - Offers up to 64,000 IOPS and 1,000 MiB/s throughput.
+  - Allows you to specify IOPS requirements.
+- **Use Cases**:
+  - Critical business applications.
+  - Large relational databases (e.g., MySQL, PostgreSQL).
+  - NoSQL databases (e.g., MongoDB, Cassandra).
+
+#### 3. Throughput Optimized HDD (st1)
+
+- **Description**: Optimized for frequently accessed, throughput-intensive workloads.
+- **Performance**:
+  - Provides up to 500 MiB/s throughput.
+  - Lower cost per GB than SSD volumes.
+- **Use Cases**:
+  - Big data analytics.
+  - Data warehouses.
+  - Log processing.
+
+#### 4. Cold HDD (sc1)
+
+- **Description**: Designed for less frequently accessed workloads that are cost-sensitive.
+- **Performance**:
+  - Provides up to 250 MiB/s throughput.
+  - Lowest cost per GB among EBS volume types.
+- **Use Cases**:
+  - Infrequent data access.
+  - Scenarios where cost optimization is critical (e.g., backups, disaster recovery).
+
+#### 5. Magnetic (standard)
+
+- **Description**: Older generation EBS volume type, gradually being phased out.
+- **Performance**:
+  - Provides the lowest cost per GB of all EBS volume types.
+  - Suitable for workloads with low I/O requirements.
+- **Use Cases**:
+  - Non-critical workloads.
+  - Scenario where cost is the primary consideration over performance.
+
+### Key Features of AWS EBS
+
+- **Elasticity**: Volumes can be dynamically scaled in size and performance to meet changing application demands.
+- **Durability**: Data is automatically replicated within an Availability Zone to protect against component failures.
+- **Snapshotting**: Point-in-time snapshots enable backup and recovery of EBS volumes.
+- **Encryption**: Volumes can be encrypted using AWS-managed or customer-managed keys for enhanced security.
+- **Availability**: Available in all AWS regions, allowing attachment to instances within the same region.
+
+----
 ### Lab Session - Creation of an EBS Volume
 
 1. **Sign in to AWS Management Console:**
