@@ -53,7 +53,7 @@ AWS EFS stands for Amazon Elastic File System. It is a scalable, fully managed f
 4. **Container Storage:** Storing persistent data for containers managed by Kubernetes or ECS.
 
 5. **Database Backups:** Storing database backups and logs accessible by multiple instances.
-
+----
 ### Types of AWS EFS Storage Classes
 
 AWS EFS currently offers two storage classes:
@@ -61,7 +61,7 @@ AWS EFS currently offers two storage classes:
 1. **Standard Storage:** This is the default storage class that is suitable for workloads with a broad range of access patterns, including frequently accessed data and larger volumes of data.
 
 2. **Infrequent Access (IA) Storage:** This storage class is optimized for workloads that access data less frequently but require cost-effective storage. It provides a lower price point compared to standard storage, with a retrieval fee when accessing data.
-
+----
 ### Lab Session - Creation of AWS EFS
 
 1. **Sign in to AWS Management Console:**
@@ -72,7 +72,7 @@ AWS EFS currently offers two storage classes:
    - Choose the appropriate settings, including the VPC and subnets where you want to create the EFS.
    - Optionally configure performance mode and encryption settings.
    - Click "Create file system" to create the EFS.
-
+----
 ### Lab Session - Mounting AWS EFS in an EC2 Instance
 
 1. **Install NFS Client on EC2 Instance:**
@@ -90,7 +90,7 @@ AWS EFS currently offers two storage classes:
      sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2 <File System ID>:/ /mnt/efs
      ```
    - Replace `<File System ID>` with your actual File System ID.
-
+----
 ### Lab Session - Deletion of AWS EFS
 
 1. **Sign in to AWS Management Console:**
