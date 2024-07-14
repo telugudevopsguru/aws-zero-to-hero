@@ -1,3 +1,12 @@
+#### INSTRUCTOR DETAILS
+
+|  Information             | Details                                                                      |
+|----------------------    |------------------------------------------------------------------------------|
+| **Name**                 | Moole Muralidhara Reddy                                                      |
+| **Email**                | techworldwithmurali@gmail.com                                                |
+| **Website**              | https://www.techworldwithmurali.com               |
+| **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
+
 ### NAT Gateway and NAT Instance in AWS VPC
 
 **NAT (Network Address Translation) Gateway** and **NAT Instance** are used to enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating connections with those instances.
