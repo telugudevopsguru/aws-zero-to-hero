@@ -74,14 +74,72 @@ By leveraging AWS CloudWatch, you can maintain a high level of operational excel
 ----
 ### Lab Session - Sending VPC Flow Logs to a CloudWatch Log Group
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the VPC Dashboard at [AWS Management Console](https://console.aws.amazon.com/vpc/).
+### Step 1: Create a CloudWatch Log Group
 
-2. **Configure VPC Flow Logs:**
-   - Select your VPC and click on "Flow Logs" in the left menu.
-   - Click on "Create Flow Log."
-   - Choose settings for flow log creation, including the destination log group in CloudWatch.
-   - Review and create the flow log.
+If you haven't already created a CloudWatch Log Group, follow these steps:
+
+1. **Navigate to CloudWatch**:
+   - Sign in to the AWS Management Console.
+   - Open the CloudWatch console at [https://console.aws.amazon.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/).
+
+2. **Access Logs**:
+   - In the left-hand navigation pane, click on **Logs**.
+
+3. **Create Log Group**:
+   - Click the **Create log group** button.
+   - Enter a name for your log group, such as `VPCFlowLogs`.
+   - Optionally, you can add tags to your log group.
+   - Click the **Create log group** button.
+
+### Step 2: Create an IAM Role
+
+You need an IAM role that has the necessary permissions to publish flow logs to CloudWatch Logs.
+
+1. **Navigate to IAM**:
+   - Open the IAM console at [https://console.aws.amazon.com/iam/](https://console.aws.amazon.com/iam/).
+
+2. **Create Role**:
+   - In the left-hand navigation pane, click on **Roles** and then **Create role**.
+   - Select **AWS Service** and then **EC2**.
+   - Click **Next: Permissions**.
+
+3. **Attach Policies**:
+   - Attach the following policies:
+     - `CloudWatchLogsFullAccess`
+     - `AmazonEC2FullAccess`
+
+4. **Create Role**:
+   - Click **Next: Tags**, then **Next: Review**.
+   - Enter a role name, such as `VPCFlowLogsRole`.
+   - Click **Create role**.
+
+### Step 3: Create VPC Flow Logs
+
+1. **Navigate to VPC**:
+   - Open the VPC console at [https://console.aws.amazon.com/vpc/](https://console.aws.amazon.com/vpc/).
+
+2. **Access Flow Logs**:
+   - In the left-hand navigation pane, click on **Your VPCs**.
+   - Select the VPC for which you want to create a flow log.
+   - In the **Actions** dropdown menu, select **Create flow log**.
+
+3. **Configure Flow Log**:
+   - **Filter**: Choose the type of traffic to capture (e.g., All, Reject, or Accept).
+   - **Destination**: Select **Send to CloudWatch Logs**.
+   - **Log Group**: Enter the name of the CloudWatch Log Group you created (`VPCFlowLogs`).
+   - **IAM Role**: Select the IAM role you created (`VPCFlowLogsRole`).
+
+4. **Create Flow Log**:
+   - Click the **Create flow log** button.
+
+### Verifying Flow Logs
+
+1. **Navigate to CloudWatch Logs**:
+   - Go to the CloudWatch console and select **Logs** from the left-hand navigation pane.
+
+2. **Check Log Streams**:
+   - Find and select the log group `VPCFlowLogs`.
+   - You should see log streams corresponding to the network interfaces within your VPC, containing the flow log records.
 
 ----
 ### Lab Session - Setting Up a CloudWatch Alarm for an EC2 Instance
