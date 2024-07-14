@@ -50,9 +50,6 @@ ACLs provide a straightforward way to control access to your S3 resources based 
    - This URL allows temporary access to download the object for one hour.
 
 ----
-### Server-side Encryption for Amazon S3 Buckets
-
-Server-side encryption for Amazon S3 buckets enhances data security by encrypting objects stored in S3 using encryption keys managed by AWS. Here are the key points:
 
 ### Server-side Encryption for Amazon S3 Buckets:
 - **Definition**: It encrypts objects stored in S3 buckets at the server level, ensuring data confidentiality.
