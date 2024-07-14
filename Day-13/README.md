@@ -125,23 +125,4 @@ Target : Internet Gateway ID
    - Select the route table associated with the private subnet.
    - Add a new route with `0.0.0.0/0` as the destination and the NAT Gateway ID as the target.
 
-### Lab Session - Delete a NAT Gateway in AWS VPC
-
-1. **Delete the NAT Gateway:**
-   - Navigate to the VPC dashboard.
-   - In the left pane, choose "NAT Gateways".
-   - Select the NAT Gateway you wish to delete.
-   - Click on "Actions" and choose "Delete NAT Gateway".
-   - Confirm the deletion.
-
-2. **Release the Elastic IP Address:**
-   - Navigate to the Elastic IPs section in the EC2 dashboard.
-   - Select the Elastic IP address associated with the deleted NAT Gateway.
-   - Click on "Actions" and choose "Release Elastic IP address".
-   - Confirm the release.
-
-### Summary
-
-NAT Gateways and NAT Instances enable instances in private subnets to access the internet while maintaining security. NAT Gateways are managed, scalable, and highly available solutions provided by AWS, whereas NAT Instances require manual setup, management, and scaling. The lab sessions guide you through the process of creating and deleting both NAT Gateways and NAT Instances in AWS VPC.
-
 
