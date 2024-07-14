@@ -24,6 +24,7 @@
    - **Usage Details:** Enter usage details such as instance hours, storage size, data transfer, etc.
    - **Estimate:** View the estimated cost breakdown including compute, storage, data transfer, and other costs.
 
+----
 ### Cost Estimation for EC2 Instances, EBS, RDS
 
 #### Estimating Costs for EC2 Instances
@@ -40,7 +41,7 @@
 1. **Select RDS Service:**
    - Navigate to RDS section in the AWS Calculator.
    - Choose the database engine (e.g., MySQL, PostgreSQL), instance type, storage type, and usage details (e.g., storage size, instance hours).
-
+----
 ### Practical Exercises with Different Instance Types
 
 #### Example Practical Exercise:
