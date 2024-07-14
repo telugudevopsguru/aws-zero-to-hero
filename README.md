@@ -268,14 +268,43 @@ You need an IAM role that has the necessary permissions to publish flow logs to 
 ----
 ### Lab Session - Setting Up AWS CloudTrail to Send Logs to an S3 Bucket
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the CloudTrail Dashboard at [AWS Management Console](https://console.aws.amazon.com/cloudtrail/).
+#### 1. **Sign in to AWS Management Console**
+   - Go to [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
 
-2. **Create Trail:**
-   - Click on "Trails" in the left menu and then "Create trail."
-   - Enter a name for the trail and choose the S3 bucket where log files will be delivered.
-   - Configure trail settings, including log file encryption and CloudWatch Logs integration.
-   - Review and create the trail.
+#### 2. **Navigate to CloudTrail**
+
+   - Open the **CloudTrail console** at [https://console.aws.amazon.com/cloudtrail/](https://console.aws.amazon.com/cloudtrail/).
+
+#### 3. **Create a New Trail**
+
+   - In the CloudTrail dashboard, click on **Trails** in the left-hand navigation pane.
+   - Click on **Create trail**.
+
+#### 4. **Configure Trail Settings**
+
+   - **Trail Name**: Enter a name for your trail (e.g., `MyCloudTrail`).
+   - **Storage Location**: Choose **S3** from the drop-down menu.
+   - **S3 Bucket**: Select an existing S3 bucket or create a new one to store your CloudTrail logs.
+   - **Enable CloudWatch Logs**: Optionally, you can enable CloudWatch Logs for real-time monitoring of CloudTrail log file delivery.
+   - **Encrypt Log Files**: Optionally, enable encryption for your log files using AWS KMS.
+   - **Apply trail to all regions**: Choose whether to apply the trail to all regions or specific regions.
+
+#### 5. **Create or Update an IAM Role**
+
+   - If you haven't already configured a CloudTrail service-linked role or an IAM role for CloudTrail, you'll be prompted to create or update one during trail creation.
+   - Ensure the IAM role has permissions to write logs to your chosen S3 bucket.
+
+#### 6. **Specify Advanced Event Logging (Optional)**
+
+   - **Management Events**: Choose to log management events like create, modify, and delete actions on AWS resources.
+   - **Data Events**: Choose to log data events like S3 object-level activities and Lambda function executions.
+   - Configure any other advanced settings as per your requirements.
+
+#### 7. **Review and Create Trail**
+
+   - Review all the settings you’ve configured for your trail.
+   - Click **Create trail** to create your CloudTrail and start sending logs to the specified S3 bucket.
+
 ----
 ### Lab Session - Deletion of CloudTrail
 
