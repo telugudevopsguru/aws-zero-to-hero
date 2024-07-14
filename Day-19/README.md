@@ -53,7 +53,7 @@
 
 6. **Seamless Integration**
    - EKS integrates seamlessly with other AWS services, allowing you to take advantage of AWS’s comprehensive suite of services for databases, machine learning, analytics, and more.
-
+----
 ## Setting up AWS EKS Step-by-Step Guide
 
 ### Step 1: Create the IAM user and provide Admin Access
