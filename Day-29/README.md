@@ -26,7 +26,7 @@
 3. **AD Connector:**
    - A directory gateway that connects your on-premises Microsoft Active Directory to AWS.
    - Allows you to proxy authentication requests to your on-premises AD without caching any information in the cloud.
-
+----
 ### Getting Started with AWS Managed Microsoft AD
 
 #### AWS Managed Microsoft AD Prerequisites
@@ -63,7 +63,7 @@
 6. **Directory Creation Process:**
    - AWS will start creating your directory, which may take several minutes.
    - Once created, the directory status will change to "Active."
-
+----
 #### Deploy an Amazon EC2 Instance to Manage Your AWS Managed Microsoft AD
 
 1. **Launch an EC2 Instance:**
@@ -87,7 +87,7 @@
 
 6. **Connect to the EC2 Instance:**
    - Once the instance is running, connect to it using RDP.
-
+----
 #### Verify that the Base Test Lab is Operational
 
 1. **Join the EC2 Instance to the Directory:**
