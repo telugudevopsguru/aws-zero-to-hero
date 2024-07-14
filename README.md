@@ -61,9 +61,69 @@ SSM Agent enables the following capabilities:
 - **State Manager:** Ensures your instances are configured per your desired state, enforcing configurations and applying updates automatically.
 - **Inventory and Patch Management:** Collects metadata about your instances, installed applications, and patches, facilitating inventory management and patch deployments.
 
-**Install SSM Agent on EC2 Instance:**
-   - SSH into your EC2 instance.
-   - Install the SSM Agent using the appropriate commands for your operating system.
+### Install SSM Agent on EC2 Instance:
+To install SSM Agent on an EC2 instance, you typically follow these steps:
+
+### Prerequisites:
+- Your EC2 instance must have an IAM role attached that grants it permissions to communicate with AWS Systems Manager (SSM). Ensure the IAM role has the necessary policies attached (e.g., AmazonSSMManagedInstanceCore).
+
+### Installation Steps:
+
+1. **Connect to Your EC2 Instance**:
+   You can connect to your EC2 instance using SSH (for Linux) or RDP (for Windows). Ensure you have administrative privileges on the instance.
+
+2. **Download and Install SSM Agent**:
+   
+   - For **Amazon Linux 2** or **Ubuntu Server**:
+
+     ```bash
+     sudo yum install -y amazon-ssm-agent  # Amazon Linux 2
+     sudo apt-get install -y amazon-ssm-agent  # Ubuntu Server
+     ```
+
+   - For **Amazon Linux** or **RHEL**:
+
+     ```bash
+     sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+     ```
+
+   - For **Windows Server**:
+     - Download the SSM Agent installer package from the AWS SSM documentation or use the Systems Manager console.
+     - Run the installer package and follow the installation prompts.
+
+3. **Start and Enable SSM Agent**:
+   
+   - For **Amazon Linux 2** or **Ubuntu Server**:
+
+     ```bash
+     sudo systemctl start amazon-ssm-agent
+     sudo systemctl enable amazon-ssm-agent
+     ```
+
+   - For **Amazon Linux** or **RHEL**:
+
+     ```bash
+     sudo start amazon-ssm-agent
+     sudo chkconfig amazon-ssm-agent on
+     ```
+
+   - For **Windows Server**:
+     - The installer typically starts the service automatically. Ensure it's running from the Services management console (`services.msc`).
+
+4. **Verify SSM Agent Installation**:
+   - Check the status of SSM Agent to ensure it's running without errors:
+
+     ```bash
+     sudo systemctl status amazon-ssm-agent  # Linux
+     Get-Service AmazonSSMAgent -ComputerName "."  # Windows
+     ```
+
+5. **Verify Connectivity**:
+   - Go to the AWS Systems Manager console and navigate to "Managed Instances". Verify that your EC2 instance appears and shows as "Online".
+
+Once installed and configured, your EC2 instance is ready to use with AWS Systems Manager, allowing you to manage it using various Systems Manager capabilities such as Run Command, Patch Manager, and Session Manager.
+
+----
 ### What is Parameter Store?
 
 **Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management. It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
@@ -80,7 +140,7 @@ To create a parameter in Parameter Store:
    - Choose the type of parameter (e.g., SecureString for sensitive data).
    - Configure any additional options such as encryption and tags.
    - Click "Create Parameter" to create the parameter.
-
+----
 ### What is Run Command?
 
 **Run Command** is a Systems Manager feature that allows you to remotely and securely execute commands on your managed instances. It provides a simple way to automate common administrative tasks across a large number of instances.
@@ -98,7 +158,7 @@ To use Run Command:
 3. **Monitor Execution:**
    - View the status and output of command executions in the Systems Manager console.
    - Optionally, schedule recurring commands or target commands based on resource groups.
-
+----
 ### What is Patch Manager?
 
 **Patch Manager** is a Systems Manager capability that helps you automate the process of patching managed instances with security-related updates and other types of updates. It simplifies the patching process across different operating systems and machine types.
@@ -117,7 +177,7 @@ Patch Manager allows you to:
    - Create a patch baseline specifying which patches should be applied.
    - Define the schedule for patching operations.
    - Apply the patch baseline to your instances.
-
+----
 ### What is Secrets Manager?
 
 **Secrets Manager** is an AWS service that helps you securely store, manage, and access sensitive information such as API keys, database passwords, and other credentials. It enables you to rotate, manage access, and audit usage of secrets throughout their lifecycle.
