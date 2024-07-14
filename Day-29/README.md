@@ -9,7 +9,8 @@
 
 ### What is AWS Directory Service?
 
-AWS Directory Service is a managed service provided by Amazon Web Services (AWS) that enables you to set up and run directories in the AWS Cloud. It offers multiple directory options, including AWS Managed Microsoft AD, Simple AD, and AD Connector, to integrate with your on-premises directories and to manage your AWS resources more efficiently.
+- AWS Directory Service is a managed service provided by Amazon Web Services (AWS) that enables you to set up and run directories in the AWS Cloud.
+- It offers multiple directory options, including AWS Managed Microsoft AD, Simple AD, and AD Connector, to integrate with your on-premises directories and to manage your AWS resources more efficiently.
 
 ### AWS Directory Service Options
 
