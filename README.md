@@ -56,15 +56,20 @@ Suppose you have a web application hosted on EC2 instances behind an ELB load ba
 By leveraging AWS CloudWatch, you can maintain a high level of operational excellence, quickly detect and resolve issues, and optimize the performance and cost of your AWS resources.
 
 ----
-### Lab Session - Creating a Log Group in AWS CloudWatch
+### Creating a Log Group via AWS Management Console
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the CloudWatch Dashboard at [AWS Management Console](https://console.aws.amazon.com/cloudwatch/).
+1. **Navigate to CloudWatch**:
+   - Sign in to the AWS Management Console.
+   - Open the CloudWatch console at [https://console.aws.amazon.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/).
 
-2. **Create Log Group:**
-   - Click on "Logs" in the left menu and then "Log groups."
-   - Click on "Create log group."
-   - Enter a name for the log group and click "Create log group."
+2. **Access Logs**:
+   - In the left-hand navigation pane, click on **Logs**.
+
+3. **Create Log Group**:
+   - Click the **Create log group** button.
+   - Enter a name for your log group in the **Log group name** field.
+   - Optionally, you can add tags to your log group for better resource management and tracking.
+   - Click the **Create log group** button.
 
 ----
 ### Lab Session - Sending VPC Flow Logs to a CloudWatch Log Group
