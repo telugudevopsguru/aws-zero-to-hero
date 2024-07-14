@@ -41,8 +41,7 @@ ACLs provide a straightforward way to control access to your S3 resources based 
 **Presigned URLs:** URLs that grant temporary access to download or upload a specific S3 object with a specified expiration time.
 
 ### Lab Session - Working with Presigned URLs in AWS S3
-
-1. **Generate Presigned URL (Download):**
+ **Generate Presigned URL (Download):**
    - Use AWS SDK or AWS CLI to generate a presigned URL for an object.
    - Example using AWS CLI:
      ```bash
@@ -50,14 +49,6 @@ ACLs provide a straightforward way to control access to your S3 resources based 
      ```
    - This URL allows temporary access to download the object for one hour.
 
-2. **Generate Presigned URL (Upload):**
-   - Generate a presigned URL to allow temporary access for uploading an object to S3.
-   - Example using AWS SDK:
-     ```python
-     import boto3
-     s3_client = boto3.client('s3')
-     presigned_url = s3_client.generate_presigned_url('put_object', Params={'Bucket': '<bucket_name>', 'Key': '<object_key>'}, ExpiresIn=3600)
-     ```
 ----
 ### Server-side Encryption for Amazon S3 Buckets
 
