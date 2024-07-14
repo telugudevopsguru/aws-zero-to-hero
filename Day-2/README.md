@@ -108,7 +108,7 @@ Use SSH to connect to your Linux server:
    ```
    Replace `/path/to/private-key.pem` with the path to your PEM file, `ec2-user` with your instance's username (may vary by AMI), and `public-ip-address` with your instance's public IP address or DNS.
 
-To create a Windows EC2 instance on AWS, follow these steps:
+
 
 ### Lab Session - Creation of a Windows EC2 Instance
 
