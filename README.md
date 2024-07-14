@@ -1,6 +1,7 @@
 #### Overview of AWS Calculator
 
-AWS Calculator, also known as AWS Pricing Calculator, is a tool provided by Amazon Web Services (AWS) that helps estimate the cost of using AWS services. It allows you to explore AWS services, configure them based on your requirements, and estimate the monthly or hourly cost of your infrastructure on AWS.
+- AWS Calculator, also known as AWS Pricing Calculator, is a tool provided by Amazon Web Services (AWS) that helps estimate the cost of using AWS services.
+- It allows you to explore AWS services, configure them based on your requirements, and estimate the monthly or hourly cost of your infrastructure on AWS.
 
 ### Basic Navigation and Interface
 
