@@ -1,3 +1,4 @@
+### What is SSM
 AWS Systems Manager (SSM) is a management service provided by Amazon Web Services (AWS) that helps you automate tasks across your AWS resources and on-premises environments. It provides a unified user interface that allows you to view operational data from multiple AWS services and automate operational tasks across AWS resources.
 
 ### Key Features of AWS Systems Manager:
@@ -51,7 +52,8 @@ It is compatible with various machine types, including Amazon EC2 instances, on-
 ----
 ### What is SSM Agent?
 
-**SSM Agent** is a software agent installed and configured on Amazon EC2 instances, on-premises servers, or virtual machines that are managed by AWS Systems Manager. The SSM Agent processes requests from Systems Manager services and securely communicates with the Systems Manager API.
+- **SSM Agent** is a software agent installed and configured on Amazon EC2 instances, on-premises servers, or virtual machines that are managed by AWS Systems Manager.
+- The SSM Agent processes requests from Systems Manager services and securely communicates with the Systems Manager API.
 
 ### Working with SSM Agent
 
@@ -126,7 +128,8 @@ Once installed and configured, your EC2 instance is ready to use with AWS System
 ----
 ### What is Parameter Store?
 
-**Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management. It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
+- **Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management.
+- It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
 
 ### Creating the Parameter Store
 
@@ -143,7 +146,8 @@ To create a parameter in Parameter Store:
 ----
 ### What is Run Command?
 
-**Run Command** is a Systems Manager feature that allows you to remotely and securely execute commands on your managed instances. It provides a simple way to automate common administrative tasks across a large number of instances.
+- **Run Command** is a Systems Manager feature that allows you to remotely and securely execute commands on your managed instances.
+- It provides a simple way to automate common administrative tasks across a large number of instances.
 
 ### Setting up Run Command
 
@@ -161,7 +165,8 @@ To use Run Command:
 ----
 ### What is Patch Manager?
 
-**Patch Manager** is a Systems Manager capability that helps you automate the process of patching managed instances with security-related updates and other types of updates. It simplifies the patching process across different operating systems and machine types.
+- **Patch Manager** is a Systems Manager capability that helps you automate the process of patching managed instances with security-related updates and other types of updates.
+- It simplifies the patching process across different operating systems and machine types.
 
 ### Working with Patch Manager
 
