@@ -1,6 +1,7 @@
 ### What is AWS WAF?
 
-AWS WAF, or AWS Web Application Firewall, is a managed service provided by Amazon Web Services (AWS) that helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources. It allows you to control which traffic to allow or block to your web applications by defining customizable web security rules.
+- AWS WAF, or AWS Web Application Firewall, is a managed service provided by Amazon Web Services (AWS) that helps protect your web applications from common web exploits that could affect application availability, compromise security, or consume excessive resources.
+- It allows you to control which traffic to allow or block to your web applications by defining customizable web security rules.
 
 ### Key Features of AWS WAF:
 
