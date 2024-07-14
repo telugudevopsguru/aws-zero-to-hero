@@ -1,3 +1,12 @@
+#### INSTRUCTOR DETAILS
+
+|  Information             | Details                                                                      |
+|----------------------    |------------------------------------------------------------------------------|
+| **Name**                 | Moole Muralidhara Reddy                                                      |
+| **Email**                | techworldwithmurali@gmail.com                                                |
+| **Website**              | https://www.techworldwithmurali.com               |
+| **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
+
 ### What is AWS CloudWatch 
 - AWS CloudWatch is a powerful monitoring and observability service designed to provide comprehensive insights into your AWS resources and applications.
 - By collecting and tracking metrics, monitoring log files, and setting alarms, CloudWatch enables you to maintain the health and performance of your infrastructure and applications.
