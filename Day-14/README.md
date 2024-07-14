@@ -9,7 +9,8 @@
 
 ### Network Access Control List (NACL) in AWS VPC
 
-**Network Access Control Lists (NACLs)** are an optional layer of security for your VPC that acts as a stateless firewall for controlling traffic in and out of one or more subnets. You can set up inbound and outbound rules to allow or deny traffic to and from individual subnets.
+- **Network Access Control Lists (NACLs)** are an optional layer of security for your VPC that acts as a stateless firewall for controlling traffic in and out of one or more subnets.
+- You can set up inbound and outbound rules to allow or deny traffic to and from individual subnets.
 
 **Key Features of NACL:**
 - **Stateless:** Responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa).
@@ -40,7 +41,8 @@
 ----
 ### Security Group in AWS VPC
 
-**Security Groups** act as a virtual firewall for your EC2 instances to control inbound and outbound traffic. Security groups operate at the instance level and are stateful.
+- **Security Groups** act as a virtual firewall for your EC2 instances to control inbound and outbound traffic.
+- Security groups operate at the instance level and are stateful.
 
 **Key Features of Security Groups:**
 - **Stateful:** If you allow an inbound request from an IP, the response is automatically allowed.
@@ -78,7 +80,8 @@
 ----
 ### VPC Flow Logs and How to Create Them
 
-**VPC Flow Logs** capture information about the IP traffic going to and from network interfaces in your VPC. Flow logs can help you with monitoring and troubleshooting network connectivity.
+- **VPC Flow Logs** capture information about the IP traffic going to and from network interfaces in your VPC.
+- Flow logs can help you with monitoring and troubleshooting network connectivity.
 
 **Key Features of VPC Flow Logs:**
 - **Capture Network Traffic:** Logs all traffic going in and out of your VPC.
@@ -121,7 +124,8 @@ Configuring an AWS Virtual Private Cloud (VPC) involves several options and feat
 ----
 ### DHCP Option Set in AWS VPC
 
-**DHCP Option Sets** allow you to configure DHCP (Dynamic Host Configuration Protocol) options for your VPC. These options define domain name servers, domain names, and other DHCP options.
+- **DHCP Option Sets** allow you to configure DHCP (Dynamic Host Configuration Protocol) options for your VPC.
+- These options define domain name servers, domain names, and other DHCP options.
 
 **Key Features of DHCP Option Sets:**
 - **Domain Name Servers**: Specify DNS servers for instances in your VPC.
@@ -269,7 +273,8 @@ By using prefix lists, you simplify the management of CIDR blocks and ensure con
 ----
 ### Elastic Network Interface (ENI) in AWS
 
-**Elastic Network Interfaces (ENIs)** are virtual network interfaces that can be attached to EC2 instances. They are used to manage network traffic, IP addresses, and security group rules.
+- **Elastic Network Interfaces (ENIs)** are virtual network interfaces that can be attached to EC2 instances.
+- They are used to manage network traffic, IP addresses, and security group rules.
 
 **Key Features of ENIs:**
 - **Flexible Attachment**: Can be attached or detached from instances without stopping them.
