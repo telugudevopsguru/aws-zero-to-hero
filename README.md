@@ -9,28 +9,28 @@
 3. **Automated Backups:** Automatic backups with point-in-time recovery.
 4. **Scalability:** Easily scale compute and storage resources as needed.
 5. **High Availability:** Multi-AZ deployments for automatic failover and reliability.
-
+----
 ### RDS Subnet Group
 
 - **Purpose:** Defines the subnets where RDS DB instances can be created.
 - **Usage:** Ensures instances are launched in a specific VPC and subnet configuration.
-
+----
 ### Parameter Groups
 
 - **Purpose:** Manage engine configurations and runtime parameters.
 - **Usage:** Customize database settings for performance and behavior.
-
+----
 ### Option Groups
 
 - **Purpose:** Manage features and functionalities specific to database engines.
 - **Usage:** Enable features like encryption, performance enhancements, and additional capabilities.
-
+----
 ### Amazon RDS Storage Types
 
 - **General Purpose (SSD):** Balanced performance for a wide range of database workloads.
 - **Provisioned IOPS (SSD):** High-performance storage for I/O-intensive database workloads.
 - **Magnetic:** Cost-effective storage for workloads with low I/O requirements.
-
+----
 ### Lab Session - Creating a MySQL Database in AWS RDS
 
 1. **Sign in to AWS Management Console:**
@@ -42,7 +42,7 @@
    - Choose the instance type, storage, and other configuration details.
    - Set up database credentials and specify other settings.
    - Click "Create database" to launch the instance.
-
+----
 ### Lab Session - Connecting to the RDS MySQL from an AWS EC2 Instance
 
 1. **Launch an EC2 Instance:**
@@ -58,7 +58,7 @@
      mysql -h <endpoint> -u <username> -p
      ```
      Replace `<endpoint>` with your RDS endpoint and `<username>` with your database username.
-
+----
 ### Lab Session - Installation of MySQL Workbench
 
 1. **Download MySQL Workbench:**
@@ -66,7 +66,7 @@
 
 2. **Install MySQL Workbench:**
    - Follow the installation instructions for your operating system.
-
+----
 ### Lab Session - Connecting to the RDS MySQL from MySQL Workbench
 
 1. **Open MySQL Workbench:**
@@ -77,7 +77,7 @@
    - Enter connection details: hostname (RDS endpoint), port, username, and password.
    - Click "Test Connection" to verify connectivity.
    - Click "OK" to save the connection.
-
+----
 ### Lab Session - Deletion of RDS MySQL Version
 
 1. **Sign in to AWS Management Console:**
