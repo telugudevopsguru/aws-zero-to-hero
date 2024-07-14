@@ -1,6 +1,16 @@
+#### INSTRUCTOR DETAILS
+
+|  Information             | Details                                                                      |
+|----------------------    |------------------------------------------------------------------------------|
+| **Name**                 | Moole Muralidhara Reddy                                                      |
+| **Email**                | techworldwithmurali@gmail.com                                                |
+| **Website**              | https://www.techworldwithmurali.com               |
+| **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
+
 ### What is AWS Billing and Cost Management?
 
-AWS Billing and Cost Management is a suite of tools provided by Amazon Web Services (AWS) to help users manage their AWS costs and usage. It allows you to monitor and control your AWS spending, access detailed billing information, and set up alerts and budgets to avoid unexpected charges.
+- AWS Billing and Cost Management is a suite of tools provided by Amazon Web Services (AWS) to help users manage their AWS costs and usage.
+- It allows you to monitor and control your AWS spending, access detailed billing information, and set up alerts and budgets to avoid unexpected charges.
 
 ### Features of AWS Billing and Cost Management
 
@@ -34,8 +44,8 @@ AWS Billing and Cost Management is a suite of tools provided by Amazon Web Servi
 7. **Savings Plans and Reserved Instances:**
    - Helps in optimizing costs by committing to a consistent amount of usage.
    - Provides significant discounts compared to On-Demand pricing.
-
-### Getting Set Up with Billing
+----
+### Getting Started with Billing
 
 1. **Accessing the Billing Dashboard:**
    - Sign in to the AWS Management Console.
@@ -49,7 +59,7 @@ AWS Billing and Cost Management is a suite of tools provided by Amazon Web Servi
    - Go to the "Cost Allocation Tags" section in the Billing dashboard.
    - Activate the required tags.
    - Apply tags to your AWS resources for cost tracking.
-
+----
 ### Setting Up a Budget
 
 1. **Accessing Budgets:**
