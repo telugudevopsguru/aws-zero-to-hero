@@ -9,7 +9,7 @@
 3. **DNS Failover:** Automatically routes traffic from unhealthy resources to healthy ones to maintain application availability.
 4. **Traffic Management:** Control traffic flow based on routing policies, such as geographic location or latency.
 5. **Health Checks:** Monitor the health of endpoints and respond to DNS queries based on endpoint health.
-
+----
 ### What is a Hosted Zone in Route53?
 
 - **Hosted Zone:** A container that holds information about how you want Amazon Route 53 to respond to DNS queries for a domain and its subdomains. It consists of a collection of resource record sets (RRsets) that Route 53 returns in response to DNS queries.
@@ -18,7 +18,7 @@
 
 1. **Public Hosted Zone:** Manages domain names that are publicly accessible on the internet.
 2. **Private Hosted Zone:** Manages domain names within an Amazon VPC (Virtual Private Cloud) and is accessible only from instances within the VPC.
-
+----
 ### Lab Session - Creating a Public Hosted Zone in AWS Route53
 
 1. **Sign in to AWS Management Console:**
@@ -29,7 +29,7 @@
    - Enter your domain name (e.g., example.com).
    - Choose the type (public or private).
    - Click "Create" to create the hosted zone.
-
+----
 ### What are Records in a Hosted Zone?
 
 - **Records:** Resource record sets (RRsets) within a hosted zone define how Route 53 responds to DNS queries for that domain name.
@@ -42,7 +42,7 @@
 4. **MX Record:** Specifies the mail servers responsible for accepting email on behalf of your domain.
 5. **TXT Record:** Provides text information to sources outside your domain.
 6. **NS Record:** Delegates a DNS namespace to a set of name servers.
-
+----
 ### What is Routing Policy?
 
 - **Routing Policy:** Specifies how Amazon Route 53 responds to DNS queries. It determines which resource records to serve based on various criteria such as geographic location, latency, or health checks.
@@ -55,7 +55,7 @@
 4. **Failover Routing:** Routes traffic to a standby resource in case of primary resource failure.
 5. **Geolocation Routing:** Routes traffic based on the geographic location of the end user.
 6. **Multi-Value Answer Routing:** Allows Route 53 to respond to DNS queries with up to eight healthy records selected at random.
-
+----
 ### Lab Session - Creating a Record in a Hosted Zone
 
 1. **Sign in to AWS Management Console:**
@@ -68,7 +68,7 @@
    - Click on "Create Record Set."
    - Enter the details for the record (name, type, value, TTL).
    - Click "Create" to create the record set.
-
+----
 ### Lab Session - Creating a Private Hosted Zone in AWS Route53
 
 1. **Sign in to AWS Management Console:**
@@ -80,7 +80,7 @@
    - Choose the type as "Private hosted zone for Amazon VPC."
    - Select the VPCs where you want the private hosted zone to be accessible.
    - Click "Create" to create the private hosted zone.
-
+----
 ### Lab Session - Configuring Query Logging for a Hosted Zone
 
 1. **Sign in to AWS Management Console:**
@@ -93,7 +93,7 @@
    - Click on "Create Query Logging Config."
    - Configure the logging details (log group, IAM role).
    - Click "Create" to enable query logging.
-
+----
 ### Lab Session - Deletion of a Hosted Zone
 
 1. **Sign in to AWS Management Console:**
