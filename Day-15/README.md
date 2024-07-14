@@ -41,6 +41,8 @@ AWS VPC peering offers a lot of benefits, but there are some limitations and con
 
 7. **Cost Implications**: While VPC peering itself is generally cost-effective, data transfer costs between peered VPCs may apply if traffic crosses AWS regions or Availability Zones.
 
+![VPC Peering Diagram - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-VPC%20Peering%20Diagram%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+
 ### Types of VPC Peering
 
 1. **Intra-Account VPC Peering**:
