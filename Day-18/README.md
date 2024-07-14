@@ -28,7 +28,7 @@
 1. **Fully Managed:** AWS manages infrastructure provisioning, scaling, and availability.
 2. **Integrated with AWS Services:** Works seamlessly with services like Amazon ECS, Kubernetes, and AWS CodePipeline.
 3. **Security:** Integrates with IAM for access control and supports encryption of images at rest.
-
+----
 ### Lab Session - Creating an ECR Repository in AWS
 
 1. **Sign in to AWS Management Console:**
@@ -39,7 +39,7 @@
    - Enter a name for the repository.
    - Optionally, configure repository settings such as image scanning.
    - Click "Create repository."
-
+----
 ### Lab Session - Pushing a Docker Image to AWS ECR
 
 1. **Install Docker:** Ensure Docker is installed on your local machine.
@@ -53,7 +53,7 @@
 
 4. **Push Docker Image:**
    - Push your Docker image to ECR using `docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:<tag>`.
-
+----
 ### Lab Session - Setting up Lifecycle Policy in ECR
 
 1. **Sign in to AWS Management Console:**
@@ -64,7 +64,7 @@
    - Click on "Edit policy."
    - Define rules for image lifecycle management, such as expiring images after a certain number of days.
    - Save the policy.
-
+----
 ### Lab Session - Setting up Replication Configuration in ECR
 
 1. **Sign in to AWS Management Console:**
