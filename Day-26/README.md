@@ -72,7 +72,7 @@ SSM Agent enables the following capabilities:
 - **Run Command:** Allows you to remotely execute scripts or commands on your instances without needing to SSH into them.
 - **State Manager:** Ensures your instances are configured per your desired state, enforcing configurations and applying updates automatically.
 - **Inventory and Patch Management:** Collects metadata about your instances, installed applications, and patches, facilitating inventory management and patch deployments.
-
+----
 ### Install SSM Agent on EC2 Instance:
 To install SSM Agent on an EC2 instance, you typically follow these steps:
 
