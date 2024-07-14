@@ -1,4 +1,35 @@
-### What is AWS Directory Service?
+Here's the text extracted from the image you provided:
+
+### Steps:
+
+#### Step 1:
+- Create an AWS Managed Microsoft AD
+- Directory DNS name: telugudevopsguru.com
+
+#### Step 2:
+- Create a DHCP options set in VPC for your directory
+- Name: dev
+
+#### Step 3:
+- Create a role to join Windows instances to your AWS Managed Microsoft AD domain
+  - AmazonSSMManagedInstanceCore
+  - AmazonSSMDirectoryServiceAccess
+
+#### Step 4:
+- Create an EC2 instance and automatically join the directory
+  - Name: Murali-server
+  - Windows Server 2022
+
+#### Step 5:
+- Install the Active Directory tools on your EC2 instance
+- Create the users and assign the groups to them
+  - Example:
+    - User Names: murali, siva
+
+#### Step 6:
+- Validate the configuration
+-
+- ### What is AWS Directory Service?
 
 AWS Directory Service is a managed service provided by Amazon Web Services (AWS) that enables you to set up and run directories in the AWS Cloud. It offers multiple directory options, including AWS Managed Microsoft AD, Simple AD, and AD Connector, to integrate with your on-premises directories and to manage your AWS resources more efficiently.
 
