@@ -27,7 +27,7 @@
 
 5. **Management and Access:** You can manage snapshots through the AWS Management Console, AWS Command Line Interface (CLI), or AWS SDKs. Snapshots can be tagged, copied, shared, and deleted as per your requirements.
 
-
+----
 ### Lab Session - Creation of a Snapshot from an EC2 Instance
 
 1. **Sign in to AWS Management Console:**
@@ -40,7 +40,7 @@
    - Right-click on the instance, select "Create Image (AMI)."
    - Provide a name and description for the snapshot.
    - Click "Create Image" to initiate the snapshot creation process.
-
+----
 ### Lab Session - Creation of a Snapshot from an EBS Volume
 
 1. **Sign in to AWS Management Console:**
@@ -54,7 +54,7 @@
    - Right-click on the volume and select "Create Snapshot."
    - Provide a name and description for the snapshot.
    - Click "Create Snapshot" to initiate the snapshot creation process.
-
+----
 ### Lab Session - Creation of an AWS AMI from a Snapshot
 
 1. **Sign in to AWS Management Console:**
@@ -69,7 +69,7 @@
    - Provide a name and description for the AMI.
    - Customize the AMI settings if needed (instance type, tags, etc.).
    - Click "Create Image" to initiate the AMI creation process.
-
+----
 ### Lab Session - Creation of an EBS Volume from a Snapshot
 
 1. **Sign in to AWS Management Console:**
@@ -83,7 +83,7 @@
    - Right-click on the snapshot and select "Create Volume."
    - Specify the volume type, size, and availability zone for the new EBS volume.
    - Click "Create Volume" to initiate the volume creation process.
-
+----
 ### Options in a Snapshot
 
 Snapshots in AWS offer several management options:
@@ -92,7 +92,7 @@ Snapshots in AWS offer several management options:
 - **Modify Snapshot:** Edit the description or permissions of the snapshot.
 - **Create Volume:** Generate an EBS volume from the snapshot.
 - **Create AMI:** Generate an Amazon Machine Image (AMI) from the snapshot.
-
+----
 ### Lab Session - Deletion of Snapshots, Volumes, and AMIs
 
 1. **Sign in to AWS Management Console:**
