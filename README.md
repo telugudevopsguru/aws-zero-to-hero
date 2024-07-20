@@ -54,7 +54,6 @@ Detailed look into AWS EBS volumes, including creation, resizing, and encryption
 - Lab Session - Attach an EBS volume to a Windows EC2 instance
 - Lab Session - Increase the size of an existing EBS volume on a Windows EC2 instance
 - Lab Session - Change the EBS volume type
-- Lab Session - Encrypt an existing attached EBS volume
 
 ## Day 5: AWS EBS Snapshot
 Understanding snapshots in AWS, including creation, management, and utilization for backups and AMI creation.
