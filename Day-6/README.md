@@ -20,7 +20,7 @@
 4. **Multi-Factor Authentication (MFA):** Add an extra layer of security.
 5. **Identity Federation:** Integrate with existing corporate directories.
 6. **Identity Information:** Manage user identities and their permissions.
-
+----
 ### What is AWS IAM User 
 
 1. **Definition**: Represents an individual with unique credentials to access AWS services and resources.
@@ -112,7 +112,7 @@ Before configuring the AWS CLI, ensure you have:
      ```
    - This command lists all your S3 buckets. If configured correctly, it will list the buckets accessible with the provided credentials.
 
----
+----
 ### Lab Session - Named Profiles for the AWS CLI
 
 To configure a named profile named `dev` for the AWS CLI, you would typically use the `aws configure` command with the `--profile` option. Here's how you can do it:
