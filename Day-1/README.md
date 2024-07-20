@@ -23,7 +23,16 @@
 ### Types of Cloud Computing
 
 1. **Public Cloud:** Resources are owned and operated by third-party providers, accessible over the internet by the general public.
+**Example:**
+  1. **Amazon Web Services (AWS):** You can rent servers and storage space online.
+  2. **Microsoft Azure:** You can host websites and store data on Microsoft's servers.
+  3. **Google Cloud Platform (GCP):** You can use Google's infrastructure to run applications and store data.
+  
 2. **Private Cloud:** Dedicated resources operated solely for a single organization.
+  **Example:**
+  1. **Company Data Center:** A business has its own servers and storage in-house.
+  2. **VMware vSphere:** A company uses software to manage its own private servers.
+  3. **OpenStack:** A company sets up and manages its own cloud infrastructure using open-source tools.
 3. **Hybrid Cloud:** Combination of public and private clouds, allowing data and applications to be shared between them.
 
 ### Types of Cloud Services
