@@ -135,7 +135,7 @@ AWS (Amazon Web Services) is a comprehensive, evolving cloud computing platform 
 1. **Complexity:** Vast array of services can lead to complexity in management.
 2. **Cost Management:** Potential for costs to escalate without proper monitoring.
 3. **Data Transfer Fees:** Charges for data transfer between regions or to the internet.
-
+----
 ### AWS Global Infrastructure
 
 #### Regions
@@ -146,6 +146,7 @@ AWS Regions are geographical locations where AWS data centers are clustered. Eac
 
 Availability Zones (AZs) are isolated locations within regions, each containing one or more data centers. They are designed to be independent yet interconnected to provide high availability and fault tolerance.
 
+----
 ### Lab Session - Creation of an AWS Account
 
 Creating an AWS account involves:
