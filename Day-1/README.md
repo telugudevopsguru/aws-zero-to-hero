@@ -65,10 +65,6 @@ Combination of public and private clouds, allowing data and applications to be s
    - Enables users to launch AWS resources into a virtual network.
    - Users can control their virtual networking environment, including selection of IP address range, creation of subnets, and configuration of route tables and gateways.
 
-5. **Amazon Route 53:**
-   - Scalable DNS and domain name registration service.
-   - Users can route end-user requests to internet applications by translating domain names into IP addresses.
-
 
   ![IAAS - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-1/images/Infrastructure%20as%20a%20Service%20-%20%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
