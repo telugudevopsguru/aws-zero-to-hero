@@ -40,20 +40,25 @@ AWS Network Load Balancer (NLB) is a load balancing solution designed to handle 
    - Select the Network Load Balancer you want to delete.
    - Click on "Actions > Delete" and confirm the deletion.
 ----
-### Difference between an ALB and an NLB
 
-**AWS Application Load Balancer (ALB):**
-- Operates at Layer 7 (Application layer).
-- Ideal for HTTP/HTTPS traffic and provides advanced routing features like content-based routing and host-based routing.
-- Supports URL-based routing and WebSocket traffic.
-- Provides integration with AWS WAF for web application firewall protection.
+### Difference between an Application Load Balancer (ALB) and a Network Load Balancer (NLB)
 
-**AWS Network Load Balancer (NLB):**
-- Operates at Layer 4 (Transport layer).
-- Ideal for handling millions of requests per second with ultra-low latencies.
-- Routes traffic based on IP addresses and ports.
-- Supports TLS termination for end-to-end encryption.
-- Provides static IP addresses per Availability Zone (AZ).
+| Feature                         | Application Load Balancer (ALB)                          | Network Load Balancer (NLB)                              |
+|---------------------------------|----------------------------------------------------------|----------------------------------------------------------|
+| **Layer**                       | Operates at Layer 7 (Application layer)                  | Operates at Layer 4 (Transport layer)                    |
+| **Use Case**                    | Ideal for HTTP/HTTPS traffic and advanced routing        | Ideal for TCP, UDP, and TLS traffic requiring high performance |
+| **Routing**                     | Supports advanced routing based on HTTP headers, paths, and hostnames | Routes traffic based on IP protocol data without inspection |
+| **Performance**                 | Suitable for applications requiring intelligent routing decisions | High performance, low latency required for real-time applications |
+| **Protocol Support**            | HTTP, HTTPS, WebSocket                                   | TCP, UDP, TLS                                            |
+| **SSL Termination**             | Supports SSL termination                                 | Supports SSL passthrough and SSL termination             |
+| **Target Type**                 | Can route to EC2 instances, IP addresses, Lambda functions | Can route to EC2 instances, IP addresses, and AWS PrivateLink endpoints |
+| **Health Checks**               | Supports health checks based on HTTP/HTTPS status codes and content | Supports health checks based on TCP connections and responses |
+| **WebSocket Support**           | Yes                                                      | No                                                       |
+| **Sticky Sessions**             | Yes, using cookies                                       | No                                                       |
+| **Host-based and Path-based Routing** | Yes                                                      | No                                                       |
+| **Cost**                        | Generally more expensive due to advanced features        | Generally less expensive due to its simplicity and lower overhead |
+
+
 ----
 ### Lab Session - Attaching an ALB to a New Auto Scaling Group
 
