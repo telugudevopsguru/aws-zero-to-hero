@@ -85,11 +85,20 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
 
 ### Benefits of an AWS Launch Template
 
-1. **Versioning:** Supports versioning of launch templates for iterative updates.
-2. **Flexibility:** Allows parameterization and conditional settings.
-3. **Easier Updates:** Supports in-place updates without recreating templates.
-4. **EC2 Fleet Integration:** Can define configurations for EC2 Fleet requests.
+1. **Standardization**:
+   - **Consistency**: Launch Templates enable you to define a standard set of configuration settings to launch instances in your infrastructure, ensuring that all instances are consistent and correctly configured.
 
+2. **Flexibility**:
+   - **Versioning**: Unlike Launch Configurations, Launch Templates allow for multiple versions, providing the ability to update templates as requirements change over time.
+   - **Custom Scripts**: You can use custom scripts to configure your instances.
+   - **Multiple Instance Types**: Specify various instance types and sizes to meet different application needs.
+
+3. **Automation**:
+   - **Auto Scaling Integration**: Launch Templates can be used with AWS Auto Scaling Groups to automate the scaling of your infrastructure. This ensures that as demand grows or shrinks, your infrastructure can automatically scale up or down accordingly.
+
+4. **Cost Savings**:
+   - **Optimized Spending**: By using Launch Templates with AWS Auto Scaling, you only run the instances needed to handle your application's demand, reducing costs and optimizing infrastructure spending.
+----
 ### Lab Session - Creation of an AWS Launch Template
 
 1. **Sign in to AWS Management Console:**
@@ -101,7 +110,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
      - Specify template details like AMI, instance type, security groups, etc.
      - Configure advanced settings as needed (e.g., instance market options, tags).
      - Review and create the launch template.
-
+----
 ### Difference between a Launch Template and a Launch Configuration
 
 - **Launch Template:** Supports versioning, advanced configuration settings, and updates without recreating.
