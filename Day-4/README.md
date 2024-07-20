@@ -24,7 +24,7 @@
 
 ### Types of AWS EBS Volumes
 
-Certainly! Let's expand on each AWS EBS volume type with their description, performance characteristics, and specific use cases:
+Let's expand on each AWS EBS volume type with their description, performance characteristics, and specific use cases:
 
 ### 1. General Purpose SSD (gp2)
 
