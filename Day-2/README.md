@@ -18,7 +18,7 @@ Amazon EC2 (Elastic Compute Cloud) is a web service that provides resizable comp
 3. **Security:** Secure instances with built-in security groups and key pairs.
 4. **Flexible Pricing:** Pay only for the compute capacity you actually use.
 5. **Integration:** Easily integrate with other AWS services and third-party tools.
-
+----
 ### Amazon EC2 Instance Types and Use Cases
 
 Amazon EC2 offers a variety of instance types to cater to different workloads and performance needs. Here are some common instance types along with their use cases:
@@ -69,7 +69,7 @@ Amazon EC2 offers a variety of instance types to cater to different workloads an
 
 - **Instance Sizes**: Each instance type is available in different sizes, offering varying amounts of CPU, memory, storage, and networking capacity.
 - **Customizable**: Users can select the instance type and size that best suits their specific workload requirements.
-
+----
 ### Lab Session - Creation of a Linux EC2 Instance
 
 1. **Sign in to AWS Management Console:** Navigate to the EC2 Dashboard.
@@ -79,7 +79,7 @@ Amazon EC2 offers a variety of instance types to cater to different workloads an
 5. **Configure Instance:** Configure instance details, storage, tags, and security groups.
 6. **Review and Launch:** Review your instance configuration and launch it.
 7. **Connect to Instance:** Use SSH to connect to your Linux instance (details for connecting will vary based on your operating system).
-
+----
 ### Lab Session - Downloading PuTTY and PuTTYgen
 
 PuTTY is a popular SSH client for Windows, while PuTTYgen is used to generate and convert SSH keys.
@@ -96,7 +96,7 @@ To convert a PEM file (typically used in Linux) to a PPK file (used in PuTTY for
 1. **Open PuTTYgen:** Launch PuTTYgen.
 2. **Load PEM Key:** Click on "Load" and select your PEM file.
 3. **Save Private Key:** Click on "Save private key" to save the key in PPK format.
-
+----
 ### Lab Session - Connecting to Linux server
 
 Use SSH to connect to your Linux server:
@@ -108,8 +108,7 @@ Use SSH to connect to your Linux server:
    ```
    Replace `/path/to/private-key.pem` with the path to your PEM file, `ec2-user` with your instance's username (may vary by AMI), and `public-ip-address` with your instance's public IP address or DNS.
 
-
-
+----
 ### Lab Session - Creation of a Windows EC2 Instance
 
 1. **Sign in to AWS Management Console:**
@@ -157,8 +156,7 @@ Use SSH to connect to your Linux server:
 
 13. **Start Using Windows Instance:**
     - You are now connected to your Windows EC2 instance. Start configuring Windows settings, installing applications, and exploring the capabilities of Windows on AWS.
-
-
+----
 ### Lab Session - Creation of a Ubuntu EC2 Instance
 
 1. **Sign in to AWS Management Console:**
@@ -207,7 +205,7 @@ Use SSH to connect to your Linux server:
 
 13. **Start Using Ubuntu Instance:**
     - You are now connected to your Ubuntu EC2 instance. Start installing applications, configuring services, and exploring the capabilities of Ubuntu on AWS.
-
+----
 ### Lab Session - Create an AMI from an Amazon EC2 Instance
 
 1. **Select Instance:** In the EC2 Dashboard, select the instance you want to create an AMI from.
