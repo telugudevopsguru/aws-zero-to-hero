@@ -1,4 +1,4 @@
-What is AWS FSx
+### What is AWS FSx
 
 Amazon FSx for Windows File Server is a fully managed service that provides a Windows-native file system built on Windows Server.
 It is designed to handle the storage needs of Windows-based applications and workloads. Here are the key features and components of Amazon FSx for Windows File Server:
