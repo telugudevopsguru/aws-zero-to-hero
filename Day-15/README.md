@@ -13,33 +13,26 @@
 - Instances in either VPC can communicate with each other as if they are within the same network.
 - VPC peering allows for seamless communication across different VPCs, whether they are in the same account, different accounts, or even different regions (inter-region VPC peering).
 
-### Key Aspects of VPC Peering
+### VPC Peering Key Points
 
-1. **Private Communication**: VPC peering enables private IP address communication between instances in different VPCs without using public IP addresses or traversing the internet.
-   
-2. **Transitive Peering Not Supported**: You cannot create a peering connection to a VPC that has a peering connection with another VPC. Peering is point-to-point.
-   
-3. **Region Independence**: You can create inter-region VPC peering connections to connect VPCs in different AWS regions.
-   
-4. **Route Tables and DNS**: You need to update route tables and optionally enable DNS resolution to allow traffic between VPCs.
-   
-5. **Security**: Traffic between peered VPCs remains within the AWS network, offering secure and low-latency connectivity.
+1. You can create a VPC peering connection between:
+   - Your own VPCs.
+   - A VPC in another AWS account.
+   - A VPC in a different AWS Region.
 
-AWS VPC peering offers a lot of benefits, but there are some limitations and considerations to keep in mind:
+2. A VPC peering connection is a one-to-one relationship between two VPCs.
 
-1. **No Transitive Peering**: AWS VPC peering connections do not support transitive routing. If you have VPC A peered with VPC B and VPC B peered with VPC C, VPC A cannot communicate directly with VPC C through the peering connection between A and B. Separate peering connections would be needed between A and C.
+3. You can create multiple VPC peering connections for each VPC.
 
-2. **CIDR Block Overlaps**: VPC peering connections cannot be established if the CIDR blocks of the peered VPCs overlap.
+4. Transitive peering relationships are not supported.
 
-3. **Performance Impact**: Depending on your architecture and traffic patterns, VPC peering might introduce additional latency compared to intra-VPC communication.
+5. You can modify a VPC peering connection to enable instances in your VPC to communicate with linked EC2-Classic instances in the peer VPC.
 
-4. **Limited Monitoring and Troubleshooting**: Monitoring and troubleshooting across peered VPCs can be more complex compared to within a single VPC, as some AWS monitoring tools may not aggregate data across peered VPCs.
+6. There is no single point of failure for communication or a bandwidth bottleneck.
 
-5. **No Transitive Network Policies**: Network Access Control Lists (ACLs) and Security Groups do not propagate through VPC peering connections. You must configure rules separately in each VPC.
+7. A VPC peering connection helps facilitate the transfer of data.
 
-6. **AWS Region Limitations**: VPC peering is only supported within the same AWS region. If you need to connect VPCs across regions, you would need to use AWS Transit Gateway or other networking solutions.
-
-7. **Cost Implications**: While VPC peering itself is generally cost-effective, data transfer costs between peered VPCs may apply if traffic crosses AWS regions or Availability Zones.
+8. The traffic remains in the private IP space.
 
 ![VPC Peering Diagram - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-VPC%20Peering%20Diagram%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
