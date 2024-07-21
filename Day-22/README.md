@@ -63,8 +63,8 @@
 ----
 ### What are Records in a Hosted Zone?
 
-- **Records:** Resource record sets (RRsets) within a hosted zone define how Route 53 responds to DNS queries for that domain name.
-
+- In AWS Route 53, a **record** is a DNS entry that maps a domain name to an IP address or another domain name.
+- When a DNS resolver receives a request for a domain name, it queries the DNS server for the appropriate DNS record to resolve the domain to its corresponding resource.
 ### Types of Records
 
 1. **A Record:** Maps a domain name to an IPv4 address.
