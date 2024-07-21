@@ -38,7 +38,7 @@
    - Set up a Virtual Private Cloud (VPC) with at least two subnets in different Availability Zones.
    - Ensure that your VPC has the required network configuration for AD, including DNS settings.
 
-### Step 1:  Create Your AWS Managed Microsoft AD
+**Step 1:  Create Your AWS Managed Microsoft AD**
 
 1. **Navigate to the AWS Directory Service Console:**
    - Open the AWS Management Console.
