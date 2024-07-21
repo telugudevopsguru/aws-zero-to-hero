@@ -38,7 +38,7 @@
    - Set up a Virtual Private Cloud (VPC) with at least two subnets in different Availability Zones.
    - Ensure that your VPC has the required network configuration for AD, including DNS settings.
 
-#### Create Your AWS Managed Microsoft AD
+### Step 1:  Create Your AWS Managed Microsoft AD
 
 1. **Navigate to the AWS Directory Service Console:**
    - Open the AWS Management Console.
@@ -63,46 +63,21 @@
 6. **Directory Creation Process:**
    - AWS will start creating your directory, which may take several minutes.
    - Once created, the directory status will change to "Active."
-----
-#### Deploy an Amazon EC2 Instance to Manage Your AWS Managed Microsoft AD
+  
+**Step 2: Create a DHCP Options Set in VPC**
+- Name: `dev`
 
-1. **Launch an EC2 Instance:**
-   - Go to the EC2 section in the AWS Management Console.
-   - Click "Launch Instance."
+**Step 3: Create a Role for Joining Windows Instances to AWS Managed Microsoft AD**
+- Attach policies: 
+  - `AmazonSSMManagedInstanceCore`
+  - `AmazonSSMDirectoryServiceAccess`
 
-2. **Configure Instance Details:**
-   - Choose an AMI (Amazon Machine Image) suitable for your needs (e.g., Windows Server 2019).
-   - Select an instance type.
-   - Configure instance details, ensuring it is launched in the same VPC and subnet as your AWS Managed Microsoft AD.
+**Step 4: Create an EC2 Instance and Join the Directory Automatically**
+- Instance Name: `Dev-server`
+- Windows Server 2022
 
-3. **Configure Security Group:**
-   - Create a security group with the necessary inbound rules for RDP (Remote Desktop Protocol) and any other required ports.
+**Step 5: Install Active Directory Tools on Your EC2 Instance**
+- Create users and assign groups
+  - Example Users: `murali`, `siva`
 
-4. **Add Storage and Tags:**
-   - Configure storage and add tags as needed.
-
-5. **Review and Launch:**
-   - Review the instance configuration.
-   - Click "Launch" and select an existing key pair or create a new one.
-
-6. **Connect to the EC2 Instance:**
-   - Once the instance is running, connect to it using RDP.
-----
-#### Verify that the Base Test Lab is Operational
-
-1. **Join the EC2 Instance to the Directory:**
-   - On the EC2 instance, open "Server Manager."
-   - Navigate to "Local Server" and click on "WORKGROUP" to join the instance to the domain.
-   - Enter the domain name and directory administrator credentials.
-
-2. **Verify Domain Join:**
-   - Restart the EC2 instance.
-   - Log in using the directory administrator account.
-
-3. **Verify Directory Functionality:**
-   - Open the "Active Directory Users and Computers" console.
-   - Check that the directory structure is visible and functional.
-
-4. **Test Directory Operations:**
-   - Create test users and groups.
-   - Assign permissions and test logins to verify that the directory is operational.
+**Step 6: Validate the Configuration**
