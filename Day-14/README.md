@@ -240,38 +240,6 @@ Inbound Rules:
   Port range: 22
   Source: MyPrefixList (pl-12345678)
 ```
-
-### Managing Prefix Lists
-
-#### Updating a Prefix List
-1. Navigate to **"Prefix Lists"** in the VPC Dashboard.
-2. Select the prefix list you want to update.
-3. Click **"Edit"**.
-4. Add, remove, or modify CIDR blocks as needed.
-5. Click **"Save changes"**.
-
-#### Deleting a Prefix List
-1. Navigate to **"Prefix Lists"** in the VPC Dashboard.
-2. Select the prefix list you want to delete.
-3. Click **"Delete"**.
-4. Confirm the deletion.
-
-### Example Scenario
-
-Suppose you have multiple VPCs and you want to allow specific IP ranges to access resources in these VPCs. Instead of manually adding these IP ranges to each security group or route table, you create a prefix list:
-
-1. **Create a Prefix List**:
-   - Name: `TrustedIPRanges`
-   - CIDR blocks: `203.0.113.0/24`, `198.51.100.0/24`
-
-2. **Update Security Groups**:
-   - Add an inbound rule to allow SSH access from `TrustedIPRanges`.
-
-3. **Update Route Tables**:
-   - Add a route to allow traffic from `TrustedIPRanges` to a specific target.
-
-By using prefix lists, you simplify the management of CIDR blocks and ensure consistent access controls across your AWS environment.
-
 ----
 ### Elastic Network Interface (ENI) in AWS
 
