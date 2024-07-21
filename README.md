@@ -28,7 +28,7 @@ It is designed to handle the storage needs of Windows-based applications and wor
 
 8. **Performance**:
    - Offers performance options that can be tuned to match the needs of different applications, such as high IOPS or high throughput.
-
+----
 ### Use Cases
 
 1. **Windows-Based Applications**:
