@@ -1,133 +1,44 @@
-Here's the text extracted from the image you provided:
+What is AWS FSx
 
-### Steps:
+Amazon FSx for Windows File Server is a fully managed service that provides a Windows-native file system built on Windows Server.
+It is designed to handle the storage needs of Windows-based applications and workloads. Here are the key features and components of Amazon FSx for Windows File Server:
 
-#### Step 1:
-- Create an AWS Managed Microsoft AD
-- Directory DNS name: telugudevopsguru.com
+### Key Features
 
-#### Step 2:
-- Create a DHCP options set in VPC for your directory
-- Name: dev
+1. **Fully Managed**:
+   - Amazon FSx handles all the administrative tasks, including hardware provisioning, patching, and backups, allowing you to focus on your applications.
 
-#### Step 3:
-- Create a role to join Windows instances to your AWS Managed Microsoft AD domain
-  - AmazonSSMManagedInstanceCore
-  - AmazonSSMDirectoryServiceAccess
+2. **Windows File System**:
+   - Provides a native Windows file system experience with support for SMB (Server Message Block) protocol, NTFS (New Technology File System), and Active Directory integration.
 
-#### Step 4:
-- Create an EC2 instance and automatically join the directory
-  - Name: Murali-server
-  - Windows Server 2022
+3. **Scalability**:
+   - Scales up or down based on your storage needs. You can adjust capacity and performance based on workload requirements.
 
-#### Step 5:
-- Install the Active Directory tools on your EC2 instance
-- Create the users and assign the groups to them
-  - Example:
-    - User Names: murali, siva
+4. **High Availability**:
+   - Offers built-in redundancy and automatic failover to ensure high availability. Data is replicated across multiple Availability Zones within a region.
 
-#### Step 6:
-- Validate the configuration
--
-- ### What is AWS Directory Service?
+5. **Backup and Restore**:
+   - Supports automated backups with point-in-time recovery, allowing you to restore data to a specific point in time.
 
-AWS Directory Service is a managed service provided by Amazon Web Services (AWS) that enables you to set up and run directories in the AWS Cloud. It offers multiple directory options, including AWS Managed Microsoft AD, Simple AD, and AD Connector, to integrate with your on-premises directories and to manage your AWS resources more efficiently.
+6. **Security**:
+   - Integrates with AWS Identity and Access Management (IAM) and supports encryption of data at rest and in transit. You can also use AWS Key Management Service (KMS) for encryption keys.
 
-### AWS Directory Service Options
+7. **Active Directory Integration**:
+   - Easily integrates with Microsoft Active Directory for user authentication and access control, allowing seamless access for users and applications.
 
-1. **AWS Managed Microsoft AD:**
-   - A fully managed Active Directory (AD) service that provides the same features and capabilities as an on-premises Microsoft AD.
-   - Supports AWS applications and services that require AD.
-   - Allows you to extend your on-premises AD to the AWS Cloud.
+8. **Performance**:
+   - Offers performance options that can be tuned to match the needs of different applications, such as high IOPS or high throughput.
 
-2. **Simple AD:**
-   - A cost-effective, standalone directory powered by Samba 4.
-   - Suitable for small to medium-sized businesses that need basic AD features.
+### Use Cases
 
-3. **AD Connector:**
-   - A directory gateway that connects your on-premises Microsoft Active Directory to AWS.
-   - Allows you to proxy authentication requests to your on-premises AD without caching any information in the cloud.
+1. **Windows-Based Applications**:
+   - Ideal for applications that rely on Windows file system features and need compatibility with SMB protocols, such as enterprise applications, home directories, or shared file systems.
 
-### Getting Started with AWS Managed Microsoft AD
+2. **File Storage**:
+   - Provides centralized file storage for Windows workloads, including application data, shared files, and user profiles.
 
-#### AWS Managed Microsoft AD Prerequisites
+3. **Backup and Restore**:
+   - Offers a reliable solution for backup and disaster recovery needs with point-in-time backups.
 
-1. **AWS Account:**
-   - Ensure you have an AWS account with the necessary permissions to create and manage directory services.
-
-2. **VPC Configuration:**
-   - Set up a Virtual Private Cloud (VPC) with at least two subnets in different Availability Zones.
-   - Ensure that your VPC has the required network configuration for AD, including DNS settings.
-
-#### Create Your AWS Managed Microsoft AD
-
-1. **Navigate to the AWS Directory Service Console:**
-   - Open the AWS Management Console.
-   - Go to the AWS Directory Service section.
-
-2. **Create a Directory:**
-   - Click on "Set up Directory."
-   - Choose "AWS Managed Microsoft AD" and click "Next."
-
-3. **Configure Directory Details:**
-   - Provide a directory name, short name, and description.
-   - Set the Admin password and confirm it.
-
-4. **Select VPC and Subnets:**
-   - Choose the VPC and subnets where you want to deploy your directory.
-   - Ensure the subnets are in different Availability Zones.
-
-5. **Review and Create:**
-   - Review the configuration details.
-   - Click "Create Directory."
-
-6. **Directory Creation Process:**
-   - AWS will start creating your directory, which may take several minutes.
-   - Once created, the directory status will change to "Active."
-
-#### Deploy an Amazon EC2 Instance to Manage Your AWS Managed Microsoft AD
-
-1. **Launch an EC2 Instance:**
-   - Go to the EC2 section in the AWS Management Console.
-   - Click "Launch Instance."
-
-2. **Configure Instance Details:**
-   - Choose an AMI (Amazon Machine Image) suitable for your needs (e.g., Windows Server 2019).
-   - Select an instance type.
-   - Configure instance details, ensuring it is launched in the same VPC and subnet as your AWS Managed Microsoft AD.
-
-3. **Configure Security Group:**
-   - Create a security group with the necessary inbound rules for RDP (Remote Desktop Protocol) and any other required ports.
-
-4. **Add Storage and Tags:**
-   - Configure storage and add tags as needed.
-
-5. **Review and Launch:**
-   - Review the instance configuration.
-   - Click "Launch" and select an existing key pair or create a new one.
-
-6. **Connect to the EC2 Instance:**
-   - Once the instance is running, connect to it using RDP.
-
-#### Verify that the Base Test Lab is Operational
-
-1. **Join the EC2 Instance to the Directory:**
-   - On the EC2 instance, open "Server Manager."
-   - Navigate to "Local Server" and click on "WORKGROUP" to join the instance to the domain.
-   - Enter the domain name and directory administrator credentials.
-
-2. **Verify Domain Join:**
-   - Restart the EC2 instance.
-   - Log in using the directory administrator account.
-
-3. **Verify Directory Functionality:**
-   - Open the "Active Directory Users and Computers" console.
-   - Check that the directory structure is visible and functional.
-
-4. **Test Directory Operations:**
-   - Create test users and groups.
-   - Assign permissions and test logins to verify that the directory is operational.
-
-### Summary
-
-AWS Directory Service provides a range of options to manage directories in the cloud, including AWS Managed Microsoft AD, Simple AD, and AD Connector. AWS Managed Microsoft AD offers a fully managed Active Directory service, integrating seamlessly with AWS applications and extending on-premises AD to the cloud. Getting started involves setting up the necessary prerequisites, creating the directory, deploying an EC2 instance for management, and verifying the operational status of the directory.
+4. **Collaboration**:
+   - Facilitates collaboration between users and applications by providing a shared file system with consistent access control and security.
