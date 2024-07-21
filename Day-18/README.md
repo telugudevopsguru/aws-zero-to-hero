@@ -12,22 +12,38 @@
 
 **Amazon Elastic Container Registry (ECR):** A fully managed Docker container registry service provided by AWS. It allows developers to store, manage, and deploy Docker container images.
 
-### Types of Repositories in AWS ECR
-
-1. **Private Repositories:** Used to store and manage Docker container images privately.
-2. **Public Repositories:** Used to share Docker container images publicly.
-
-### Components of Amazon ECR
-
-1. **Registry:** A collection of repositories, managed within an AWS account.
-2. **Repository:** A collection of Docker images, with versioning support.
-3. **Image:** A Docker container image stored in a repository.
-
 ### Features of Amazon ECR
 
 1. **Fully Managed:** AWS manages infrastructure provisioning, scaling, and availability.
 2. **Integrated with AWS Services:** Works seamlessly with services like Amazon ECS, Kubernetes, and AWS CodePipeline.
 3. **Security:** Integrates with IAM for access control and supports encryption of images at rest.
+
+----
+### Types of Repositories in AWS ECR
+
+1. **Private Repositories:** Used to store and manage Docker container images privately.
+2. **Public Repositories:** Used to share Docker container images publicly.
+----
+### Components of Amazon ECR
+
+1. **Registry**: 
+   - Each AWS account has an Amazon ECR private registry.
+   - You can create multiple repositories within your registry to store images.
+
+2. **Authorization Token**: 
+   - Your client must authenticate to Amazon ECR registries as an AWS user to push and pull images.
+
+3. **Repository**: 
+   - Stores Docker images, Open Container Initiative (OCI) images, and OCI compatible artifacts.
+
+4. **Repository Policy**: 
+   - Controls access to repositories and images with policies.
+
+5. **Image**: 
+   - You can push and pull container images to your repositories.
+   - These images can be used locally on your development system or in Amazon ECS task definitions and Amazon EKS pod specifications.
+
+
 ----
 ### Lab Session - Creating an ECR Repository in AWS
 
