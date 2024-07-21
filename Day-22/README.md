@@ -65,14 +65,40 @@
 
 - In AWS Route 53, a **record** is a DNS entry that maps a domain name to an IP address or another domain name.
 - When a DNS resolver receives a request for a domain name, it queries the DNS server for the appropriate DNS record to resolve the domain to its corresponding resource.
+
 ### Types of Records
 
-1. **A Record:** Maps a domain name to an IPv4 address.
-2. **AAAA Record:** Maps a domain name to an IPv6 address.
-3. **CNAME Record:** Maps an alias name to another domain name.
-4. **MX Record:** Specifies the mail servers responsible for accepting email on behalf of your domain.
-5. **TXT Record:** Provides text information to sources outside your domain.
-6. **NS Record:** Delegates a DNS namespace to a set of name servers.
+AWS Route 53 supports several types of DNS records that can be added to a hosted zone:
+
+1. **A (Address) Record**:
+   - Maps a domain name to an IPv4 address.
+
+2. **AAAA (IPv6 Address) Record**:
+   - Maps a domain name to an IPv6 address.
+
+3. **CNAME (Canonical Name) Record**:
+   - Maps a domain name to another domain name, creating an alias.
+
+4. **MX (Mail Exchange) Record**:
+   - Specifies mail servers responsible for accepting email messages for a domain.
+
+5. **NS (Name Server) Record**:
+   - Specifies the name servers for a domain.
+
+6. **PTR (Pointer) Record**:
+   - Maps an IP address to a domain name, used for reverse DNS lookups.
+
+7. **SOA (Start of Authority) Record**:
+   - Contains information about the DNS zone, including the primary name server and contact details.
+
+8. **SPF (Sender Policy Framework) Record**:
+   - Specifies servers authorized to send email on behalf of a domain.
+
+9. **SRV (Service) Record**:
+   - Specifies the location of a specific service, such as a web server or SIP server.
+
+10. **TXT (Text) Record**:
+    - Allows adding arbitrary text to a DNS record, used for domain verification or other purposes.
 ----
 ### What is Routing Policy?
 
