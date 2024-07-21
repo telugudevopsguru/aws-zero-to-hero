@@ -65,26 +65,6 @@
    - Follow the confirmation steps to delete the key.
 ----
 
-### Lab Session - Creating AWS SES
-
-1. **Sign in to AWS Management Console:**
-   - Navigate to the SES Dashboard at [AWS Management Console](https://console.aws.amazon.com/ses/).
-
-2. **Verify Email Addresses or Domains:**
-   - Before sending emails, verify email addresses or domains that you plan to use for sending.
-
-3. **Send Test Emails:**
-   - Use the SES console or API to send test emails to ensure configurations are correct.
-----
-### Lab Session - Deletion of AWS SES
-
-1. **Sign in to AWS Management Console:**
-   - Navigate to the SES Dashboard at [AWS Management Console](https://console.aws.amazon.com/ses/).
-
-2. **Delete SES Configuration:**
-   - Delete verified email addresses or domains.
-   - Optionally, delete SES configurations and settings if no longer needed.
-----
 ### What is AWS SNS?
 
 Amazon Simple Notification Service (SNS) is a fully managed messaging service provided by AWS that enables the decoupling of microservices, distributed systems, and serverless applications. 
@@ -171,3 +151,24 @@ Amazon Simple Email Service (SES) is a scalable, flexible, and cost-effective em
 2. **Marketing Campaigns**: Send promotional emails and newsletters to your customers.
 3. **Notifications and Alerts**: Send alerts and notifications for events such as system outages, security alerts, or customer support responses.
 4. **Email Ingestion**: Receive emails for further processing, analysis, or storage within your AWS environment.
+
+----
+### Lab Session - Creating AWS SES
+
+1. **Sign in to AWS Management Console:**
+   - Navigate to the SES Dashboard at [AWS Management Console](https://console.aws.amazon.com/ses/).
+
+2. **Verify Email Addresses or Domains:**
+   - Before sending emails, verify email addresses or domains that you plan to use for sending.
+
+3. **Send Test Emails:**
+   - Use the SES console or API to send test emails to ensure configurations are correct.
+----
+### Lab Session - Deletion of AWS SES
+
+1. **Sign in to AWS Management Console:**
+   - Navigate to the SES Dashboard at [AWS Management Console](https://console.aws.amazon.com/ses/).
+
+2. **Delete SES Configuration:**
+   - Delete verified email addresses or domains.
+   - Optionally, delete SES configurations and settings if no longer needed.
