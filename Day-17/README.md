@@ -275,7 +275,7 @@ You need an IAM role that has the necessary permissions to publish flow logs to 
 - `DescribeInstances`: Indicates the description of EC2 instances.
 
 ----
-### Lab Session - Setting Up AWS CloudTrail to Send Logs to an S3 Bucket
+### Lab Session - Configuring AWS CloudTrail to Send Logs to S3
 
 #### 1. **Sign in to AWS Management Console**
    - Go to [AWS Management Console](https://aws.amazon.com/console/) and sign in with your credentials.
