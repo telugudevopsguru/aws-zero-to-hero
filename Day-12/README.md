@@ -18,7 +18,7 @@
 2. **Control:** Complete control over your virtual networking environment.
 3. **Scalability:** Easily scale your VPC as your AWS resources grow.
 4. **Security:** Secure your resources using security groups and network access control lists (ACLs).
-5. **Connectivity:** Connect your VPC to other networks using VPN or AWS Direct Connect.
+5. **Connectivity:** Connect your VPC to other networks using VPC Peering, TGW, VPN, or AWS Direct Connect.
 ----
 ### CIDR (Classless Inter-Domain Routing)
 
