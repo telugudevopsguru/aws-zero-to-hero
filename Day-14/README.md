@@ -69,13 +69,13 @@
 ----
 ### Differences between NACL and Security Group in AWS VPC
 
-| Feature             | NACL                                    | Security Group                         |
-|---------------------|-----------------------------------------|----------------------------------------|
-| **Level of Operation** | Subnet level                            | Instance level                         |
-| **Stateless vs Stateful** | Stateless                                | Stateful                               |
-| **Rule Evaluation** | Rules evaluated in order of priority    | All rules evaluated together           |
-| **Default Behavior** | Allows all inbound and outbound traffic | Denies all inbound traffic by default; allows all outbound traffic by default |
-| **Association**     | Can be associated with multiple subnets | Can be associated with multiple instances |
+| Feature                      | NACL                                    | Security Group                         |
+|---------------------         |-----------------------------------------|----------------------------------------|
+| **Level of Operation**      | Subnet level                            | Instance level                         |
+| **Stateless vs Stateful**   | Stateless                                | Stateful                               |
+| **Rule Evaluation**         | Rules evaluated in order of priority    | All rules evaluated together           |
+| **Default Behavior**        | Allows all inbound and outbound traffic | Denies all inbound traffic by default; allows all outbound traffic by default |
+| **Association**             | Can be associated with multiple subnets | Can be associated with multiple instances |
 
 ----
 ### VPC Flow Logs and How to Create Them
