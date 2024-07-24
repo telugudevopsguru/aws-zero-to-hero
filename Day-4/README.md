@@ -204,28 +204,66 @@ After attaching the volume, you can log in to your Linux EC2 instance and procee
 
 ### Mounting the EBS Volume on Linux
 
-Once attached, you typically need to mount the EBS volume to make it accessible within your Linux instance. Here are basic steps for mounting on a typical Linux system:
+Here are the condensed steps to format and mount an attached EBS volume on a Linux EC2 instance:
 
-1. **SSH into Your Linux Instance:**
-   - Use SSH to connect to your Linux instance where the volume is attached.
+1. **Connect to your instance:**
+   ```bash
+   ssh -i /path/to/key.pem ec2-user@your-ec2-public-ip
+   ```
 
-2. **Check Attached Volumes:**
-   - Use the `lsblk` command to list all block devices including your newly attached volume. Identify the device name (e.g., `/dev/xvdf`).
+2. **Identify the new volume:**
+   ```bash
+   lsblk
+   ```
 
-3. **Create a Mount Point:**
-   - Create a directory where you will mount the volume. For example, `sudo mkdir /mnt/data`.
+3. **Check for existing filesystem:**
+   ```bash
+   sudo file -s /dev/xvdf
+   ```
 
 4. **Format the Volume (if not formatted):**
-   - If the volume is new or needs to be formatted, use a command like `sudo mkfs -t ext4 /dev/xvdf` to format it as ext4 (replace `/dev/xvdf` with your device name).
 
-5. **Mount the Volume:**
-   - Mount the volume to the mount point you created: `sudo mount /dev/xvdf /mnt/data`.
+- If the volume has no filesystem, create one:
+     ```bash
+     sudo mkfs -t xfs /dev/xvdf
+     ```
+   - If `mkfs.xfs` is not found, install XFS tools:
+     ```bash
+     sudo yum install xfsprogs
+     ```
 
-6. **Verify Mounting:**
-   - Use `df -h` to verify that the volume is mounted correctly and check its available space.
+   **Warning:** Do not format if the volume already has data (e.g., from a snapshot).
 
-7. **Automate Mounting (Optional):**
-   - Edit `/etc/fstab` to automatically mount the volume on system boot. Add a line like `/dev/xvdf   /mnt/data   ext4   defaults,nofail   0   2`.
+
+5. **Create a mount point:**
+   ```bash
+   sudo mkdir /data
+   ```
+
+6. **Mount the volume:**
+   ```bash
+   sudo mount /dev/xvdf /data
+   ```
+
+7. **Persist mount across reboots:**
+   - Find the UUID of the device:
+     ```bash
+     sudo blkid
+     ```
+   - Edit `/etc/fstab`:
+     ```bash
+     sudo vim /etc/fstab
+     ```
+   - Add entry:
+     ```plaintext
+     UUID=your-uuid /data xfs defaults,nofail 0 2
+     ```
+
+8. **Verify the `/etc/fstab` entry:**
+   ```bash
+   sudo umount /data
+   sudo mount -a
+   ```
 
 ----
 
