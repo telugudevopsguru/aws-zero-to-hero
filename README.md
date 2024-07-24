@@ -28,12 +28,12 @@ Introduction to Amazon EC2 instances, including instance types and basic managem
 - Lab Session - Convert PEM to PPK file
 - Lab Session - Connecting to Linux server
 - Lab Session - Creation of a Windows EC2 instance
-- Lab Session - Creation of a Ubuntu EC2 instance
 - Lab Session - Create an AMI from an Amazon EC2 Instance
 
 ## Day 3: Amazon Elastic Compute Cloud (EC2) Part 2
 Exploring advanced EC2 concepts like Elastic IPs, Security Groups, and various purchasing options for instances.
 
+- Lab Session - Creation of a Ubuntu EC2 instance
 - What is an Elastic IP?
 - Lab Session - Creating an Elastic IP and Attaching it to an EC2 Instance
 - What is a Security Group?
