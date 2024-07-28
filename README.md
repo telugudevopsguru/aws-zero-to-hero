@@ -111,20 +111,20 @@ Introduction to AWS ELB services, including Classic Load Balancers, Application 
 - What is an AWS Target Group?
 - What is a Listener?
 - Lab Session - Creation of an AWS Target Group
-- What is an AWS Application Load Balancer?
-- Benefits of an AWS Application Load Balancer
-- Lab Session - Creation of an Application Load Balancer
-- Lab Session - Deletion of an ALB
 
 ## Day 9: AWS ELB (Elastic Load Balancing) Part 2
 Advanced ELB configurations and differences between ALB and NLB, with practical sessions on integration with ASGs.
+- What is an AWS Application Load Balancer?
+- Benefits of an AWS Application Load Balancer
+- Lab Session - Creation of an Application Load Balancer
+- Lab Session - Attaching an ALB to a new Auto Scaling group
+- Lab Session - Deletion of an ALB
 - What is an AWS Network Load Balancer?
 - Benefits of an AWS Network Load Balancer
 - Lab Session - Creation of an AWS Network Load Balancer
 - Lab Session - Deletion of an NLB
 - Difference between an ALB and an NLB
-- Lab Session - Attaching an ALB to a new Auto Scaling group
-- Lab Session - Attaching an ALB to an existing Auto Scaling group
+- Lab Session - Attaching an NLB  to an Auto Scaling group
 
 ## Day 10: AWS S3 (Simple Storage Service)
 Understanding AWS S3 fundamentals, including bucket creation, object storage, versioning, and access control.
