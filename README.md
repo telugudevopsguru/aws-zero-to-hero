@@ -138,18 +138,15 @@ Understanding AWS S3 fundamentals, including bucket creation, object storage, ve
 - S3 Versioning and enabling it
 - Bucket Policy in Amazon S3
 - Working with the Bucket Policy for S3 bucket
-
-## Day 11: AWS S3 (Simple Storage Service) Part 2
-Exploring advanced S3 features such as ACLs, lifecycle management, static website hosting, and encryption.
-
-- Access Control List (ACL) in Amazon S3
-- Lab Session - Apply ACL for S3 bucket
 - S3 Bucket Lifecycle
 - Hosting a static website using Amazon S3
 - Presigned URLs in AWS S3
 - Lab Session - Working with Presigned URLs in AWS S3
 - Server-side encryption for Amazon S3 buckets
 - Lab Session - Delete an S3 bucket
+
+## Day 11: Recap Day 1 to Day 10
+
 
 ## Day 12: AWS VPC (Virtual Private Cloud) Part 1
 Introduction to AWS VPC networking, including CIDR blocks, subnets, route tables, and internet gateway setup.
