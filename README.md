@@ -136,6 +136,7 @@ Understanding AWS S3 fundamentals, including bucket creation, object storage, ve
 - Lab Session - Upload objects to S3 using the AWS Console
 - Lab Session - Upload objects to S3 using the AWS CLI
 - S3 Versioning and enabling it
+## Day 11: AWS S3 Part 2
 - Bucket Policy in Amazon S3
 - Working with the Bucket Policy for S3 bucket
 - S3 Bucket Lifecycle
@@ -144,8 +145,6 @@ Understanding AWS S3 fundamentals, including bucket creation, object storage, ve
 - Lab Session - Working with Presigned URLs in AWS S3
 - Server-side encryption for Amazon S3 buckets
 - Lab Session - Delete an S3 bucket
-
-## Day 11: Recap Day 1 to Day 10
 
 
 ## Day 12: AWS VPC (Virtual Private Cloud) Part 1
