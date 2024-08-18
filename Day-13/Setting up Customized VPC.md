@@ -1,5 +1,5 @@
 # Setting up Customized VPC.
-![Lab - Setting up Customized VPC in telugu - Moole Devdhara Reddy - Tech World With Dev](https://github.com/techworldwithDev/aws-zero-to-hero/blob/main/Day-13/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Devdhara%20Reddy%20-%20Tech%20World%20with%20Dev.png)
+![Lab - Setting up Customized VPC in telugu - Moole Muralidhara Reddy - Tech World With Murali](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-13/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ## Step 1: Create the AWS VPC
 ```xml
