@@ -3,60 +3,60 @@
 ![Lab - Setting up NAT Gateway in telugu - Moole Muralidhara Reddy - Tech World with Murali](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-13/images/Day%20%2013-%20Lab%20-%20Setting%20up%20NAT%20Gateway-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 ## Step 1: Create the AWS VPC
 ```xml
-Name: Murali-VPC in US East (N. Virginia) us-east-1
+Name: Dev-VPC in US East (N. Virginia) us-east-1
 CIDR : 10.100.0.0/16
 ```
 ## Step 2: Create a 2 public subnets with
 ```xml
 CIDR :10.100.8.0/21
-Name: murali-public-subnet-1a
+Name: Dev-public-subnet-1a
 
 CIDR :10.100.16.0/21
-Name: murali-public-subnet-1b
+Name: Dev-public-subnet-1b
 
 ```
 ## Step 3: Create a 2 private subnets with
 ```xml
 CIDR :10.100.80.0/21
-Name: murali-private-subnet-1a
+Name: Dev-private-subnet-1a
 
 CIDR :10.100.88.0/21
-Name: murali-private-subnet-1b
+Name: Dev-private-subnet-1b
 
 ```
 
 ## Step 4: Create a 2 app subnets with
 ```xml
 CIDR :10.100.144.0/21
-Name: murali-app-subnet-1a
+Name: Dev-app-subnet-1a
 
 CIDR :10.100.162.0/21
-Name: murali-app-subnet-1b
+Name: Dev-app-subnet-1b
 
 ```
 ## Step 4: Create a 2 data subnets with
 ```xml
 CIDR :10.100.168.0/21
-Name: murali-data-subnet-1a
+Name: Dev-data-subnet-1a
 
 CIDR :10.100.176.0/21
-Name: murali-data-subnet-1b
+Name: Dev-data-subnet-1b
 
 ```
 
-## Step 5: Create an internet gateway and attach to Murali-VPC
+## Step 5: Create an internet gateway and attach to Dev-VPC
 ```xml
-Name: Murali-VPC-IGW
+Name: Dev-VPC-IGW
 ```
-## Step 6: Create a route table and name it Murali-VPC-Public-RouteTable and attach the public subnets to this RouteTable.
+## Step 6: Create a route table and name it Dev-VPC-Public-RouteTable and attach the public subnets to this RouteTable.
 ```xml
-Name: Murali-VPC-Public-RouteTable
+Name: Dev-VPC-Public-RouteTable
 ```
 
-## Step 7: Create a route table and name it Murali-VPC-Private-RouteTable and attach the private,app,data subnets to this RouteTable.
+## Step 7: Create a route table and name it Dev-VPC-Private-RouteTable and attach the private,app,data subnets to this RouteTable.
 
 ```xml
-Name: Murali-VPC-Private-RouteTable
+Name: Dev-VPC-Private-RouteTable
 ```
 
 ## Step 8: Add the Internet Gateway route to the Public RouteTable.
@@ -69,7 +69,7 @@ Target : Internet Gateway ID
 ```
 ## Step 9: Create the NAT Gateway in the public subnet
 ```xml
-Murali-VPC-Nat-Gateway
+Dev-VPC-Nat-Gateway
 ```
 ## Step 10: Add the Nat Gateway route to the Private RouteTable.
 
