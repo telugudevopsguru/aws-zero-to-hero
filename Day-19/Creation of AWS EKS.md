@@ -23,7 +23,7 @@ UserName: moole
 ### Step 2: Create the VPC and 2 public subnets
 ```xml
 Note: We are going to use the DEV  VPC.
-
+```
 ### Step 3: Create the KeyPair
 ```xml
 KeyPair Name: dev
