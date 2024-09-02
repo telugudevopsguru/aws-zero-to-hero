@@ -8,7 +8,7 @@ I hope you’re doing well.
 
 Could you please create an S3 bucket with the following configuration in the `us-east-1` region?
 
-- **AWS S3 Bucket**
+- **AWS S3 Bucket Name** : techworldwithmurali-financial-data
 - **Storage Class**: S3 Standard
 - **Storage Amount**: 1000GB per month
 
