@@ -1,5 +1,4 @@
-**Subject**: Request to Create EC2 Instance with Windows Server and SQL Server Standard in us-east-1 Region
-
+**Subject**: Request to create an EC2 instance with Windows Server and SQL Server Standard in the us-east-1 region.
 ---
 
 **Hello DevOps Team,**
