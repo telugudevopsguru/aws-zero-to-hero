@@ -12,7 +12,6 @@ Could you please create an Amazon RDS instance with the following configuration 
 - **Instance Type**: `db.m4.2xlarge`
 - **Nodes**: 3
 - **Storage (EBS)**: 100GB General Purpose SSD (gp3)
-- 
 
 Please let me know once the setup is complete or if you need any additional details.
 
