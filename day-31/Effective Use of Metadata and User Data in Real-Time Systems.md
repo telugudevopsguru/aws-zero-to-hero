@@ -60,6 +60,28 @@ echo "127.0.0.1   localhost dev-linux-frontend-$REGION-$INSTANCE_ID" >> /etc/hos
 ```
 
 
+### **Force a Re-run of the User Data Script**
+
+If you want to re-execute the entire User Data script, you can clean up the previous cloud-init state and then re-trigger it:
+
+1. **Clear cloud-init's previous state**:
+   ```bash
+   sudo cloud-init clean
+   ```
+
+2. **Re-initialize cloud-init**:
+   ```bash
+   sudo cloud-init init
+   ```
+
+3. **Reboot the server**:
+   ```bash
+   reboot
+   ```
+   
+This should allow you to manually trigger the re-execution of the User Data script or any cloud-init process that you need.
+
+
 **Important Notes**:
 - User Data is **only run once**, during the first boot of the instance, and it can be re-executed manually after that using the `cloud-init` service.
 - It can be accessed via EC2 Metadata at `http://169.254.169.254/latest/user-data/`.
@@ -67,4 +89,3 @@ echo "127.0.0.1   localhost dev-linux-frontend-$REGION-$INSTANCE_ID" >> /etc/hos
 ### Summary:
 - **Metadata**: Provides instance-related information and configurations (read-only).
 - **User Data**: Executes user-defined scripts or commands to configure the instance at boot (modifiable).
-
