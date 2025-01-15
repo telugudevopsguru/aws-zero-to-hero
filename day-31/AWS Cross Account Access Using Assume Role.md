@@ -2,8 +2,6 @@
 
 To enable AWS Cross-Account Access using an IAM role (Assume Role) from an **Infrastructure Account (Infra Account)** to a **Development Account (Dev Account)**, follow these steps:
 
----
-
 ### **Step 1: Create an IAM Role in the Dev Account**
 
 1. **Login to the Dev Account**:
