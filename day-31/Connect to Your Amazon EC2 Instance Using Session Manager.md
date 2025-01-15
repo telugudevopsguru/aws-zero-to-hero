@@ -1,6 +1,3 @@
-Here's the requested GitHub README.md format:
-
-```markdown
 # Connect to Your Amazon EC2 Instance Using Session Manager
 
 ## Pre-requisites
