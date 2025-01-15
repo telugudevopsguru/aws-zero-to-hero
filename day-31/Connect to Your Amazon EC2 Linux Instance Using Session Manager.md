@@ -11,6 +11,7 @@ Key Benefits:
 - **Simple**: Access via the AWS Console or CLI without third-party tools.
 - **Cost-effective**: Eliminates the need for bastion hosts.
 
+Reference link : https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-al2.html
 ## Pre-requisites
 
 ### AWS Systems Manager Agent (SSM Agent)
