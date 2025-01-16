@@ -2,9 +2,9 @@
 
 | **Tool**               | **LTS**  | **Latest Version** | **Currently Using Version in Real-Time** | **Plans**                                    | **Official Link**                        |
 |------------------------|----------|--------------------|-----------------------------------------|----------------------------------------------|------------------------------------------|
-| **Amazon Linux**       | Yes      | 2.0                | 2.0                                     | Open Source (Free), AWS Managed Service     | [Amazon Linux](https://aws.amazon.com/amazon-linux-2/) |
-| **Amazon Windows**     | No       | 2022               | 2019                                    | Paid (AWS Managed Service)                  | [Amazon Windows](https://aws.amazon.com/windows/) |
-| **Ubuntu**             | Yes      | 22.04 LTS          | 20.04 LTS                               | Open Source (Free)                           | [Ubuntu](https://ubuntu.com/)             |
+| **Amazon Linux**       | Yes      | Amazon Linxu 2, Amazon Linux 2023                |  Amazon Linxu 2                                     | Open Source (Free), AWS Managed Service     | [Amazon Linux](https://aws.amazon.com/amazon-linux-2/) |
+| **Amazon Windows**     | No       | 2003,2006,2009,2012,2016,2019,2022               | 2012,2016, 2019                                    | Paid (AWS Managed Service)                  | [Amazon Windows](https://aws.amazon.com/windows/) |
+| **Ubuntu**             | Yes      | 18, 20, 22.04 LTS          | 20.04 LTS                               | Open Source (Free)                           | [Ubuntu](https://ubuntu.com/)             |
 | **CentOS**             | Yes      | 8.4.2105           | 8.3.2011                                 | Open Source (Free)                           | [CentOS](https://www.centos.org/)         |
 | **Git**                | No       | 2.41.0             | 2.40.1                                  | Open Source (Free)                           | [Git](https://git-scm.com/)               |
 | **GitHub**             | No       | Latest version     | Latest version                         | Free, Pro, Team, Enterprise                 | [GitHub](https://github.com/)             |
