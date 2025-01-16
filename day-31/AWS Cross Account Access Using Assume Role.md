@@ -134,6 +134,38 @@ Use the following command to list all S3 buckets in the destination (Dev) accoun
 aws s3 ls --profile dev
 ```
 
+### **Step 8: Automate the Process (Optional)**
+To automate this, you can create a shell script:
+
+```bash
+#!/bin/bash
+
+# Variables
+ROLE_ARN="arn:aws:iam::651706744553:role/InfraAssumeRole"
+SESSION_NAME="InfraToDevSession"
+PROFILE_NAME="dev"
+
+# Assume the role
+CREDS=$(aws sts assume-role --role-arn $ROLE_ARN --role-session-name $SESSION_NAME)
+
+# Extract credentials
+AWS_ACCESS_KEY_ID=$(echo $CREDS | jq -r '.Credentials.AccessKeyId')
+AWS_SECRET_ACCESS_KEY=$(echo $CREDS | jq -r '.Credentials.SecretAccessKey')
+AWS_SESSION_TOKEN=$(echo $CREDS | jq -r '.Credentials.SessionToken')
+
+# Create a temporary AWS CLI profile
+aws configure set aws_access_key_id "$AWS_ACCESS_KEY_ID" --profile $PROFILE_NAME
+aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY" --profile $PROFILE_NAME
+aws configure set aws_session_token "$AWS_SESSION_TOKEN" --profile $PROFILE_NAME
+
+```
+
+Save this script as `InfraAssumeRole.sh`, give it execution permissions, and run it:
+
+```bash
+chmod +x InfraAssumeRole.sh
+./InfraAssumeRole.sh
+```
 
 ### **Summary**
 
