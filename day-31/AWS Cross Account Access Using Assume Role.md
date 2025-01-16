@@ -89,31 +89,51 @@ You will see that you are now logged in as the assumed role, and the console wil
 
 ### **Step 5: Assume the Role from the Infra Account**
 
-1. **Use the AWS CLI**:
-   - Run the following command to assume the role:
+Run the following command to assume the role in the Dev account:
 
-     ```bash
-     aws sts assume-role \
-       --role-arn "arn:aws:iam::<Dev-Account-ID>:role/InfraAssumeRole" \
-       --role-session-name "InfraToDevSession"
-     ```
+```bash
+aws sts assume-role \
+  --role-arn "arn:aws:iam::<Dev-Account-ID>:role/InfraAssumeRole" \
+  --role-session-name "InfraToDevSession" --profile infra
+```
 
-   - The output will include temporary credentials: `AccessKeyId`, `SecretAccessKey`, and `SessionToken`.
+This will return temporary credentials in JSON format:
 
-2. **Use the Temporary Credentials**:
-   - Configure these temporary credentials in your AWS CLI or SDK for subsequent API calls to the Dev Account.
-
-     ```bash
-     aws configure
-     ```
+```json
+{
+    "Credentials": {
+        "AccessKeyId": "AKIAEXAMPLE",
+        "SecretAccessKey": "EXAMPLEKEY1234567890",
+        "SessionToken": "TOKENEXAMPLE1234567890",
+        "Expiration": "2025-01-15T12:00:00Z"
+    },
+    "AssumedRoleUser": {
+        "AssumedRoleId": "AROEXAMPLEID",
+        "Arn": "arn:aws:sts::123456789012:assumed-role/InfraAssumeRole/InfraToDevSession"
+    }
+}
+```
 
 ---
 
-### **Step 6: Test Access**
+### **Step 6: Export the Temporary Credentials**
+Export the temporary credentials to environment variables so they can be used by subsequent AWS CLI commands:
 
-- Use the assumed role credentials to test access to the resources in the Dev Account (e.g., list S3 buckets, launch an EC2 instance).
+```bash
+export AWS_ACCESS_KEY_ID=AKIAEXAMPLE
+export AWS_SECRET_ACCESS_KEY=EXAMPLEKEY1234567890
+export AWS_SESSION_TOKEN=TOKENEXAMPLE1234567890
+```
 
 ---
+
+### **Step 7: List S3 Buckets in the Destination Account**
+Use the following command to list all S3 buckets in the destination (Dev) account:
+
+```bash
+aws s3 ls --profile dev
+```
+
 
 ### **Summary**
 
