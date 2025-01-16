@@ -21,15 +21,13 @@ To enable AWS Cross-Account Access using an IAM role (Assume Role) from an **Inf
      - Alternatively, create a custom policy with fine-grained permissions.
 
 5. **Add Role Name and Description**:
-   - Name the role (e.g., `InfraAssumeRole`).
+   - Name the role (e.g., `cross-account-dev-admin-role`).
    - Add a description for clarity.
 
 6. **Review and Create**:
    - Review the settings and click **Create Role**.
 
 ---
-
-
 
 ### **Step 2: Assume Role in the AWS Console (Source Account)**
 
@@ -41,13 +39,13 @@ To enable AWS Cross-Account Access using an IAM role (Assume Role) from an **Inf
 
 3. **Fill in the Role Details**:
    - **Account**: Enter the **Account ID** of the **target account**.
-   - **Role**: Enter the **Role name** you created in the target account (e.g., `CrossAccountS3AccessRole`).
+   - **Role**: Enter the **Role name** you created in the target account (e.g., `cross-account-dev-admin-role`).
    - Optionally, you can enter a **Display name** (this will show in the top navigation when you're switched to the assumed role).
    - Optionally, select a **Color** to visually differentiate the session.
 
    **Example**:
    - **Account ID**: `123456789012`
-   - **Role name**: `CrossAccountS3AccessRole`
+   - **Role name**: `cross-account-dev-admin-role`
 
 4. **Click Switch Role**.
 
@@ -68,7 +66,7 @@ To enable AWS Cross-Account Access using an IAM role (Assume Role) from an **Inf
          {
            "Effect": "Allow",
            "Action": "sts:AssumeRole",
-           "Resource": "arn:aws:iam::<Dev-Account-ID>:role/InfraAssumeRole"
+           "Resource": "arn:aws:iam::<Dev-Account-ID>:role/cross-account-dev-admin-role"
          }
        ]
      }
@@ -93,7 +91,7 @@ Run the following command to assume the role in the Dev account:
 
 ```bash
 aws sts assume-role \
-  --role-arn "arn:aws:iam::<Dev-Account-ID>:role/InfraAssumeRole" \
+  --role-arn "arn:aws:iam::<Dev-Account-ID>:role/cross-account-dev-admin-role" \
   --role-session-name "InfraToDevSession" --profile infra
 ```
 
@@ -109,7 +107,7 @@ This will return temporary credentials in JSON format:
     },
     "AssumedRoleUser": {
         "AssumedRoleId": "AROEXAMPLEID",
-        "Arn": "arn:aws:sts::123456789012:assumed-role/InfraAssumeRole/InfraToDevSession"
+        "Arn": "arn:aws:sts::123456789012:assumed-role/cross-account-dev-admin-role/InfraToDevSession"
     }
 }
 ```
@@ -141,7 +139,7 @@ To automate this, you can create a shell script:
 #!/bin/bash
 
 # Variables
-ROLE_ARN="arn:aws:iam::651706744553:role/InfraAssumeRole"
+ROLE_ARN="arn:aws:iam::651706744553:role/cross-account-dev-admin-role"
 SESSION_NAME="InfraToDevSession"
 PROFILE_NAME="dev"
 
@@ -163,8 +161,8 @@ aws configure set aws_session_token "$AWS_SESSION_TOKEN" --profile $PROFILE_NAME
 Save this script as `InfraAssumeRole.sh`, give it execution permissions, and run it:
 
 ```bash
-chmod +x InfraAssumeRole.sh
-./InfraAssumeRole.sh
+chmod +x cross-account-dev-admin-role.sh
+./cross-account-dev-admin-role.sh
 ```
 
 ### **Summary**
