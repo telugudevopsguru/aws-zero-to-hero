@@ -1,4 +1,4 @@
-# Connect to Your Amazon Windows EC2 Instance Using Session Manager
+### Connect to Your Amazon Windows EC2 Instance Using Session Manager
 
 - **SSM Session Manager** is a feature of AWS Systems Manager that allows you to securely connect to and manage EC2 instances without needing SSH, RDP, or open inbound ports.
 - It provides encrypted, auditable access to your instances through the AWS Management Console or CLI.
