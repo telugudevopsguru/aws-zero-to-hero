@@ -7,8 +7,6 @@ Amazon EC2 provides two types of status checks for instances:
 
 If an instance fails either of these checks, it indicates a potential issue with the underlying infrastructure or with the instance itself.
 
-![image](https://github.com/user-attachments/assets/659e03d1-11db-44f4-a861-5af02b47fb9e)
-
 ---
 
 ### **2. Check Instance Status in the Console**
@@ -26,6 +24,7 @@ If an instance fails either of these checks, it indicates a potential issue with
    - AWS will often provide diagnostic messages, which can guide you toward the root cause.
 
 ---
+![image](https://github.com/user-attachments/assets/659e03d1-11db-44f4-a861-5af02b47fb9e)
 
 ### **System Status Checks**
 
