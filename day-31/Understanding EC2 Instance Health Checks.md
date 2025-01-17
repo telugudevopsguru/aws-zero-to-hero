@@ -1,4 +1,4 @@
-### **1. Understand EC2 Instance Health Checks**
+### **1. Understanding EC2 Instance Health Checks**
 
 Amazon EC2 provides two types of status checks for instances:
 
