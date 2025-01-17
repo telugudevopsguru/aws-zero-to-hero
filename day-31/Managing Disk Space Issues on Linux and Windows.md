@@ -1,4 +1,4 @@
-### **Troubleshooting Disk Space Issues**
+### **Managing Disk Space Issues on Linux and Windows**
 
 #### 1. **Linux `/data` Directory**
 
