@@ -1,6 +1,9 @@
 #### Different Ways to Connect to Windows Servers: PEM File, Active Directory (AD) and SSM (AWS Systems Manager)
 
-
+We can connect to the Amazon Windows server in three different ways:  
+1. Using a PEM file  
+2. Using Active Directory (AD)
+3. Using a SSM (AWS Systems Manager)
 ### **1. Using PEM File (For AWS EC2 Windows Instances)**
 #### Prerequisites:
 - PEM file associated with your Windows instance.
