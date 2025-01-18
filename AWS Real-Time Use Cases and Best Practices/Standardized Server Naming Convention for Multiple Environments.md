@@ -1,6 +1,6 @@
 ### Standardized Server Naming Convention for Multiple Environments
 
-When naming servers for different environments (Dev, QA, UAT, Prod, Preprod), it's important to use a consistent naming convention to make it clear which environment each server belongs to
+When naming servers for different environments (Dev, TEST, QA, UAT, Preprod,Prod ), it's important to use a consistent naming convention to make it clear which environment each server belongs to
 
 ### **General Naming Convention Format:**
 `<env>-<os>-<app-name>-<region>-<instance_id>`
