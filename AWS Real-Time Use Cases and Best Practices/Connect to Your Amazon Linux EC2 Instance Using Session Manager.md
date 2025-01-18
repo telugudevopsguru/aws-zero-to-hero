@@ -1,12 +1,12 @@
 # Connect to Your Amazon Linux EC2 Instance Using Session Manager
 
 - **SSM Session Manager** is a feature of AWS Systems Manager that allows you to securely connect to and manage EC2 instances without needing SSH, RDP, or open inbound ports.
-- It provides encrypted, auditable access to your instances through the AWS Management Console or CLI.
+- It provides encrypted, auditable access to your instances through the AWS Management Console.
 
 **Key Benefits:**
 - **Secure**: No need for SSH keys or open ports.
 - **Auditable**: All sessions are logged.
-- **Simple**: Access via the AWS Console or CLI without third-party tools.
+- **Simple**: Access via the AWS Console without third-party tools.
 - **Cost-effective**: Eliminates the need for bastion hosts.
 
 Reference link : https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-al2.html
