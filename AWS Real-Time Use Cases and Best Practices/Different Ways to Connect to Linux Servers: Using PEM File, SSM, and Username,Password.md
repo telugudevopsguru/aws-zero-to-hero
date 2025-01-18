@@ -2,7 +2,7 @@
 
 We can connect to the Amazon Linux server in three different ways:  
 1. Using a PEM file  
-2. Using AWS SSM  
+2. Using AWS Session Manager  
 3. Using a username and password  
 
 ### **1. Using a PEM File (Private Key Method)**
