@@ -23,3 +23,10 @@ In AWS, there are various regions available, and the choice of region depends on
 6. **Compliance Support**: Meets key regulatory requirements like HIPAA and SOC.
 7. **Strong Global Connectivity**: Excellent connections to other regions.
 8. **Established Ecosystem**: A large network of AWS experts and partners.
+
+-----
+1. **HIPAA** - **Health Insurance Portability and Accountability Act**  
+   A U.S. law designed to provide privacy standards and safeguard sensitive patient information.
+
+2. **SOC** - **System and Organization Controls**  
+   A set of standards for managing and securing data, particularly for organizations that handle sensitive information. There are different types of SOC reports, such as SOC 1, SOC 2, and SOC 3, which focus on various aspects of data security and privacy controls.
