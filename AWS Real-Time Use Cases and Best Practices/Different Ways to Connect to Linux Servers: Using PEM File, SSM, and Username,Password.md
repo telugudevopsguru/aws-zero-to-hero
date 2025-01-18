@@ -1,5 +1,10 @@
 ### Different Ways to Connect to Linux Servers: Using PEM File, SSM, and Username/Password
 
+We can connect to the Amazon Linux server in three different ways:  
+1. Using a PEM file  
+2. Using AWS SSM  
+3. Using a username and password  
+
 ### **1. Using a PEM File (Private Key Method)**
 #### Prerequisites:
 - A `.pem` file containing your private key.
