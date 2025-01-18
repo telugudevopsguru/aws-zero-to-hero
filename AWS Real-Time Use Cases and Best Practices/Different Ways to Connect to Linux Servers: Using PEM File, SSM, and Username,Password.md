@@ -91,7 +91,7 @@ We can connect to the Amazon Linux server in three different ways:
 1. **Ensure Password Authentication is Enabled**:
    On the server, confirm that password authentication is allowed in the SSH configuration file:
    ```bash
-   sudo nano /etc/ssh/sshd_config
+   sudo vim  /etc/ssh/sshd_config
    ```
    Ensure the following lines are set:
    ```plaintext
