@@ -36,7 +36,7 @@ sudo pip3 install --upgrade pip
 
 # Install Java 11 
 echo "Installing Java 11 ..."
-amazon-linux-extras install java-openjdk11
+amazon-linux-extras install java-openjdk11 -y
 
 # Install Docker
 echo "Installing Docker..."
