@@ -34,10 +34,9 @@ echo "Installing Python 3 and pip..."
 sudo yum install python3 -y
 sudo pip3 install --upgrade pip
 
-# Install Java 11 (Corretto)
-echo "Installing Java 11 (Corretto)..."
-sudo amazon-linux-extras enable corretto11
-sudo yum install java-11-openjdk -y
+# Install Java 11 
+echo "Installing Java 11 ..."
+amazon-linux-extras install java-openjdk11
 
 # Install Docker
 echo "Installing Docker..."
