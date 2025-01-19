@@ -18,12 +18,10 @@ In AWS, there are various regions available, and the choice of region depends on
 ### Key reasons for using the North Virginia region for U.S. projects:
 1. **Close to the U.S. East Coast**: Reduces latency for users in that region.
 2. **Largest AWS Region**: Offers a wide range of services and multiple availability zones.
-3. **High Availability**: Provides reliable infrastructure with fault tolerance.
-4. **Cost-Effective**: Competitive pricing due to its size and resource availability.
-5. **Early Access to New Services**: New AWS features often launch here first.
-6. **Compliance Support**: Meets key regulatory requirements like HIPAA and SOC.
-7. **Strong Global Connectivity**: Excellent connections to other regions.
-8. **Established Ecosystem**: A large network of AWS experts and partners.
+3. **Early Access to New Services**: New AWS features often launch here first.
+4. **Compliance Support**: Meets key regulatory requirements like HIPAA and SOC.
+5. **Strong Global Connectivity**: Excellent connections to other regions.
+6. **Established Ecosystem**: A large network of AWS experts and partners.
 
 -----
 1. **HIPAA** - **Health Insurance Portability and Accountability Act**  
