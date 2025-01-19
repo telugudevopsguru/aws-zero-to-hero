@@ -1,7 +1,7 @@
 # Creating Customized Amazon Machine Images (AMIs)
 
-- Creating customized Amazon Machine Images (AMIs) is an essential process for standardizing your AWS deployments.
-- By creating a custom AMI, you can include specific configurations, software, and settings tailored to your needs, which can then be used to launch EC2 instances with those exact specifications.
+- Custom AMIs allow you to standardize your AWS deployments, ensuring consistency across your environment.
+- With a custom AMI, you can pre-configure software, settings, and other requirements, so every EC2 instance launched from it is ready to use without additional setup.
 
 ## **1. Prepare the Base EC2 Instance**
 
@@ -34,10 +34,9 @@ echo "Installing Python 3 and pip..."
 sudo yum install python3 -y
 sudo pip3 install --upgrade pip
 
-# Install Java 11 (Corretto)
-echo "Installing Java 11 (Corretto)..."
-sudo amazon-linux-extras enable corretto11
-sudo yum install java-11-openjdk -y
+# Install Java 11 
+echo "Installing Java 11 ..."
+amazon-linux-extras install java-openjdk11
 
 # Install Docker
 echo "Installing Docker..."
