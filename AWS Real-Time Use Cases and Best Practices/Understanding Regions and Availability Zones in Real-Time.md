@@ -14,7 +14,7 @@ In AWS, there are various regions available, and the choice of region depends on
 - For example, in the North Virginia region (us-east-1), there are multiple Availability Zones such as **us-east-1a**, **us-east-1b**, **us-east-1c**, **us-east-1d**, **us-east-1e**, and **us-east-1f**.
 - When using North Virginia, you should choose at least **two** Availability Zones to ensure better fault tolerance and higher availability.
 - By utilizing multiple AZs, you can improve fault tolerance and minimize service interruptions.
-- 
+
 ### Key reasons for using the North Virginia region for U.S. projects:
 1. **Close to the U.S. East Coast**: Reduces latency for users in that region.
 2. **Largest AWS Region**: Offers a wide range of services and multiple availability zones.
