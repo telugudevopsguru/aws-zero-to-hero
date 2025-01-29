@@ -248,7 +248,7 @@ Introduction to Kubernetes on AWS with EKS, including cluster setup, management,
 - Lab Session - Connecting to the EKS cluster
 - Lab Session - Deploying a sample application in Kubernetes
 
-## Day 20: AWS KMS (Key Management Service)
+## Day 20: AWS KMS , SES , SNS
 Exploring AWS KMS for key management and encryption tasks, including key creation and usage scenarios.
 
 - What is AWS KMS?
