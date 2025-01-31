@@ -128,8 +128,7 @@ Once installed and configured, your EC2 instance is ready to use with AWS System
 ----
 ### What is Parameter Store?
 
-- **Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management.
-- It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
+- AWS Systems Manager **Parameter Store** is a secure service for managing configuration values, secrets, and passwords as key-value pairs.
 
 ### Creating the Parameter Store
 
