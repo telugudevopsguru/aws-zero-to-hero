@@ -86,3 +86,57 @@
    - Go to the Web ACL where you want to apply the rule.
    - Add the rule to the Web ACL.
    - Save the changes to apply the rule, effectively blocking the specified IP addresses.
+
+---
+
+## 🔹 **1️⃣ AWS WAF Logs & CloudWatch Integration**  
+
+✅ **Enabling AWS WAF Logging**  
+- AWS WAF provides detailed logs of blocked and allowed requests.  
+- Logging can be enabled for WebACLs and sent to:  
+  - **Amazon S3** (for archival and analysis)  
+  - **Amazon Kinesis Data Firehose** (for real-time processing)  
+  - **CloudWatch Logs** (for monitoring and alerting)  
+
+🔧 **Steps to Enable WAF Logging in CloudWatch**  
+1. Go to the **AWS WAF Console**.  
+2. Select your **WebACL** and navigate to the **Logging and Metrics** tab.  
+3. Choose **Enable Logging**, select **CloudWatch Logs**, and configure the log destination.  
+4. Apply filtering options to capture specific request details.  
+
+🚀 **Benefits of CloudWatch Integration:**  
+- Real-time visibility into **malicious traffic patterns**.  
+- Ability to create **custom dashboards** for WAF logs.  
+- Setting up **CloudWatch Alarms** for threat detection.  
+
+---
+
+## 🔹 **2️⃣ Analyzing Blocked & Allowed Requests**  
+
+🔍 **Understanding AWS WAF Logs Format**  
+- Logs contain critical information like:  
+  - Source IP  
+  - Request URI  
+  - User-Agent  
+  - Rule that triggered the action (ALLOW/BLOCK/COUNT)  
+  - Country of origin  
+
+---
+
+## 🔹 **3️⃣ Configuring AWS WAF Metrics**  
+
+📡 **Using CloudWatch Metrics for AWS WAF**  
+AWS WAF automatically sends the following metrics to **Amazon CloudWatch**:  
+- **AllowedRequests** – Number of requests allowed by WebACL rules.  
+- **BlockedRequests** – Number of requests blocked by WebACL rules.  
+- **CountedRequests** – Requests that match rules but are not blocked.  
+
+📊 **Creating Custom CloudWatch Dashboards**  
+- Navigate to **CloudWatch > Dashboards**.  
+- Add a new widget with **AWS WAF Metrics** (AllowedRequests, BlockedRequests).  
+- Apply **filters** to monitor specific rules or IP addresses.  
+
+🚨 **Setting Up CloudWatch Alarms**  
+- Create an **Alarm** for high blocked requests (>1000 in 5 min).  
+- Configure SNS notifications to **alert security teams**.  
+- Automate remediation using **AWS Lambda** (e.g., block a suspicious IP).  
