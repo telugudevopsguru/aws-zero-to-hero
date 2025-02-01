@@ -38,7 +38,7 @@
    - You can configure rate-based rules to protect against application-layer attacks such as brute force login attempts or HTTP floods. AWS WAF also includes bot control features to identify and mitigate automated threats.
 
 ----
-#### Creating a Web ACL
+#### Creating and Managing Web ACLs in AWS WAF
 
 1. **Sign in to AWS Management Console:**
    - Navigate to the AWS WAF & Shield Dashboard at [AWS Management Console](https://console.aws.amazon.com/wafv2/).
@@ -50,7 +50,7 @@
    - Add rules to the Web ACL and configure actions (allow, block, count, etc.) based on rule matches.
    - Click "Create" to create the Web ACL.
 ----
-#### Applying the Web ACL to an ALB (Application Load Balancer)
+#### Applying a Web ACL to an Application Load Balancer (ALB)
 
 1. **Sign in to AWS Management Console:**
    - Navigate to the AWS WAF & Shield Dashboard at [AWS Management Console](https://console.aws.amazon.com/wafv2/).
@@ -64,7 +64,7 @@
    - Select the ALB and configure the association settings.
    - Save the association to apply the Web ACL to the ALB.
 ----
-#### Blocking a Specific IP Address
+#### Blocking a Specific IP Address in AWS WAF
 
 1. **Sign in to AWS Management Console:**
    - Navigate to the AWS WAF & Shield Dashboard at [AWS Management Console](https://console.aws.amazon.com/wafv2/).
