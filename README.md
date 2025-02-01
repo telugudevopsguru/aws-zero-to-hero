@@ -64,6 +64,105 @@
    - Select the ALB and configure the association settings.
    - Save the association to apply the Web ACL to the ALB.
 ----
+
+List of commonly used **AWS-managed rule groups** for real-time protection:  
+
+### **1. AWS Core Rule Set (CRS)**  
+✔ Protects against common OWASP Top 10 threats, such as:  
+   - SQL Injection (SQLi)  
+   - Cross-Site Scripting (XSS)  
+   - Command Injection  
+   - Local File Inclusion (LFI)  
+   - HTTP Protocol Violations  
+
+✅ **Use Case:** General web application security  
+
+---
+
+### **2. AWS Known Bad Inputs Rule Set**  
+✔ Blocks known attack patterns, including:  
+   - Common malicious payloads  
+   - Exploits targeting web applications  
+   - Attempts to manipulate parameters  
+
+✅ **Use Case:** Protects against frequently observed threats  
+
+---
+
+### **3. AWS SQL Injection Rule Set**  
+✔ Detects and blocks SQL injection attempts in:  
+   - Query strings  
+   - POST bodies  
+   - HTTP headers  
+
+✅ **Use Case:** Prevents database-related attacks  
+
+---
+
+### **4. AWS XSS Rule Set**  
+✔ Detects and blocks **Cross-Site Scripting (XSS)** attacks in:  
+   - User inputs  
+   - Web forms  
+   - HTTP headers  
+
+✅ **Use Case:** Prevents browser-based security vulnerabilities  
+
+---
+
+### **5. AWS IP Reputation List Rule Set**  
+✔ Blocks requests from **known malicious IPs** based on AWS threat intelligence.  
+
+✅ **Use Case:** Mitigates attacks from bad actors, bots, and compromised servers  
+
+---
+
+### **6. AWS Anonymous IP List Rule Set**  
+✔ Blocks traffic from:  
+   - VPNs  
+   - Tor exit nodes  
+   - Proxy servers  
+✅ **Use Case:** Prevents traffic from anonymized sources often used by attackers  
+
+---
+
+### **7. AWS Bot Control Rule Set**  
+✔ Detects and mitigates bot traffic using:  
+   - **Common Bot Detection** – Blocks known bad bots  
+   - **Advanced Bot Detection** – Differentiates good bots (search engines) from bad ones  
+   - **CAPTCHA Challenges** – Verifies human users  
+
+✅ **Use Case:** Prevents automated attacks like credential stuffing and scraping  
+
+---
+
+### **8. AWS Account Takeover Prevention (ATP) Rule Set**  
+✔ Detects suspicious login activity, including:  
+   - Credential stuffing  
+   - Unusual login attempts  
+   - Brute-force attacks  
+
+✅ **Use Case:** Protects user accounts on login and authentication pages  
+
+---
+
+### **9. AWS Managed DDoS Protection Rule Set** (For AWS Shield Advanced customers)  
+✔ Protects against high-volume **Layer 7 DDoS attacks**  
+✔ Blocks **application-layer flood attacks**  
+
+✅ **Use Case:** Defends against large-scale web application DDoS threats  
+
+---
+
+### **10. Third-Party Managed Rule Groups (AWS Marketplace)**  
+✔ Available from security vendors like:  
+   - **Fortinet** – Advanced web filtering and bot protection  
+   - **F5** – WAF rule sets for API security  
+   - **Imperva** – OWASP protection and behavioral analysis  
+   - **Trend Micro** – Real-time malware and exploit blocking  
+
+✅ **Use Case:** Industry-specific security solutions with enhanced threat intelligence  
+
+
 #### Blocking a Specific IP Address in AWS WAF
 
 1. **Sign in to AWS Management Console:**
