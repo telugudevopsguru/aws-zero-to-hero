@@ -37,8 +37,7 @@
 6. **Rate Limiting and Bot Control**:
    - You can configure rate-based rules to protect against application-layer attacks such as brute force login attempts or HTTP floods. AWS WAF also includes bot control features to identify and mitigate automated threats.
 
-### Lab Sessions:
-
+----
 #### Creating a Web ACL
 
 1. **Sign in to AWS Management Console:**
@@ -50,7 +49,7 @@
    - Define rules using conditions (e.g., IP addresses, HTTP headers, URI strings).
    - Add rules to the Web ACL and configure actions (allow, block, count, etc.) based on rule matches.
    - Click "Create" to create the Web ACL.
-
+----
 #### Applying the Web ACL to an ALB (Application Load Balancer)
 
 1. **Sign in to AWS Management Console:**
@@ -89,54 +88,29 @@
 
 ---
 
-## 🔹 **1️⃣ AWS WAF Logs & CloudWatch Integration**  
+### **Monitoring and Logging AWS WAF Activity**  
 
-✅ **Enabling AWS WAF Logging**  
-- AWS WAF provides detailed logs of blocked and allowed requests.  
-- Logging can be enabled for WebACLs and sent to:  
-  - **Amazon S3** (for archival and analysis)  
-  - **Amazon Kinesis Data Firehose** (for real-time processing)  
-  - **CloudWatch Logs** (for monitoring and alerting)  
+To monitor and log AWS WAF activity effectively, follow these key steps:  
 
-🔧 **Steps to Enable WAF Logging in CloudWatch**  
-1. Go to the **AWS WAF Console**.  
-2. Select your **WebACL** and navigate to the **Logging and Metrics** tab.  
-3. Choose **Enable Logging**, select **CloudWatch Logs**, and configure the log destination.  
-4. Apply filtering options to capture specific request details.  
+### **1. Enabling AWS WAF Logging**  
+AWS WAF allows you to log all web requests that match your defined rules. You can enable logging by:  
+- Navigating to the **AWS WAF Console**  
+- Selecting your **Web ACL**  
+- Going to the **Logging and Metrics** section  
+- Enabling logging to **Amazon Kinesis Data Firehose**, which can then send logs to **Amazon S3, Amazon CloudWatch**  
 
-🚀 **Benefits of CloudWatch Integration:**  
-- Real-time visibility into **malicious traffic patterns**.  
-- Ability to create **custom dashboards** for WAF logs.  
-- Setting up **CloudWatch Alarms** for threat detection.  
+### **2. Monitoring with AWS WAF Metrics**  
+AWS WAF provides built-in **CloudWatch metrics** to track:  
+- **Allowed requests**  
+- **Blocked requests**  
+- **Counted requests**  
+- **Requests per rule group**  
 
----
+You can create CloudWatch **dashboards and alarms** to monitor traffic patterns and detect anomalies.  
 
-## 🔹 **2️⃣ Analyzing Blocked & Allowed Requests**  
-
-🔍 **Understanding AWS WAF Logs Format**  
-- Logs contain critical information like:  
-  - Source IP  
-  - Request URI  
-  - User-Agent  
-  - Rule that triggered the action (ALLOW/BLOCK/COUNT)  
-  - Country of origin  
-
----
-
-## 🔹 **3️⃣ Configuring AWS WAF Metrics**  
-
-📡 **Using CloudWatch Metrics for AWS WAF**  
-AWS WAF automatically sends the following metrics to **Amazon CloudWatch**:  
-- **AllowedRequests** – Number of requests allowed by WebACL rules.  
-- **BlockedRequests** – Number of requests blocked by WebACL rules.  
-- **CountedRequests** – Requests that match rules but are not blocked.  
-
-📊 **Creating Custom CloudWatch Dashboards**  
-- Navigate to **CloudWatch > Dashboards**.  
-- Add a new widget with **AWS WAF Metrics** (AllowedRequests, BlockedRequests).  
-- Apply **filters** to monitor specific rules or IP addresses.  
-
-🚨 **Setting Up CloudWatch Alarms**  
-- Create an **Alarm** for high blocked requests (>1000 in 5 min).  
-- Configure SNS notifications to **alert security teams**.  
-- Automate remediation using **AWS Lambda** (e.g., block a suspicious IP).  
+### **3. Analyzing AWS WAF Logs**  
+AWS WAF logs contain detailed request information, including:  
+- **Source IP address**  
+- **Country of origin**  
+- **User-Agent details**  
+- **Matched rule and action taken (allow/block/count)**  
