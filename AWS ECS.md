@@ -44,7 +44,7 @@ Amazon Elastic Container Service (ECS) is a fully managed container orchestratio
 - **Service Discovery & Load Balancing**: Integrated with Route 53, ALB, NLB.  
 - **Security & Monitoring**: Uses IAM roles, AWS CloudWatch, and AWS CloudTrail.  
 
-#### **6. ECS Launch Types: EC2 vs. Fargate**  
+#### **6. ECS Launch Types: Fargate vs EC2**  
 
 | **Feature**                       | **Fargate**                                                      | **EC2**                                                            |
 |------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------|
