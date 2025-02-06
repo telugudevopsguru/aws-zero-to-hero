@@ -54,8 +54,48 @@ Amazon Elastic Container Service (ECS) is a fully managed container orchestratio
 | **Cost**     | Pay for EC2 instances | Pay only for container runtime |
 | **Use Case** | Best for existing EC2 workloads | Ideal for fully managed, serverless deployments |
 
+-------------------------
+## How to Set Up an ECS Cluster with Auto Scaling in AWS
+### Step 1: Create an ECS Cluster
+1. **Sign in to the AWS Management Console**.
+2. **Navigate to the ECS service** by entering "ECS" in the search bar and selecting "Elastic Container Service".
+3. Click on the **"Create Cluster"** button.
+5. Enter the **Cluster name** as `infra-ecs`.
+6. Review the settings and click **"Create"**.
 
+### Step 2: Create an Auto Scaling Group (ASG)
+1. **Navigate to the EC2 service** by entering "EC2" in the search bar.
+2. On the left-hand side, click on **"Auto Scaling Groups"** under the "Auto Scaling" section.
+3. Click on the **"Create Auto Scaling group"** button.
+4. Enter the **Auto Scaling group name** as `infra-ecs-asg`.
+5. Select a **Launch Template** or **Launch Configuration**. If you don't have one, you will need to create it by providing the necessary EC2 instance details.
+6. On the **Instance Group Size** page, set the **Minimum capacity** to `2` and the **Maximum capacity** to `4`.
 
+### Step 3: Configure ASG Details
+1. **Select the VPC** and **Subnets** where you want the instances to be launched.
+2. Under **Advanced options**, configure the **Health check type** and **Grace period** if needed.
+
+### Step 4: Add Key Pair
+1. On the **Configure Security Group** page, select an existing security group or create a new one.
+2. On the **Add Tags** page, you can add tags for your Auto Scaling group.
+3. On the **Add Key Pair** page, select the **Key Pair** as `infra`. If you don't have a key pair with that name, you will need to create one.
+
+### Step 5: Review and Create
+1. Review all the configurations to ensure they are correct.
+2. Click **"Create Auto Scaling group"**.
+
+### Step 6: Register the Instances with the ECS Cluster
+1. After creating the ASG, the instances will be launched automatically.
+2. Navigate back to the ECS cluster page.
+3. Ensure the instances in the Auto Scaling group are registered with your ECS cluster. This might require the instances to have the ECS agent installed and configured to connect to the `infra-ecs-cluster`.
+
+### Final Check
+1. Verify that the ECS cluster shows the desired number of instances.
+2. Ensure that the instances are healthy and are in a "Running" state.
+
+Congratulations, your ECS cluster with an Auto Scaling Group should now be set up and running!
+
+-------
 ### **Deploying a Microservice Application on AWS ECS**  
 ### **1. Create the Task Definition**  
 A **Task Definition** is like a blueprint for how your containerized application runs in ECS.  
