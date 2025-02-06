@@ -106,9 +106,9 @@ A **Task Definition** is like a blueprint for how your containerized application
 3. Define **Task Name** and **Execution Role** (used by ECS to pull images from ECR).  
 4. Configure **Container Definitions**:  
    - Add a **Container Name** (e.g., `microservice-app`).  
-   - Provide the **Docker Image URL** (e.g., `123456789.dkr.ecr.us-east-1.amazonaws.com/microservice:latest`).  
+   - Provide the **Docker Image URL** (e.g., `123456789.dkr.ecr.us-east-1.amazonaws.com/usermanagement:56428`).  
    - Allocate **CPU and Memory** based on app requirements.  
-   - Define **Port Mappings** (e.g., `8080` for web apps).  
+   - Define **Port Mappings** (e.g., `8080` for usermanagement).  
    - Set **Environment Variables**, **Logging**, and **Health Checks**.  
 5. Click **Create Task Definition**.  
 
@@ -174,15 +174,15 @@ To capture logs from ECS tasks:
 #### **Enable CloudWatch Logging for ECS Tasks**  
 1. Go to **ECS Console** → **Task Definitions**.  
 2. Edit the **Container Definition** and scroll to **Log Configuration**.  
-3. Select **AWS CloudWatch Logs** and provide a **Log Group Name** (e.g., `/ecs/microservice`).  
+3. Select **AWS CloudWatch Logs** and provide a **Log Group Name** (e.g., `/ecs/pro-ecs/usermanagement`).  
 4. Save and **Update the Task Definition**.  
 
 #### **View Logs in CloudWatch**  
 1. Go to **CloudWatch Console** → **Logs** → **Log Groups**.  
-2. Select the log group `/ecs/microservice`.  
+2. Select the log group `/ecs/pro-ecs/usermanagement`.  
 3. View real-time logs from running containers.  
 
-
+-----
 ## **Troubleshooting ECS Agent Issues in Linux (Amazon ECS on EC2)**  
 
 The **ECS agent** is responsible for communicating between your EC2 instances and the AWS ECS control plane. If your containers are not registering, failing to start, or the ECS service isn't working as expected, follow this troubleshooting guide.
