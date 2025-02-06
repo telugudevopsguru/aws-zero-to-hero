@@ -11,7 +11,7 @@ Amazon Elastic Container Service (ECS) is a fully managed container orchestratio
 - **Cost-Effective**: Pay only for the resources you use, especially with Fargate.  
 - **Flexibility**: Supports both EC2 and Fargate launch types for different use cases.  
 
-#### **3. ECS vs. EKS , Kubernetes**  
+#### **3. ECS vs. EKS vs Kubernetes**  
 
 | Feature              | Amazon ECS                             | Amazon EKS                             | Kubernetes                                |
 |----------------------|----------------------------------------|----------------------------------------|-------------------------------------------|
@@ -46,16 +46,23 @@ Amazon Elastic Container Service (ECS) is a fully managed container orchestratio
 
 #### **6. ECS Launch Types: EC2 vs. Fargate**  
 
-| Feature       | EC2 Launch Type | Fargate Launch Type |
-|--------------|----------------|---------------------|
-| **Infrastructure** | Requires EC2 instances | Serverless, AWS manages infra |
-| **Scaling**  | Manual or Auto Scaling | Automatic scaling |
-| **Security** | Requires IAM roles for EC2 | IAM roles at the task level |
-| **Cost**     | Pay for EC2 instances | Pay only for container runtime |
-| **Use Case** | Best for existing EC2 workloads | Ideal for fully managed, serverless deployments |
+| **Feature**                       | **Fargate**                                                      | **EC2**                                                            |
+|------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Suitability**                    | Small to large workloads that require low operational overhead. | Large workloads that need price optimization.                     |
+| **Management**                     | Serverless, no need to manage infrastructure.                   | You manage EC2 instances and infrastructure.                      |
+| **Scaling**                        | Automatic scaling based on the CPU and memory specifications.   | Manual scaling based on task definitions and services.            |
+| **Container Grouping**             | No need for manual grouping; handles scaling and task allocation automatically. | Group related containers in task definitions manually.           |
+| **Application Design**             | Tasks are automatically deployed with built-in load balancing.  | Define services and tasks manually, including load balancing.     |
+| **Infrastructure Management**      | No infrastructure management required.                          | Full management of EC2 instances and infrastructure.              |
+| **Integration**                    | Native integration with VPC, Auto Scaling, Load Balancing, IAM, Secrets Manager. | Requires additional setup for integration with services like VPC, Load Balancing, IAM, etc. |
+| **Costing**                        | Pay-as-you-go, based on CPU and memory.                         | Can be optimized for larger workloads but requires management.    |
+| **Compliance**                     | Meets compliance standards like PCI, FIPS 140-2, FedRAMP, HIPAA. | Depends on EC2 instance and setup.                                |
+| **Use Cases**                      | Best for workloads with occasional bursts, small applications, or batch processing. | Best for large, stable workloads that need fine-grained control.  |
+| **Operational Overhead**           | Lower operational overhead due to automated scaling and infrastructure management. | Higher, as you need to manage infrastructure and scaling.         |
+
 
 -------------------------
-## How to Set Up an ECS Cluster with Auto Scaling in AWS
+## How to Set Up an ECS Cluster
 ### Step 1: Create an ECS Cluster
 1. **Sign in to the AWS Management Console**.
 2. **Navigate to the ECS service** by entering "ECS" in the search bar and selecting "Elastic Container Service".
