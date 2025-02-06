@@ -17,7 +17,7 @@
 1. **Cost Explorer:**
    - Provides detailed insights into your AWS spending.
    - Allows you to view and analyze your cost and usage patterns over time.
-   - Helps in identifying trends and anomalies.
+   - Makes it easier to notice trends and  unusual activities.
 
 2. **Budgets:**
    - Lets you set custom cost and usage budgets.
