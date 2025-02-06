@@ -171,8 +171,8 @@ List of commonly used **AWS-managed rule groups** for real-time protection:
 
 ✅ **Use Case:** Industry-specific security solutions with enhanced threat intelligence  
 
-
-#### Blocking a Specific IP Address in AWS WAF
+-----
+### Blocking a Specific IP Address in AWS WAF
 
 1. **Sign in to AWS Management Console:**
    - Navigate to the AWS WAF & Shield Dashboard at [AWS Management Console](https://console.aws.amazon.com/wafv2/).
