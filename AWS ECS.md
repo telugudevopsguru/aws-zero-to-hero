@@ -181,12 +181,12 @@ To capture logs from ECS tasks:
 #### **Enable CloudWatch Logging for ECS Tasks**  
 1. Go to **ECS Console** → **Task Definitions**.  
 2. Edit the **Container Definition** and scroll to **Log Configuration**.  
-3. Select **AWS CloudWatch Logs** and provide a **Log Group Name** (e.g., `/ecs/pro-ecs/usermanagement`).  
+3. Select **AWS CloudWatch Logs** and provide a **Log Group Name** (e.g., `/ecs/infra-ecs/usermanagement`).  
 4. Save and **Update the Task Definition**.  
 
 #### **View Logs in CloudWatch**  
 1. Go to **CloudWatch Console** → **Logs** → **Log Groups**.  
-2. Select the log group `/ecs/pro-ecs/usermanagement`.  
+2. Select the log group `/ecs/infra-ecs/usermanagement`.  
 3. View real-time logs from running containers.  
 
 -----
