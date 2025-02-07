@@ -112,7 +112,7 @@ A **Task Definition** is like a blueprint for how your containerized application
 2. Choose **Fargate** or **EC2** as the launch type.  
 3. Define **Task Name** and **Execution Role** (used by ECS to pull images from ECR).  
 4. Configure **Container Definitions**:  
-   - Add a **Container Name** (e.g., `microservice-app`).  
+   - Add a **Container Name** (e.g., `usermanagement`)
    - Provide the **Docker Image URL** (e.g., `123456789.dkr.ecr.us-east-1.amazonaws.com/usermanagement:56428`).  
    - Allocate **CPU and Memory** based on app requirements.  
    - Define **Port Mappings** (e.g., `8080` for usermanagement).  
