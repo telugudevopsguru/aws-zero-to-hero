@@ -188,3 +188,131 @@ D. Creating multiple listeners for redundancy.
 
 **Correct Answer:** B. Configuring detailed health check settings such as protocol, path, timeout, and interval.  
 **Explanation:** Health check settings are critical for assessing the availability and performance of each target. Proper configuration ensures that the load balancer routes traffic only to targets that are responsive and healthy.
+
+Below is a series of multiple‐choice questions covering AWS Application Load Balancers (ALBs) and Network Load Balancers (NLBs), including their definitions, benefits, lab session steps, and key differences. Each question is followed by the correct answer and an explanation.
+
+---
+
+### Application Load Balancer (ALB)
+
+**1. What is an AWS Application Load Balancer?**  
+A. A load balancer that operates at the network layer (Layer 4) for TCP traffic only.  
+B. A load balancer that operates at the application layer (Layer 7) and supports advanced routing (e.g., host- and path-based routing).  
+C. A DNS service that distributes requests based on geographic location.  
+D. A storage solution for distributing files across regions.
+
+**Correct Answer:** B  
+**Explanation:** An AWS Application Load Balancer works at Layer 7 and is designed for modern web applications. It supports content-based routing, such as host- and path-based routing, making it ideal for dynamic web content.
+
+---
+
+**2. Which of the following is a key benefit of an AWS Application Load Balancer?**  
+A. It supports only a single target per listener.  
+B. It enables advanced routing decisions based on URL paths, host headers, HTTP headers, and query strings.  
+C. It automatically assigns static IP addresses in each Availability Zone.  
+D. It provides load balancing for non-HTTP protocols exclusively.
+
+**Correct Answer:** B  
+**Explanation:** The ALB’s ability to make routing decisions based on request content (like URL paths and host headers) allows you to efficiently distribute traffic to different backend services based on application logic.
+
+---
+
+**3. During a lab session for creating an Application Load Balancer, which of the following steps is essential?**  
+A. Configuring a static IP address for the load balancer.  
+B. Selecting a Virtual Private Cloud (VPC) and at least two subnets in different Availability Zones.  
+C. Assigning the load balancer to a single Availability Zone for simplicity.  
+D. Setting up a CloudFront distribution before the ALB.
+
+**Correct Answer:** B  
+**Explanation:** For high availability and fault tolerance, an ALB must be deployed in a VPC with at least two subnets across different Availability Zones. This ensures the load balancer can handle failures in any single zone.
+
+---
+
+**4. In a lab session for attaching an ALB to a new Auto Scaling group, what component of the ALB is used to route traffic to the EC2 instances?**  
+A. Listener  
+B. Target Group  
+C. Security Group  
+D. DNS Name
+
+**Correct Answer:** B  
+**Explanation:** The ALB routes incoming traffic to EC2 instances via a Target Group. The Target Group contains the instances (or other resources) that receive the traffic, and health checks determine their availability.
+
+---
+
+**5. What is the expected outcome when performing a lab session on the deletion of an Application Load Balancer?**  
+A. The ALB’s listeners are removed, but the ALB remains active.  
+B. The ALB, its listeners, and all associated configuration settings are permanently removed.  
+C. The ALB is deactivated temporarily and can be reactivated later.  
+D. The ALB remains but stops routing traffic until manually restarted.
+
+**Correct Answer:** B  
+**Explanation:** Deleting an Application Load Balancer removes the entire load balancer along with its listeners and configuration, meaning it will no longer distribute any incoming traffic.
+
+---
+
+### Network Load Balancer (NLB)
+
+**6. What is an AWS Network Load Balancer?**  
+A. A load balancer that operates at the application layer (Layer 7) with advanced routing features.  
+B. A load balancer that operates at the transport layer (Layer 4) and is optimized for high performance, low latency, and handling millions of requests per second.  
+C. A service that primarily manages DNS requests.  
+D. A load balancer that only supports HTTP/HTTPS traffic.
+
+**Correct Answer:** B  
+**Explanation:** An AWS Network Load Balancer works at Layer 4 and is designed for extremely high performance. It can handle volatile traffic patterns, offers low latency, and provides a static IP per Availability Zone.
+
+---
+
+**7. Which of the following is a benefit of using an AWS Network Load Balancer?**  
+A. It supports advanced content-based routing like host and path-based rules.  
+B. It provides a single static IP address per Availability Zone and is optimized for sudden, high-volume traffic.  
+C. It automatically encrypts all data in transit without additional configuration.  
+D. It is designed exclusively for load balancing HTTP/HTTPS traffic.
+
+**Correct Answer:** B  
+**Explanation:** NLBs offer the benefit of static IP addresses in each Availability Zone and are optimized for high throughput and low latency, making them ideal for use cases that require extreme performance and rapid scaling.
+
+---
+
+**8. In a lab session for creating an AWS Network Load Balancer, which configuration is typically required?**  
+A. Configuring multiple listeners for different protocols simultaneously.  
+B. Specifying the VPC, selecting one or more subnets in different Availability Zones, and optionally assigning static IP addresses.  
+C. Setting up advanced routing rules based on HTTP headers.  
+D. Integrating directly with AWS Lambda without using target groups.
+
+**Correct Answer:** B  
+**Explanation:** Creating an NLB involves choosing the VPC, selecting subnets in different Availability Zones (to ensure high availability), and optionally assigning static IP addresses. The focus is on high performance at the transport layer rather than advanced routing.
+
+---
+
+**9. What is the expected outcome of a lab session on the deletion of an AWS Network Load Balancer?**  
+A. The NLB is deactivated but its configuration is preserved for future use.  
+B. The NLB and its associated listeners are removed; however, standalone target groups might remain if not explicitly deleted.  
+C. Only the listener configurations are removed, leaving the NLB active.  
+D. The NLB remains in a dormant state until manually reactivated.
+
+**Correct Answer:** B  
+**Explanation:** Deleting an NLB removes the load balancer and its listener configurations. However, if you created target groups separately (outside of the NLB creation process), they might not be deleted automatically and must be managed independently.
+
+
+**10. Which of the following best describes a key difference between an ALB and an NLB?**  
+A. An ALB operates at Layer 4 and supports static IP addresses, whereas an NLB operates at Layer 7 with content-based routing.  
+B. An ALB operates at Layer 7 and supports advanced routing features, while an NLB operates at Layer 4 and is optimized for high throughput with static IP support.  
+C. Both ALB and NLB operate at Layer 7, but only the NLB supports auto-scaling.  
+D. Both load balancers provide identical functionalities, with the only difference being pricing.
+
+**Correct Answer:** B  
+**Explanation:** The ALB works at Layer 7 and provides advanced routing (e.g., host- and path-based rules), while the NLB operates at Layer 4, delivering high performance and low latency with features such as static IP addresses in each Availability Zone.
+
+---
+
+**11. In a lab session for attaching an NLB to an Auto Scaling group, which step is essential?**  
+A. Configuring a listener to support only HTTP/HTTPS protocols.  
+B. Associating the NLB with a target group that contains the Auto Scaling group’s EC2 instances.  
+C. Manually updating DNS records to point to the new NLB.  
+D. Enabling session stickiness on the NLB.
+
+**Correct Answer:** B  
+**Explanation:** When integrating an NLB with an Auto Scaling group, you attach the NLB to a target group. The Auto Scaling group registers its instances with this target group, allowing the NLB to route traffic appropriately based on health checks and performance metrics.
+
+---
