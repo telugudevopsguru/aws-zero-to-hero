@@ -142,7 +142,7 @@ Configuring an AWS Virtual Private Cloud (VPC) involves several options and feat
 ----
 ### VPC Endpoints in AWS and Types Available
 
-An **AWS VPC Endpoint** is a service that allows you to privately connect your **Amazon Virtual Private Cloud (VPC)** to supported AWS services and VPC endpoint services, without using a public IP address or going over the internet.
+An **AWS VPC Endpoints** allow you to privately connect your VPC to supported AWS services without requiring an internet gateway, NAT devices, VPN connection, or AWS Direct Connect.
 
 There are two types of VPC endpoints:
 
