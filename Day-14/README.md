@@ -154,6 +154,19 @@ There are two types of VPC endpoints:
 - **Security**: Traffic does not leave the AWS network, reducing exposure to potential threats.
 - **Privacy**: You don't need a public IP address to connect to AWS services.
 - **Reliability**: The connection is highly available and secure within the AWS network.
+  
+### Comparison Table
+
+| Feature                    | **Gateway Endpoint**                             | **Interface Endpoint**                              |
+|----------------------------|--------------------------------------------------|----------------------------------------------------|
+| **Supported Services**      | S3, DynamoDB                                     | S3, DynamoDB, Lambda, SNS, SQS, CloudWatch, etc.   |
+| **Network Layer**           | Route Table-level routing                       | Network Interface (ENI) with a private IP address  |
+| **Traffic Flow**            | Routes traffic through a gateway in the route table | Routes traffic through an ENI with a private IP     |
+| **VPC Configuration**       | Simple route table update                       | Requires security groups, route table updates, etc. |
+| **Service Access**          | Primarily for S3 and DynamoDB                   | More flexible and supports many AWS services       |
+| **Cost**                    | No additional cost for the Gateway itself       | Charges for usage (per hour, per GB)               |
+| **Use Cases**               | Accessing S3 and DynamoDB                       | Accessing a variety of AWS services privately      |
+
 ----
 ### Lab Session - Create a Gateway VPC Endpoint for S3 in AWS
 
