@@ -1,4 +1,4 @@
-### Automated EC2 Backup Lambda using Boto3
+### Automated AMI Backups for EC2 Instances Using Lambda
 
 This Python script is designed to **run in AWS Lambda** and **automatically create AMI backups** of EC2 instances that have a `Name` tag equal to `dev-mysql`.
 
