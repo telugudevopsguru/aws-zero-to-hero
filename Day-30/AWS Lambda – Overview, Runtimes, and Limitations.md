@@ -1,6 +1,15 @@
 # 📘 AWS Lambda – Overview, Runtimes, and Limitations
 
-## 🧭 Introduction
+#### INSTRUCTOR DETAILS
+
+|  Information             | Details                                                                      |
+|----------------------    |------------------------------------------------------------------------------|
+| **Name**                 | Moole Muralidhara Reddy                                                      |
+| **Email**                | techworldwithmurali@gmail.com                                                |
+| **Website**              | https://www.techworldwithmurali.com               |
+| **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
+
+## 🧭 What is AWS Lambda
 
 - **AWS Lambda** is a **serverless compute service** that enables you to run code without provisioning or managing servers.
 - It automatically scales your applications by running code in response to events and only charges for the compute time consumed.
