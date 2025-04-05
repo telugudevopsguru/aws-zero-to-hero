@@ -109,6 +109,4 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 | 15-minute timeout           | Use **Step Functions** to chain multiple Lambda functions     |
 | Large payloads              | Upload to **S3** and pass the object key to Lambda            |
 | Need persistent storage     | Use **S3, DynamoDB, or EFS**                                  |
-| Cold starts                 | Enable **provisioned concurrency**                            |
 | VPC access with internet    | Attach a **NAT Gateway** or keep Lambda outside the VPC       |
-| Stateful processing         | Use **DynamoDB, RDS**, or similar for state management        |
