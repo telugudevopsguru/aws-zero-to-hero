@@ -73,17 +73,6 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 
 ---
 
-### 🔹 Performance & Execution Behavior
-
-| Type                      | Description                                                                 |
-|---------------------------|-----------------------------------------------------------------------------|
-| **Cold starts**           | Higher latency when idle or newly scaled                                   |
-| **Stateless**             | No built-in persistent state; use external services                        |
-| **No guaranteed order**   | Invocations are parallel, not sequential                                    |
-| **Ephemeral storage only**| Files in `/tmp` are cleared after each execution                            |
-
----
-
 ### 🔹 Security & IAM
 
 | Limitation                    | Description                                               |
