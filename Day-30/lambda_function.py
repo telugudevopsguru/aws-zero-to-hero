@@ -25,36 +25,6 @@ def get_mysql_instance_ids():
         return []
 
 def create_ec2_backup(instance_id):
-    """Creates an AMI backup of the specified EC2 instance"""
-    try:
-        timestamp = datetime.datetime.now().strftime('%Y-%m-%d-%H%M%S')
-        ami_name = f'Backup-{instance_id}-{timestamp}'
-
-        response = ec2_client.create_image(
-            InstanceId=instance_id,
-            Name=ami_name,
-            Description=f'Automated backup of {instance_id} taken on {timestamp}',
-            NoReboot=True  # Set to True to avoid rebooting the instance
-        )
-
-        ami_id = response['ImageId']
-        print(f'AMI created successfully: {ami_id}')
-
-        # Tagging the AMI for easy identification
-        ec2_client.create_tags(
-            Resources=[ami_id],
-            Tags=[{'Key': 'Backup', 'Value': timestamp}]
-        )
-        print(f'Tagged AMI {ami_id} with Backup={timestamp}')
-
-        return ami_id
-    except Exception as e:
-        print(f'Error creating AMI: {str(e)}')
-
-
-
-
-def create_ec2_backup(instance_id):
     """Creates an AMI backup of the specified EC2 instance, using its Name tag"""
     try:
         # Fetch the instance details to get the Name tag
