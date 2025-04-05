@@ -1,5 +1,10 @@
 import boto3
 import datetime
+import logging
+
+# Setup logging
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 # Initialize EC2 client
 ec2_client = boto3.client('ec2')
@@ -21,17 +26,17 @@ def get_mysql_instance_ids():
         return instance_ids
 
     except Exception as e:
-        print(f"Error fetching instances: {str(e)}")
+        logger.error(f"Error fetching instances: {str(e)}")
         return []
 
 def create_ec2_backup(instance_id):
     """Creates an AMI backup of the specified EC2 instance, using its Name tag"""
     try:
-        # Fetch the instance details to get the Name tag
+        # Fetch instance details
         instance_desc = ec2_client.describe_instances(InstanceIds=[instance_id])
         tags = instance_desc['Reservations'][0]['Instances'][0].get('Tags', [])
         
-        # Extract the Name tag value
+        # Extract the Name tag or fallback to instance ID
         name_tag = next((tag['Value'] for tag in tags if tag['Key'] == 'Name'), instance_id)
         
         timestamp = datetime.datetime.now().strftime('%Y-%m-%d-%H%M%S')
@@ -45,34 +50,34 @@ def create_ec2_backup(instance_id):
         )
 
         ami_id = response['ImageId']
-        print(f'AMI created successfully: {ami_id} with name {ami_name}')
+        logger.info(f'AMI created successfully: {ami_id} with name {ami_name}')
 
-        # Tag the AMI for identification
+        # Tag the AMI
         ec2_client.create_tags(
             Resources=[ami_id],
             Tags=[
-                {'Key': 'Backup', 'Value': timestamp},
+                {'Key': 'Team', 'Value': 'DevOps'},
                 {'Key': 'Name', 'Value': ami_name}
             ]
         )
-        print(f'Tagged AMI {ami_id} with Backup={timestamp} and Name={ami_name}')
+        logger.info(f'Tagged AMI {ami_id} with Team=DevOps and Name={ami_name}')
 
         return ami_id
     except Exception as e:
-        print(f'Error creating AMI: {str(e)}')
-
+        logger.error(f'Error creating AMI for instance {instance_id}: {str(e)}')
+        return None
 
 def lambda_handler(event, context):
     """Lambda function entry point"""
     instance_ids = get_mysql_instance_ids()
     
     if not instance_ids:
-        print("No instances found with Name=dev-mysql tag.")
+        logger.warning("No instances found with Name=dev-mysql tag.")
         return {"statusCode": 404, "body": "No instances found with Name=dev-mysql tag."}
     
     ami_ids = []
     for instance_id in instance_ids:
-        print(f"Backing up instance: {instance_id}")
+        logger.info(f"Backing up instance: {instance_id}")
         ami_id = create_ec2_backup(instance_id)
         if ami_id:
             ami_ids.append(ami_id)
