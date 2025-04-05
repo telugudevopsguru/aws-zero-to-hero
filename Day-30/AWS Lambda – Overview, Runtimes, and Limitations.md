@@ -1,23 +1,9 @@
 # 📘 AWS Lambda – Overview, Runtimes, and Limitations
 
-## 📌 Table of Contents
-
-1. [Introduction](#introduction)  
-2. [Why Use AWS Lambda?](#why-use-aws-lambda)  
-3. [Supported Runtimes](#supported-runtimes)  
-4. [Limitations](#limitations)  
-   - [General Limits](#general-limits)  
-   - [Performance & Execution Behavior](#performance--execution-behavior)  
-   - [Security & IAM](#security--iam)  
-   - [Networking Constraints](#networking-constraints)  
-   - [Other Considerations](#other-considerations)  
-5. [Workarounds for Common Limitations](#workarounds-for-common-limitations)
-
----
-
 ## 🧭 Introduction
 
-**AWS Lambda** is a **serverless compute service** that enables you to run code without provisioning or managing servers. It automatically scales your applications by running code in response to events and only charges for the compute time consumed.
+- **AWS Lambda** is a **serverless compute service** that enables you to run code without provisioning or managing servers.
+- It automatically scales your applications by running code in response to events and only charges for the compute time consumed.
 
 ---
 
