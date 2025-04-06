@@ -41,7 +41,7 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 - **When to Use**:
   - For scalability, agility, or long-term cost savings
   - To adopt microservices, containers, or serverless architectures
-- **Example**: Breaking a monolithic app into microservices using AWS Lambda, API Gateway, and DynamoDB.
+- **Example**: Refactoring a monolithic application into a microservices-based architecture using AWS Lambda for compute, API Gateway for routing, and DynamoDB as a scalable NoSQL database.
 
 ---
 
