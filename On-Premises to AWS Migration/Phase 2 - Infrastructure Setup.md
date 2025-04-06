@@ -92,6 +92,6 @@
     - Networking components (VPC, subnets, security groups) are correctly configured.  
     - VPN connectivity is established and tested.  
     - DevOps tools are accessible and functional.  
-    - Databases are provisioned, migrated, and accessible.  
+    - Databases are provisioned, and accessible.  
     - Route 53 DNS records are correctly set up.  
   - Documentation, including **architecture diagrams, and access credentials**, will be shared in the designated **Confluence/JIRA **. 
