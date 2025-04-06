@@ -11,8 +11,6 @@
 - Either set up **environment-specific accounts** (e.g., separate accounts for **Dev, Test, QA**) or consolidate **all lower environments** into a single AWS account.  
 - **Production, Pre-Prod, and Infrastructure** accounts should be separate for security and compliance.  
 
-**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
-
 ### **Step 13: AWS Networking Setup via Terraform**  
 - The **DevOps engineer** sets up AWS networking components, including:  
   - **VPC, Subnets, Route Tables, NAT Gateways, Internet Gateways, Security Groups, NACLs**  
@@ -25,11 +23,11 @@
 - **PRE-PROD CIDR** - 10.50.0.0/16  
 - **PROD CIDR** - 10.60.0.0/16  
 - **INFRA CIDR** - 10.70.0.0/16  
-
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 14: Site-to-Site VPN Setup**  
 - Work with the **on-premises network team** to establish a **Site-to-Site VPN** between **on-premises** and **AWS**.  
 - Test **connectivity** to ensure smooth integration with AWS resources.  
-
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 15: AWS Client VPN / Cisco VPN Setup**  
 - Set up **AWS Client VPN** or **Cisco VPN** to allow secure access to private AWS resources.  
 - Example use case: **Accessing internal application URLs (e.g., https://user-registration-dev.techworldwithmurali.in).**  
@@ -37,6 +35,8 @@
 **Prerequisites for AWS Client VPN Setup:**  
 1. **AWS Directory Service** configuration  
 2. **Amazon Certificate Manager (ACM)** for SSL/TLS certificates  
+
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 
 ### **Step 16: DevOps Tools Installation in Infra VPC**  
 - Deploy essential DevOps tools in the **Infra VPC** for automation and CI/CD processes.  
@@ -58,13 +58,13 @@
   - **ECS (Elastic Container Service)**  
   - **EKS (Elastic Kubernetes Service)**  
 - The choice depends on **application architecture** and **team discussions**.  
-
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 18: Monolithic Applications Setup via Terraform**  
 - For **monolithic applications**, set up:  
   - **Auto Scaling Groups (ASG)**  
   - **Application Load Balancer (ALB)** (internal/external) for traffic distribution  
   - Create/update the records in **Route 53 hosted zone** etc.
-
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 19: Route 53 DNS Configuration**  
 - Create a **Hosted Zone** in **Route 53**. Example:  
   - `techworldwithmurali.in`  
@@ -73,7 +73,7 @@
 ### **Step 20: Database Setup**  
 - Set up **Amazon RDS MySQL Cluster** as per the database requirements.  
 - Inform the **DBA team** once provisioning is complete.  
-
+**Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 21: Database Migration**  
 - Migrate databases from **on-premises to AWS** using the appropriate strategy:  
   - **AWS DMS (Database Migration Service)**  
