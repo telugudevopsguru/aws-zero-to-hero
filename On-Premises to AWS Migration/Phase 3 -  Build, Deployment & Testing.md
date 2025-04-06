@@ -23,4 +23,4 @@
 - Developers deploy **monolithic applications** in the **DEV environment** using **Jenkins jobs**. After deployment:  
   - **Load Balancers, listeners, and Route 53 records** are automatically created via **Terraform**.  
 
-**Note:** Before migrating the application, we will first build the application, deploy it to the **EKS cluster**, and validate its functionality.
+**Note:** Before migrating the application, we will first build and deploy it, and then validate whether the functionality is working as expected.
