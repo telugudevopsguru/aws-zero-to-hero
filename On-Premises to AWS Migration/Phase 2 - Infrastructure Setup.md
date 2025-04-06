@@ -57,13 +57,15 @@
 - Deploy microservices in either:  
   - **ECS (Elastic Container Service)**  
   - **EKS (Elastic Kubernetes Service)**  
-- The choice depends on **application architecture** and **team discussions**.  
+- The choice depends on **application architecture** and **team discussions**.
+   
 **Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 18: Monolithic Applications Setup via Terraform**  
 - For **monolithic applications**, set up:  
   - **Auto Scaling Groups (ASG)**  
   - **Application Load Balancer (ALB)** (internal/external) for traffic distribution  
   - Create/update the records in **Route 53 hosted zone** etc.
+    
 **Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 19: Route 53 DNS Configuration**  
 - Create a **Hosted Zone** in **Route 53**. Example:  
