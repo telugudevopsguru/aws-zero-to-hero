@@ -259,9 +259,35 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 ### **Step 26: Schedule the Cutover Meeting**  
 - Based on the final discussion, a **cutover date** will be finalized.  
 - The **Scrum Master** will schedule the meeting.  
-- The cutover process typically takes **3 to 4 hours**, but depending on the complexity of the applications, it may take longer.  
+- The cutover process typically takes **3 to 4 hours**, but depending on the complexity of the applications, it may take longer.
 
-### **Step 27: Stop the Application in On-Premises**  
+### **Step 27: Send Notification to Clients**
+
+- **Notify Clients:** Send a formal notification to all relevant clients/stakeholders regarding **today's scheduled cutover plan**.
+- **Include Key Details:**
+  - **Cutover Date & Time**
+  - **Expected Downtime (if any)**
+  - **New AWS endpoint or DNS URL** (if it’s changing)
+  - **What actions (if any)** are required from the client side
+  - **Point of Contact** in case of any issues or queries
+
+- **Purpose of the Notification:**
+  - Ensure clients are **aware of the migration**
+  - **Minimize surprises** and set expectations regarding any temporary inaccessibility
+  - Help clients **validate functionality post-cutover**
+
+> ✅ Example email subject:  
+> _“[INFO] Scheduled Cutover to AWS – [Application Name] on [Date]”_
+
+> ✅ Example content snippet:  
+> _Dear Client,_  
+> _As part of our cloud modernization initiative, we are migrating [Application Name] from our on-premises infrastructure to AWS today, [Date]._  
+> _The expected cutover time is from [Start Time] to [End Time]._  
+> _During this time, the application may be briefly inaccessible._  
+> _Post-migration, the application will be accessible via: [New URL]._  
+> _Please contact [Support Contact Info] for any assistance._  
+
+### **Step 27.1: Stop the Application in On-Premises**  
 - Stop the on-premises application **after the final data sync**.  
 - Ensure that no new transactions are being processed in the on-premises system.  
 
