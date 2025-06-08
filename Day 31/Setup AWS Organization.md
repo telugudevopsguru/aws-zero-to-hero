@@ -1,0 +1,110 @@
+
+## 🏗️ Step-by-Step: Setup AWS Organization
+
+---
+
+### ✅ **1. Start with the Management Account**
+
+* This is your **root account** — the first AWS account you used.
+* It automatically becomes the **management account** of your organization.
+* Log in to [AWS Console](https://console.aws.amazon.com/organizations/).
+
+---
+
+### ✅ **2. Create the Organization**
+
+* Go to **AWS Organizations** (from the Services menu).
+* Click **“Create organization”**.
+* Choose **“Enable all features”** (for full SCP and central management capabilities).
+
+---
+
+### ✅ **3. Create Organizational Unit (OU)**
+
+* Click on **"Organize accounts"** > **"Add an OU"**.
+* Name it: `Environments`
+* This will be the parent container for your environment-specific accounts.
+
+---
+
+### ✅ **4. Create Member Accounts**
+
+Under `Environments` OU, create 3 accounts:
+
+| Account Name | Email                                                           | Purpose                                                   |
+| ------------ | --------------------------------------------------------------- | --------------------------------------------------------- |
+| `dev`        | [aws-dev@techworldwithmurali.com](mailto:dev@techworldwithmurali.com)               | Development workloads (app + DB)                          |
+| `test`       | [aws-test@techworldwithmurali.com](mailto:test@techworldwithmurali.com)             | Internal QA testing (unit/integration/automated)          |
+| `uat`        | [aws-uat@techworldwithmurali.com](mailto:uat@techworldwithmurali.com)               | User Acceptance Testing (pre-prod validation by business) |
+| `prod`       | [aws-prod@techworldwithmurali.com](mailto:prod@techworldwithmurali.com)             | Production workloads (live, customer-facing)              |
+| `management` | [aws-management@techworldwithmurali.com](mailto:management@techworldwithmurali.com) | CI/CD pipelines, tooling, admin dashboards                |
+| `security`   | [aws-security@techworldwithmurali.com](mailto:security@techworldwithmurali.com)     | Centralized logging, GuardDuty, AWS Config, CloudTrail    |
+
+**Steps:**
+
+* Go to “Accounts” > **Add account**
+* Choose: **Create AWS account**
+* Enter account name + email
+* Assign to the `Environments` OU
+
+> 📌 Tip: Use aliases or distribution lists for email addresses.
+
+---
+
+### ✅ **5. (Optional) Apply Service Control Policies (SCPs)**
+
+Use **SCPs** to restrict what accounts in the OU can do. Example:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyFullAccessToBilling",
+      "Effect": "Deny",
+      "Action": "aws-portal:*",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+Attach the SCP to the `Environments` OU.
+
+---
+
+### ✅ **6. Enable Trusted Access (for AWS Config, CloudTrail, etc.)**
+
+* Go to **AWS Organizations > Services**
+* Enable trusted access for services like:
+
+  * AWS Config
+  * CloudTrail
+  * GuardDuty
+  * Backup
+  * Service Catalog
+
+---
+
+### ✅ **7. Setup Centralized Logging in `security` Account**
+
+* Set up **S3 bucket** for logs (CloudTrail, Config).
+* Share it with other accounts.
+* Enable:
+
+  * CloudTrail org trails
+  * GuardDuty delegated admin
+  * AWS Config aggregator
+
+---
+
+### ✅ Summary Architecture
+
+```
+Organization: your-company-org
+│
+└── OU: Environments
+     ├── Account: dev
+     ├── Account: prod
+     └── Account: security
+```
