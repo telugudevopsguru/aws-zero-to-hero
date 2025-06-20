@@ -3,8 +3,8 @@
 |  Information             | Details                                                                      |
 |----------------------    |------------------------------------------------------------------------------|
 | **Name**                 | Moole Muralidhara Reddy                                                      |
-| **Email**                | techworldwithmurali@gmail.com                                                |
-| **Website**              | https://www.techworldwithmurali.com               |
+| **Email**                | telugudevopsguru@gmail.com                                                |
+| **Website**              | https://www.telugudevopsguru.com               |
 | **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
 
 
@@ -168,7 +168,7 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 **Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 15: AWS Client VPN / Cisco VPN Setup**  
 - Set up **AWS Client VPN** or **Cisco VPN** to allow secure access to private AWS resources.  
-- Example use case: **Accessing internal application URLs (e.g., https://user-registration-dev.techworldwithmurali.in).**  
+- Example use case: **Accessing internal application URLs (e.g., https://user-registration-dev.telugudevopsguru.in).**  
 
 **Prerequisites for AWS Client VPN Setup:**  
 1. **AWS Directory Service** configuration  
@@ -185,9 +185,9 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 - **SonarQube** - for code quality analysis  
 
 #### **Example URLs:**  
-- **Jenkins** - https://jenkins.techworldwithmurali.in  
-- **JFrog Artifactory** - https://artifactory.techworldwithmurali.in  
-- **SonarQube** - https://sonarqube.techworldwithmurali.in  
+- **Jenkins** - https://jenkins.telugudevopsguru.in  
+- **JFrog Artifactory** - https://artifactory.telugudevopsguru.in  
+- **SonarQube** - https://sonarqube.telugudevopsguru.in  
 
 **Note:** These tools can either be deployed on **individual EC2 instances** or hosted in an **EKS (Kubernetes) cluster** for better scalability.  
 
@@ -207,7 +207,7 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 **Note:** Wherever applicable, we will use **Terraform** to automate infrastructure provisioning.  
 ### **Step 19: Route 53 DNS Configuration**  
 - Create a **Hosted Zone** in **Route 53**. Example:  
-  - `techworldwithmurali.in`  
+  - `telugudevopsguru.in`  
 - Migrate DNS records to the **Route 53 hosted zone**, if applicable.  
 
 ### **Step 20: Database Setup**  

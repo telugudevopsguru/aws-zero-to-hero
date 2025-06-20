@@ -3,8 +3,8 @@
 |  Information             | Details                                                                      |
 |----------------------    |------------------------------------------------------------------------------|
 | **Name**                 | Moole Muralidhara Reddy                                                      |
-| **Email**                | techworldwithmurali@gmail.com                                                |
-| **Website**              | https://www.techworldwithmurali.com               |
+| **Email**                | telugudevopsguru@gmail.com                                                |
+| **Website**              | https://www.telugudevopsguru.com               |
 | **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
 
 ### What is VPC Peering?
@@ -34,7 +34,7 @@
 
 8. The traffic remains in the private IP space.
 
-![VPC Peering Diagram - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-VPC%20Peering%20Diagram%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+![VPC Peering Diagram - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/telugudevopsguru/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-VPC%20Peering%20Diagram%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ### Types of VPC Peering
 
@@ -46,4 +46,4 @@
   -  Inter-region VPC peering within the same AWS account
   -  Inter-region VPC peering within the different AWS account
 
-![Types of VPC Peering - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-Types%20of%20VPC%20Peering%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+![Types of VPC Peering - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/telugudevopsguru/aws-zero-to-hero/blob/main/Day-15/images/Day%2015-Types%20of%20VPC%20Peering%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)

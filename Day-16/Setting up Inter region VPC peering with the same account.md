@@ -1,5 +1,5 @@
 # Setting up Inter region VPC peering with same account
-![Inter region VPC Peering Same AWS  account - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-16/images/Day%20%2016-%20Inter%20region%20VPC%20Peering%20same%20account-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+![Inter region VPC Peering Same AWS  account - Tech World with Murali - Moole Muralidhara Reddy.png](https://github.com/telugudevopsguru/aws-zero-to-hero/blob/main/Day-16/images/Day%20%2016-%20Inter%20region%20VPC%20Peering%20same%20account-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ## Step 1: Create the AWS VPC
 ```xml

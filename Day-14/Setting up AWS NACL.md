@@ -1,6 +1,6 @@
 # Setting up AWS NACL
 
-![Lab - Setting up NACL in telugu - Moole Muralidhara Reddy - Tech Wolrd With Murali](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-14/images/Day%2014%20-%20Lab%20-%20Setting%20up%20NACL%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+![Lab - Setting up NACL in telugu - Moole Muralidhara Reddy - Tech Wolrd With Murali](https://github.com/telugudevopsguru/aws-zero-to-hero/blob/main/Day-14/images/Day%2014%20-%20Lab%20-%20Setting%20up%20NACL%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ## Step 1: Create the Public NACL
 ```xml

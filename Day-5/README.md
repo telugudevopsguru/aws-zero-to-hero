@@ -3,8 +3,8 @@
 |  Information             | Details                                                                      |
 |----------------------    |------------------------------------------------------------------------------|
 | **Name**                 | Moole Muralidhara Reddy                                                      |
-| **Email**                | techworldwithmurali@gmail.com                                                |
-| **Website**              | https://www.techworldwithmurali.com               |
+| **Email**                | telugudevopsguru@gmail.com                                                |
+| **Website**              | https://www.telugudevopsguru.com               |
 | **LinkedIn profile**     | [Moole Muralidhara Reddy](https://www.linkedin.com/in/moole-muralidhara-reddy) |
 
 ### What is a Snapshot in AWS?

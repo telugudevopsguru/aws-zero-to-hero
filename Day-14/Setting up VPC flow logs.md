@@ -1,5 +1,5 @@
 # Setting up AWS VPC Flow Logs
-![Lab -Setting up VPC flow logs in telugu - Moole Muralidhara Reddy - Tech World with Murali](https://github.com/techworldwithmurali/aws-zero-to-hero/blob/main/Day-14/images/Day%2014-Setting%20up%20VPC%20flow%20logs%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+![Lab -Setting up VPC flow logs in telugu - Moole Muralidhara Reddy - Tech World with Murali](https://github.com/telugudevopsguru/aws-zero-to-hero/blob/main/Day-14/images/Day%2014-Setting%20up%20VPC%20flow%20logs%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 **Note:** You should have already created the S3 bucket for storing the VPC logs.<br>
 **Name: murali-vpc-flow-logs**
